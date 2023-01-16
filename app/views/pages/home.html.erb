@@ -1,1 +1,21 @@
+<%# ------- FOR DEVELOPMENT PURPOSES ONLY ------- %>
 <h1>Homepage</h1>
+
+<p>Pages controller</p>
+<%= link_to "pages#home", root_path %> <br>
+<%= link_to "pages#cuisine", cuisine_path %> <br>
+<%= link_to "pages#restaurant", restaurant_path %> <br>
+
+<p>Bookings controller</p>
+<%= link_to "bookings#index", bookings_path %> <br>
+<%= link_to "bookings#new", new_booking_path %> <br>
+<%= link_to "bookings#show", booking_path(Booking.last) %> <br>
+<%= link_to "bookings#confirmation", confirmation_booking_path(Booking.last) %>
+
+<p>Menus & Newsletters controllers</p>
+<%= link_to "menus#index", menus_path %> <br>
+<%= link_to "menus#show", menu_path(Menu.last) %> <br>
+<%= link_to "newsletters#index", newsletters_path %> <br>
+<%= link_to "newsletters#show", newsletter_path(Newsletter.last) %> <br>
+
+<%# ------- DEV HOMEPAGE BELOW THIS ------- %>

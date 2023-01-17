@@ -10,12 +10,14 @@ Rails.application.routes.draw do
   get '/cuisine', to: 'pages#cuisine', as: 'cuisine'
 
   # Bookings routes [TO PASS TO ADMIN MODULE WHEN READY FOR PRODUCTION]
+  # https://api.rubyonrails.org/v7.0.4/classes/ActionDispatch/Routing/Mapper/Scoping.html#method-i-namespace
   # namespace :admin do
   resources :bookings
   # end
   get '/bookings/:id/confirmation', to: 'bookings#confirmation', as: 'confirmation_booking'
 
   # Newsletters & Menu routes [TO PASS TO ADMIN MODULE WHEN READY FOR PRODUCTION]
+  # https://api.rubyonrails.org/v7.0.4/classes/ActionDispatch/Routing/Mapper/Scoping.html#method-i-namespace
   # namespace :admin do
   resources :newsletters, only: %i[index new show update create destroy]
   resources :menus, only: %i[index new show update create destroy]

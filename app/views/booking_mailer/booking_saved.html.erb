@@ -1,0 +1,18 @@
+<div style="margin: 0 auto;">
+  <p>Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+
+  Votre réservation a bien été prise en compte :
+  <ul>
+    <li>Places : <%= @booking.people %></li>
+    <li>Date : <%= @booking.date %></li>
+    <li>Heure : <%= @booking.starts_at %></li>
+    <li>Remarques : <%= @booking.comment %></li>
+  </ul>
+
+  <p>Notre équipe va prendre connaissance de votre demande dans les plus brefs délais pour y apporter une réponse.</p>
+
+  <p>A bientôt,<br>
+  l'équipe Eunoé.
+  </p>
+
+</div>

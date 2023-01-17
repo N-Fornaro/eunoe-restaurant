@@ -1,0 +1,24 @@
+<div style="margin: 0 auto;">
+  <p>Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+
+  Votre réservation pour le <%= @booking.date %> a bien été confirmée par notre équipe. Pour rappel :
+  <ul>
+    <li>Places : <%= @booking.people %></li>
+    <li>Date : <%= @booking.date %></li>
+    <li>Heure : <%= @booking.starts_at %></li>
+    <li>Remarques : <%= @booking.comment %></li>
+  </ul>
+
+  Pour vous rendre au restaurant :
+  <em>
+    <p>Eunoé Restaurant <br>
+    15 boulevard Lorem Ipsum <br>
+    75011 Paris <br>
+    Métros : Lorem Ipsum, Sit Amet</p>
+  </em>
+
+  <p>A bientôt dans notre restaurant,<br>
+  l'équipe Eunoé.
+  </p>
+
+</div>

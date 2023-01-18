@@ -2,14 +2,18 @@ class Booking < ApplicationRecord
   validates :email, presence: true
 
   after_create :email_saved
+  after_commit :notify_admin
   around_update :email_updated
   after_destroy :email_cancelled
 
   private
 
   def email_saved
-    BookingMailer.with(booking: self).booking_saved
-    # ADD AN ADMIN MAILING HERE TO NOTIFY HIM
+    BookingMailer.with(booking: self).booking_saved.deliver!
+  end
+
+  def notify_admin
+    BookingMailer.with(booking: self).notify_admin.deliver
   end
 
   def email_confirmed

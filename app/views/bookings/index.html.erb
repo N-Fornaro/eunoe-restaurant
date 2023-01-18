@@ -2,7 +2,7 @@
 <p> To implement here : bookings list with admin interface & commands</p>
 <ul>
   <% @booking.each do |booking| %>
-    <li><%= link_to booking.last_name, booking_path(booking) %> - (<%=booking.people %>)</li>
+    <li><%= link_to booking.last_name, booking_path(booking) %> - (<%= booking.people %>)</li>
   <% end %>
 </ul>
 <%= link_to "Add a  booking", new_booking_path %>

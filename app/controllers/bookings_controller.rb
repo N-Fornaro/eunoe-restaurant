@@ -42,7 +42,7 @@ class BookingsController < ApplicationController
                                     :last_name,
                                     :phone,
                                     :email,
-                                    :comments,
+                                    :comment,
                                     :status)
   end
 end

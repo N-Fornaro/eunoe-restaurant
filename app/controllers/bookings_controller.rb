@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  before_action :set_booking, only: %i[confirmation show]
+  before_action :set_booking, only: %i[confirmation show edit update destroy]
 
   def index
     @booking = Booking.all
@@ -19,13 +19,26 @@ class BookingsController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
   def confirmation
     @booking.update!(status: true)
     redirect_to bookings_path, status: :see_other
   end
+
   def edit; end
-  def update; end
-  def destroy; end
+
+  def update
+    if @booking.update(booking_params)
+      redirect_to booking_path(@booking)
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @booking.destroy
+    redirect_to bookings_path, status: :see_other
+  end
 
   private
 

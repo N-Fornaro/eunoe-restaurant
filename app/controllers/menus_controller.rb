@@ -1,4 +1,5 @@
 class MenusController < ApplicationController
+  before_action :set_menu, only: %i[show]
 
   def index; end
   def show; end

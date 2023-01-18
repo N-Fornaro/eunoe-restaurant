@@ -2,6 +2,6 @@
 <p> To implement here : bookings list with admin interface & commands</p>
 <ul>
   <% @booking.each do |booking| %>
-    <li><%= booking.last_name %></li>
+    <li><%= link_to booking.last_name, booking_path(booking) %> - (<%=booking.people %>)</li>
   <% end %>
 </ul>

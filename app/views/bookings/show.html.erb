@@ -1,11 +1,13 @@
-<h1>Booking details / for all users / to see details, edit or destroy</h1>
-<p> To implement here : show, edit/update, destroy</p>
+<div class="container">
+  <h1>Booking details / for all users / to see details, edit or destroy</h1>
+  <p> To implement here : show, edit/update, destroy</p>
 
-<h2><%= @booking.last_name %> <%= @booking.first_name %></h2>
-<p><%= @booking.date %> <%= @booking.starts_at %></p>
-<p><%= @booking.phone  %> <%= @booking.email %></p>
-<p><%= @booking.comment %></p>
-<%= link_to "edit this booking", edit_booking_path(@booking) %>
-<%= link_to "Back to list", bookings_path %>
-<br>
-<%= link_to "Delete this booking", booking_path(@booking), method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+  <h2><%= @booking.last_name %> <%= @booking.first_name %></h2>
+  <p><%= @booking.date %> <%= @booking.starts_at %></p>
+  <p><%= @booking.phone  %> <%= @booking.email %></p>
+  <p><%= @booking.comment %></p>
+  <%= link_to "edit this booking", edit_booking_path(@booking) %>
+  <%= link_to "Back to list", bookings_path %>
+  <br>
+  <%= link_to "Delete this booking", booking_path(@booking), method: :delete, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>

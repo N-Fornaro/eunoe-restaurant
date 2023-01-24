@@ -24,7 +24,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_01_24_152522) do
     t.string "phone"
     t.string "email"
     t.string "comment"
-    t.string "status"
+    t.string "status", default: "pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

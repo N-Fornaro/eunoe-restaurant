@@ -1,0 +1,18 @@
+<div class="container">
+  <p>Bonjour Admin,</p>
+
+  Une nouvelle demande de réservation pour le <%= @booking.date %> a été enregistrée. Détail de la réservation :
+  <ul>
+    <li>Nom : <%= @booking.first_name %> <%= @booking.last_name.upcase %></li>
+    <li>Places : <%= @booking.people %></li>
+    <li>Date : <%= @booking.date %></li>
+    <li>Heure : <%= @booking.starts_at %></li>
+    <li>Remarques : <%= @booking.comment %></li>
+    <li>Contact : <%= @booking.phone %> / <%= @booking.email %></li>
+  </ul>
+
+  Pour la confirmer ou l'annuler :
+  <%# LINK BELOW TO EDIT & FIX WHEN DOMAIN IS SET. STILL BUGGY IF LINK_TO IS USED. %>
+  <p><%= link_to "Valider la réservation", "http://localhost:3000/bookings" %></p>
+
+</div>

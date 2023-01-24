@@ -1,8 +1,10 @@
-<h1>Booking index - for admin only</h1>
-<p> To implement here : bookings list with admin interface & commands</p>
-<ul>
-  <% @booking.each do |booking| %>
-    <li><%= link_to booking.last_name, booking_path(booking) %> - (<%=booking.people %>)</li>
-  <% end %>
-</ul>
-<%= link_to "Add a  booking", new_booking_path %>
+<div class="container">
+  <h1>Booking index - for admin only</h1>
+  <p> To implement here : bookings list with admin interface & commands</p>
+  <ul>
+    <% @booking.each do |booking| %>
+      <li><%= link_to booking.last_name, booking_path(booking) %> - (<%= booking.people %>)</li>
+    <% end %>
+  </ul>
+  <%= link_to "Add a  booking", new_booking_path %>
+</div>

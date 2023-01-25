@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MenusController < ApplicationController
   before_action :set_menu, only: %i[show]
 

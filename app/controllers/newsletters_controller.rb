@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class NewslettersController < ApplicationController
   before_action :set_newsletter, only: %i[show update destroy]
 
@@ -15,9 +17,9 @@ class NewslettersController < ApplicationController
     @newsletter = Newsletter.new(newsletter_params)
     if @newsletter.save!
       redirect_to newsletter_path(@newsletter)
-      flash[:notice] = "Your newsletter has been saved !"
+      flash[:notice] = 'Your newsletter has been saved !'
     else
-      flash[:alert] = "We encountered an error while saving your newsletter. Please try agian in a few seconds."
+      flash[:alert] = 'We encountered an error while saving your newsletter. Please try agian in a few seconds.'
     end
   end
 

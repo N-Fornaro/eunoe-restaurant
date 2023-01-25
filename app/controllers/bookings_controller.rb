@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[confirmation show edit update destroy]
 

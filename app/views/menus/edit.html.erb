@@ -1,0 +1,10 @@
+<h1>Edit a Meal</h1>
+<div class="container">
+  <%= simple_form_for [@menu] do |f| %>
+    <%= f.input :title %>
+    <%= f.input :content %>
+    <%= f.input :price %>
+    <%= f.input :meal %>
+    <%= f.submit %>
+  <% end %>
+</div>

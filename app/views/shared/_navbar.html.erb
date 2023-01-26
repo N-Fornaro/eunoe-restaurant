@@ -1,4 +1,4 @@
-<header aria-label="Site Header" class="sticky top-0 bg-white/75">
+<header aria-label="Site Header" class="absolute top-0 left-0 right-0 z-20 bg-transparent">
   <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="md:flex md:items-center md:gap-12">
@@ -15,20 +15,20 @@
               fill="currentColor"
             />
           </svg> %>
-          <%= image_tag "logo-png.png", height: "48px", width: "48px" %>
+          <%= image_tag "logo-white.png", height: "48px", width: "48px" %>
         </a>
       </div>
 
       <div class="hidden md:block">
         <nav aria-label="Site Nav" role="menu">
-          <ul class="flex items-center gap-6 text-md">
-            <li><%= link_to "Accueil", root_path, class: "text-gray-500 transition hover:text-gray-500/75" %></li>
+          <ul class="flex items-center gap-6 text-sm">
+            <li><%= link_to "Accueil", root_path, class: "text-white transition hover:text-white/75" %></li>
 
-            <li><%= link_to "Restaurant", restaurant_path, class: "text-gray-500 transition hover:text-gray-500/75" %></li>
+            <li><%= link_to "Restaurant", restaurant_path, class: "text-white transition hover:text-white/75" %></li>
 
-            <li><%= link_to "Cuisine", cuisine_path, class: "text-gray-500 transition hover:text-gray-500/75" %></li>
+            <li><%= link_to "Cuisine", cuisine_path, class: "text-white transition hover:text-white/75" %></li>
 
-            <li><%= link_to "Réservation", new_booking_path, class: "text-gray-500 transition hover:text-gray-500/75" %></li>
+            <li><%= link_to "Réservation", new_booking_path, class: "text-white transition hover:text-white/75" %></li>
 
           </ul>
         </nav>

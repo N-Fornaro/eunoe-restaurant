@@ -17,7 +17,7 @@ starter1 = Menu.create(
   content: 'A description of the starter 1 with some details.',
   title: 'Name of the starter 1',
   price: 8,
-  meal: 'starter'
+  meal: 'Starter'
 )
 starter1.save!
 
@@ -25,7 +25,7 @@ starter2 = Menu.create(
   content: 'A description of the starter 2 with some details.',
   title: 'Name of the starter 2',
   price: 9,
-  meal: 'starter'
+  meal: 'Starter'
 )
 starter2.save!
 

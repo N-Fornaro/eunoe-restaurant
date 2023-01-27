@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home cuisine]
+  skip_before_action :authenticate_user!, only: %i[home restaurant cuisine]
 
   def home; end
 

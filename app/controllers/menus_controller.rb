@@ -2,6 +2,7 @@
 
 class MenusController < ApplicationController
   before_action :set_menu, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!, only: %i[index]
 
   def index
     @menus = Menu.all

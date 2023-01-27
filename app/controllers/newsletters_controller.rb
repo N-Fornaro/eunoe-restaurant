@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class NewslettersController < ApplicationController
+  skip_before_action :authenticate_user!, only: %i[show]
   before_action :set_newsletter, only: %i[show update destroy]
 
   def index

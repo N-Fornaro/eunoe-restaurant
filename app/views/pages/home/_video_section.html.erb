@@ -1,0 +1,13 @@
+<% @lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur suscipit nemo eveniet doloribus temporibus autem ut consectetur fuga ullam. Maiores, nisi! Suscipit eveniet quidem quia quis quos dolor hic laborum?" %>
+
+<div class="container">
+  <div class="grid gap-24 py-14 md:grid-cols-2 sm:grid-cols-1">
+    <%= video_tag "restaurant-video-placeholder.mp4", height: "960px", controls: true, autoplay: true, muted: true %>
+    <div class="flex flex-col items-start justify-center gap-8">
+      <h3 class="text-xl font-semibold text-teal-600">Découvrez notre restaurant</h3>
+      <p>
+        <%= @lorem %>
+      </p>
+    </div>
+  </div>
+</div>

@@ -1,10 +1,10 @@
 <div class="container">
-  <h1>Modification : <strong><%= @menu.title %></strong></h1>
-  <%= simple_form_for [@menu] do |f| %>
+  <h1>Modification : <strong><%= @meal.title %></strong></h1>
+  <%= simple_form_for [@meal] do |f| %>
     <%= f.input :title %>
-    <%= f.input :content %>
+    <%= f.input :description %>
     <%= f.input :price %>
-    <%= f.input :meal %>
+    <%= f.input :dish %>
     <%= f.submit %>
   <% end %>
 </div>

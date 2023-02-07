@@ -1,44 +1,44 @@
 # frozen_string_literal: true
 
-class MenusController < ApplicationController
-  before_action :set_menu, only: %i[show edit update destroy]
+class MealsController < ApplicationController
+  before_action :set_meal, only: %i[show edit update destroy]
   skip_before_action :authenticate_user!, only: %i[index]
 
   def index
-    @menus = Menu.all
+    @meals = Meal.all
   end
 
   def show; end
 
   def new
-    @menu = Menu.new
+    @meal = Meal.new
   end
 
   def create
-    @menu = Menu.new(menu_params)
-    @menu.save!
-    redirect_to menu_path(@menu)
+    @meal = Meal.new(meal_params)
+    @meal.save!
+    redirect_to meal_path(@meal)
   end
 
   def edit; end
 
   def update
-    @menu.update!(menu_params)
-    redirect_to menu_path(@menu)
+    @meal.update!(meal_params)
+    redirect_to meal_path(@meal)
   end
 
   def destroy
-    @menu.destroy!
-    redirect_to menus_path, status: :see_other
+    @meal.destroy!
+    redirect_to meals_path, status: :see_other
   end
 
   private
 
-  def set_menu
-    @menu = Menu.find(params[:id])
+  def set_meal
+    @meal = Meal.find(params[:id])
   end
 
-  def menu_params
-    params.require(:menu).permit(:content, :title, :price, :meal)
+  def meal_params
+    params.require(:meal).permit(:title, :description, :price, :dish)
   end
 end

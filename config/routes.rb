@@ -23,6 +23,6 @@ Rails.application.routes.draw do
   # https://api.rubyonrails.org/v7.0.4/classes/ActionDispatch/Routing/Mapper/Scoping.html#method-i-namespace
   # namespace :admin do
   resources :newsletters, only: %i[index new show update create destroy]
-  resources :menus
+  resources :meals
   # end
 end

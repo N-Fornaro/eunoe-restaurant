@@ -1,10 +1,10 @@
 <div class="container">
   <h1>Ajouter un contenu à la carte :</h1>
-  <%= simple_form_for [@menu] do |f| %>
+  <%= simple_form_for [@meal] do |f| %>
     <%= f.input :title, label: 'Name of the meal' %>
-    <%= f.input :content, label: 'Description of the meal' %>
+    <%= f.input :description, label: 'Description of the meal' %>
     <%= f.input :price, label: 'Price of the meal' %>
-    <%= f.input :meal, label: 'The type of meal', collection: ['Starter', 'Main meal', 'Dessert'] %>
+    <%= f.input :dish, label: 'The type of meal', collection: ['Starter', 'Main meal', 'Dessert'] %>
     <%= f.submit %>
   <% end %>
 </div>

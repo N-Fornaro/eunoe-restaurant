@@ -6,20 +6,20 @@
 
 <div class="container">
   <div class="menu">
-    <%= link_to 'Add a meal', new_menu_path %> # Wait admin part : if current_user.admin
+    <%= link_to 'Add a meal', new_meal_path %> # Wait admin part : if current_user.admin
 
     <div class="starter">
       # maybe an img in futur
       <div class="meal-infos">
-        <% @menus.each do |menu| %>
-          <% if menu.meal == 'Starter' %>
-            <h3><%= menu.title %></h3>
+        <% @meals.each do |meal| %>
+          <% if meal.dish == 'Starter' %>
+            <h3><%= meal.title %></h3>
             <ul>
-              <li><%= menu.content %></li>
-              <li><%= menu.price %></li>
+              <li><%= meal.description %></li>
+              <li><%= meal.price %></li>
             </ul>
-            <%= link_to 'Edit', edit_menu_path(menu) %> # Wait admin part : if current_user.admin
-            <%= link_to 'Delete', menu_path(menu), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
+            <%= link_to 'Edit', edit_meal_path(meal) %> # Wait admin part : if current_user.admin
+            <%= link_to 'Delete', meal_path(meal), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
           <% end %>
         <% end %>
       </div>
@@ -28,15 +28,15 @@
     <div class="main-meal">
       # maybe an img in futur
       <div class="meal-infos">
-        <% @menus.each do |menu| %>
-          <% if menu.meal == 'Main meal' %>
-            <h3><%= menu.title %></h3>
+        <% @meals.each do |meal| %>
+          <% if meal.dish == 'Main meal' %>
+            <h3><%= meal.title %></h3>
             <ul>
-              <li><%= menu.content %></li>
-              <li><%= menu.price %></li>
+              <li><%= meal.description %></li>
+              <li><%= meal.price %></li>
             </ul>
-            <%= link_to 'Edit', edit_menu_path(menu) %> # Wait admin part : if current_user.admin
-            <%= link_to 'Delete', menu_path(menu), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
+            <%= link_to 'Edit', edit_meal_path(meal) %> # Wait admin part : if current_user.admin
+            <%= link_to 'Delete', meal_path(meal), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
           <% end %>
         <% end %>
       </div>
@@ -45,15 +45,15 @@
     <div class="dessert">
       # maybe an img in futur
       <div class="meal-infos">
-        <% @menus.each do |menu| %>
-          <% if menu.meal == 'Dessert' %>
-            <h3><%= menu.title %></h3>
+        <% @meals.each do |meal| %>
+          <% if meal.dish == 'Dessert' %>
+            <h3><%= meal.title %></h3>
             <ul>
-              <li><%= menu.content %></li>
-              <li><%= menu.price %></li>
+              <li><%= meal.description %></li>
+              <li><%= meal.price %></li>
             </ul>
-            <%= link_to 'Edit', edit_menu_path(menu) %> # Wait admin part : if current_user.admin
-            <%= link_to 'Delete', menu_path(menu), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
+            <%= link_to 'Edit', edit_meal_path(meal) %> # Wait admin part : if current_user.admin
+            <%= link_to 'Delete', meal_path(meal), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
           <% end %>
         <% end %>
       </div>

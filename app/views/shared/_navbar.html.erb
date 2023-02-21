@@ -1,4 +1,5 @@
-<header aria-label="Site Header" class="<%= current_page?(root_path) ? 'fixed bg-transparent' : 'sticky bg-black' %> top-0 left-0 right-0 z-20 mb-24">
+<header aria-label="Site Header" class="sticky top-0 left-0 right-0 z-20" style="background-color: rgba(0,0,0,0.6); margin-top: -64px;">
+  <%# Prob current_page?(root_path) ? 'fixed bg-transparent' : 'sticky bg-black' -> no nav bar after the banner and no possibility with the opacity. AND, height with "mb-24" at the end of the tag header -> add an space btw Nav & banner to others pages(restaurant, cuisine) %>
   <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="md:flex md:items-center md:gap-12">

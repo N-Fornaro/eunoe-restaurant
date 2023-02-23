@@ -11,12 +11,12 @@
 
       <div class="hidden md:block">
         <nav aria-label="Site Nav" role="menu">
-          <ul class="flex items-center gap-6 text-sm">
+          <ul class="flex items-center gap-10 text-base">
             <li><%= link_to "Accueil", root_path, class: "text-white transition hover:text-white/75" %></li>
 
             <li><%= link_to "Restaurant", restaurant_path, class: "text-white transition hover:text-white/75" %></li>
 
-            <li><%= link_to "Cuisine", cuisine_path, class: "text-white transition hover:text-white/75" %></li>
+            <li><%= link_to "Menu", meals_path, class: "text-white transition hover:text-white/75" %></li>
 
             <li><%= link_to "Réservation", new_booking_path, class: "text-white transition hover:text-white/75" %></li>
 
@@ -26,7 +26,7 @@
 
       <div class="flex items-center gap-4">
         <div class="sm:flex sm:gap-4">
-          <%= link_to "Réserver", new_booking_path, class: "rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white shadow" %>
+          <%= link_to "Réserver", new_booking_path, class: "rounded-md bg-teal-600 px-8 py-2.5 uppercase text-base font-medium text-white shadow" %>
         </div>
 
         <div class="block md:hidden">

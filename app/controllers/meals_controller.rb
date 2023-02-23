@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
 class MealsController < ApplicationController
+  skip_before_action :authenticate_user!
   before_action :set_meal, only: %i[show edit update destroy]
-  skip_before_action :authenticate_user!, only: %i[index]
 
   def index
     @meals = Meal.all

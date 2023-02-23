@@ -1,62 +1,144 @@
-<div class="banner">
-    <img src="" alt="">
-    <h1>La Carte</h1>
-    <button>Réserver</button>
-</div>
+<section class="h-screen relative bg-[url(https://images.unsplash.com/photo-1564759298141-cef86f51d4d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80)] bg-cover bg-center bg-no-repeat">
+
+  <div class="absolute inset-0 sm:z-0 bg-black/60 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/60 sm:to-black/60">
+  </div>
+
+  <div class="relative max-w-screen-xl px-4 py-32 mx-auto sm:z-10 lg:flex lg:h-screen lg:items-center">
+    <div class="max-w-xl mx-auto text-center">
+      <h1 class="text-3xl font-extrabold text-white sm:text-5xl">
+        La Carte
+        <strong class="font-extrabold text-teal-600 sm:block">
+          Eunoé
+        </strong>
+      </h1>
+    </div>
+  </div>
+</section>
 
 <div class="container">
-  <div class="menu">
-    <%= link_to 'Add a meal', new_meal_path %> # Wait admin part : if current_user.admin
 
-    <div class="starter">
-      # maybe an img in futur
-      <div class="meal-infos">
+  <div class="flex flex-col m-4">
+    <div class="flex flex-row justify-center">
+      <button class="block w-full px-12 py-3 text-md font-medium text-white bg-teal-600 border-black rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto">Déjeuner</button>
+      <button class="block w-full px-16 py-3 text-md font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto ml-1">Diner</button>
+    </div>
+    <h2 class="flex justify-center text-center text-md font-light italic">Notre carte Eunoé change en fonction de la restauration <br>du midi et du soir. </h2>
+  </div>
+
+  <div class="menu-lunch flex flex-col">
+    <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin%>
+
+    <div class="starter-meal flex flex-row justify-between my-8">
+      <%# # maybe an img in futur %>
+      <div class="meal-infos mb-4" style="width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;">
+        <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Entrées</h2>
+        <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
+        <br>
+        <p class="text-base font-normal	">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+        <br>
         <% @meals.each do |meal| %>
           <% if meal.dish == 'Starter' %>
-            <h3><%= meal.title %></h3>
-            <ul>
-              <li><%= meal.description %></li>
-              <li><%= meal.price %></li>
-            </ul>
-            <%= link_to 'Edit', edit_meal_path(meal) %> # Wait admin part : if current_user.admin
-            <%= link_to 'Delete', meal_path(meal), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
+            <div class="mb-6">
+              <div class="flex flex-row mb-3">
+                <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
+                <span class="grow border-black border-b-2 border-dotted mb-3 mr-2 ml-2"></span>
+                <p class="text-xl font-bold ml-1"><%= meal.price %></p>
+              </div>
+              <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+              <div class="flex flex-row">
+                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
+              </div>
+            </div>
           <% end %>
         <% end %>
       </div>
+
+      <img style="width: 36vw; height: 78vh; object-fit: cover;" src="https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
+
     </div>
 
-    <div class="main-meal">
-      # maybe an img in futur
-      <div class="meal-infos">
+
+    <br>
+    <br>
+
+
+    <div class="main-meal flex flex-row justify-between my-8">
+      <%# # maybe an img in futur %>
+      <img style="width: 36vw; height: 90vh; object-fit: cover;" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+
+      <div class="meal-infos mb-4" style="width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;">
+        <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Plat principal</h2>
+        <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
+        <br>
+        <p class="text-base font-normal	">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+        <br>
         <% @meals.each do |meal| %>
           <% if meal.dish == 'Main meal' %>
-            <h3><%= meal.title %></h3>
-            <ul>
-              <li><%= meal.description %></li>
-              <li><%= meal.price %></li>
-            </ul>
-            <%= link_to 'Edit', edit_meal_path(meal) %> # Wait admin part : if current_user.admin
-            <%= link_to 'Delete', meal_path(meal), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
+            <div class="mb-6">
+              <div class="flex flex-row mb-3">
+                <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
+                <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
+                <p class="text-xl font-bold ml-1"><%= meal.price %></p>
+              </div>
+              <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+              <div class="flex flex-row">
+                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
+              </div>
+            </div>
           <% end %>
         <% end %>
       </div>
+
+
     </div>
 
-    <div class="dessert">
-      # maybe an img in futur
-      <div class="meal-infos">
+
+    <br>
+    <br>
+
+
+    <div class="dessert-meal flex flex-row justify-between my-8">
+      <%# # maybe an img in futur %>
+      <div class="meal-infos mb-4" style="width: 55%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;">
+        <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Dessert</h2>
+        <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
+        <br>
+        <p class="text-base font-normal	">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+        <br>
         <% @meals.each do |meal| %>
           <% if meal.dish == 'Dessert' %>
-            <h3><%= meal.title %></h3>
-            <ul>
-              <li><%= meal.description %></li>
-              <li><%= meal.price %></li>
-            </ul>
-            <%= link_to 'Edit', edit_meal_path(meal) %> # Wait admin part : if current_user.admin
-            <%= link_to 'Delete', meal_path(meal), data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> # Wait admin part : if current_user.admin
+            <div class="mb-6">
+              <div class="flex flex-row mb-3">
+                <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
+                <span class="grow border-b-2 border-dotted mb-3 mr-2 ml-2"></span>
+                <p class="text-xl font-bold ml-1"><%= meal.price %></p>
+              </div>
+              <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+              <div class="flex flex-row">
+                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
+              </div>
+            </div>
           <% end %>
         <% end %>
       </div>
+
+      <img style="width: 36vw; height: 78vh; object-fit: cover;" class="overflow-hidden" src="https://images.unsplash.com/photo-1593424718424-cf4d83f3def1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+
     </div>
 
   </div>

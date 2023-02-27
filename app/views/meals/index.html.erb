@@ -6,7 +6,7 @@
   <div class="relative max-w-screen-xl px-4 py-32 mx-auto sm:z-10 lg:flex lg:h-screen lg:items-center">
     <div class="max-w-xl mx-auto text-center">
       <h1 class="text-3xl font-extrabold text-white sm:text-5xl">
-        La Carte <strong class="font-extrabold text-teal-600 ">Eunoé</strong>
+        La Carte <strong class="font-extrabold text-pink-pastel ">Eunoé</strong>
       </h1>
     </div>
   </div>
@@ -16,14 +16,14 @@
 
   <div class="flex flex-col m-8">
     <div class="flex flex-row justify-center">
-      <button class="block w-full px-12 py-3 text-md font-medium text-white bg-teal-600 border-black rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto">Déjeuner</button>
-      <button class="block w-full px-16 py-3 text-md font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto ml-1">Diner</button>
+      <button class="block w-full px-12 py-3 text-md font-medium text-white bg-pink-pastel border-black rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto">Déjeuner</button>
+      <button class="block w-full px-16 py-3 text-md font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto ml-1">Diner</button>
     </div>
     <h2 class="flex justify-center text-center text-md font-light italic">Notre carte Eunoé change en fonction de la restauration <br>du midi et du soir. </h2>
   </div>
 
   <div class="menu-lunch flex flex-col my-8">
-    <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin%>
+    <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pinred-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin%>
 
     <div class="starter-meal flex flex-row justify-between my-8">
       <%# # maybe an img in futur %>
@@ -42,13 +42,13 @@
             <div class="mb-6">
               <div class="flex flex-row mb-3">
                 <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
-                <span class="grow border-black border-b-2 border-dotted mb-3 mr-2 ml-2"></span>
+                <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
                 <p class="text-xl font-bold ml-1"><%= meal.price %></p>
               </div>
               <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
               <div class="flex flex-row">
-                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
-                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-10 pink-pastel py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
               </div>
             </div>
           <% end %>
@@ -88,8 +88,8 @@
               </div>
               <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
               <div class="flex flex-row">
-                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
-                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-10 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
               </div>
             </div>
           <% end %>
@@ -121,13 +121,13 @@
             <div class="mb-6">
               <div class="flex flex-row mb-3">
                 <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
-                <span class="grow border-b-2 border-dotted mb-3 mr-2 ml-2"></span>
+                <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
                 <p class="text-xl font-bold ml-1"><%= meal.price %></p>
               </div>
               <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
               <div class="flex flex-row">
-                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
-                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-teal-600 rounded shadow hover:bg-teal-700 focus:outline-none focus:ring active:bg-teal-500 sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
+                <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
               </div>
             </div>
           <% end %>

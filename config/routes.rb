@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # Pages routes
   get '/home', to: 'pages#home', as: 'home'
   get '/restaurant', to: 'pages#restaurant', as: 'restaurant'
-  get '/cuisine', to: 'pages#cuisine', as: 'cuisine'
+  get '/privatisation', to: 'pages#privatisation', as: 'privatisation'
 
   # Bookings routes [TO PASS TO ADMIN MODULE WHEN READY FOR PRODUCTION]
   # https://api.rubyonrails.org/v7.0.4/classes/ActionDispatch/Routing/Mapper/Scoping.html#method-i-namespace

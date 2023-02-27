@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home restaurant cuisine]
+  skip_before_action :authenticate_user!, only: %i[home restaurant privatisation]
 
   def home; end
 
   def restaurant; end
 
-  def cuisine; end
+  def privatisation; end
 end

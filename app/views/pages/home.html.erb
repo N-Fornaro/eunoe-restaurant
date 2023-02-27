@@ -7,7 +7,7 @@
     <div class="p-3 border rounded-xl">
       <p class="text-lg">Pages controller <br>
         <%= link_to "pages#home", root_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%= link_to "pages#cuisine", cuisine_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
+        <%= link_to "pages#privatisation", privatisation_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
         <%= link_to "pages#restaurant", restaurant_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
       </p>
     </div>
@@ -45,3 +45,111 @@
 
 <%= render "pages/home/banner" %>
 <%= render "pages/home/video_section" %>
+
+<div class="container bg-white">
+  <div style="display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center; margin: 0vh 0 8vh 0">
+    <h2 class="text-2xl font-semibold text-center m-4">On parle de nous...</h2>
+    <img class="m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
+    <p class="text-md font-normal text-center m-2"><strong>Assiettes inspirées aux dressages soignés.</strong><br>À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
+    <button class="bg-black text-white text-sm text-base px-10 py-4 rounded">Lire l'Article</button>
+  </div>
+</div>
+
+<div class="container bg-white">
+  <div style="display: flex;
+    height: 36vh;
+    overflow: hidden;
+    justify-content: space-between;
+    flex-direction: row; margin: 0 0 12vh 0;">
+    <img src="https://images.unsplash.com/photo-1559054663-e8d23213f55c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Ambiance of the restaurant" style="width: 16%; object-fit: cover;">
+
+    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Ambiance of the restaurant" style="width: 16%; object-fit: cover;">
+
+    <img src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Ambiance of the restaurant" style="width: 16%; object-fit: cover;">
+
+    <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Ambiance of the restaurant" style="width: 16%; object-fit: cover;">
+
+    <img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=710&q=80" alt="Ambiance of the restaurant" style="width: 16%; object-fit: cover;">
+
+    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80" alt="Ambiance of the restaurant" style="width: 16%; object-fit: cover;">
+  </div>
+</div>
+
+<div class="container bg-white my-16">
+  <div class="flex flex-col text-center">
+    <h2 class="text-3xl font-extrabold text-pink-pastel sm:text-3xl">Menu Eunoé</h2>
+    <p class="text-base italic">(Différent le soir, samedi et dimanche midi)</p>
+    <br>
+    <p class="text-base font-normal	">Les gourmands apprécieront <strong>le mélange subtil des saveurs et des épices dans nos plats</strong>. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+    <br>
+  </div>
+  <div class="main-meal flex flex-row justify-between my-6">
+    <%# # maybe an img in futur %>
+    <img style="width: 36vw; height: 60vh; object-fit: cover;" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+
+    <div class="meal-infos mb-4" style="width: 55%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;">
+      <div class="mb-6">
+        <div class="flex flex-row mb-3">
+          <h3 class="text-xl font-bold mr-1">Pour le Déjeuner</h3>
+          <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
+          <p class="text-xl font-bold ml-1">30/40</p>
+        </div>
+        <p class="text-base font-light mb-3">Il est composé de 2 choix d'entrées, 3 choix de plats et 2 desserts. Nos produits sont frais et trier sur le volet pour le bonheur de vos papilles. Nous vous invitons à les découvrir.</p>
+      </div>
+      <div class="mb-6">
+        <div class="flex flex-row mb-3">
+          <h3 class="text-xl font-bold mr-1">Pour le Diner</h3>
+          <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
+          <p class="text-xl font-bold ml-1">38/50</p>
+        </div>
+        <p class="text-base font-light mb-3">Il est composé de 2 choix d'entrées, 3 choix de plats et 2 desserts. Nos produits sont frais et trier sur le volet pour le bonheur de vos papilles. Nous vous invitons à les découvrir.</p>
+      </div>
+      <div class="flex justify-center gap-4 mt-4">
+        <%= link_to "Découvez notre carte", meals_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow bg-red-pastel:hover focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container bg-white my-16">
+  <div class="grid gap-16 md:grid-cols-2 sm:grid-cols-1 my-16" style="height:110vh">
+    <div class="flex flex-col items-start justify-center gap-8">
+      <h3 class="text-3xl font-semibold text-pink-pastel">Titre 2 Description</h3>
+      <p class="text-base">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil ab impedit fuga molestias nostrum cum, aspernatur minus culpa esse rerum modi minima obcaecati nulla ea officiis nisi, id recusandae. Quidem, est hic ab <strong>voluptates quisquam minus!</strong> <br>
+        <br> Commodi praesentium ea officiis odit odio neque quaerat enim officia tempore tenetur. Soluta repellat sint, repellendus nulla harum odit dolorem itaque eum, corrupti quos eaque praesentium dolore eveniet doloribus ullam asperiores cum illo vel provident labore!
+      </p>
+      <div class="flex justify-center gap-4 mt-4">
+        <%= link_to "Découvez notre restaurant", restaurant_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow bg-red-pastel:hover focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %>
+      </div>
+    </div>
+    <div class="grid content-center justify-items-center">
+      <img style="width: 45vw; height: 110vh; object-fit: cover;" src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y2hlZiUyMGNvb2tpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60">
+    </div>
+  </div>
+</div>
+
+
+<div class="container bg-white">
+  <div class="grid gap-16 md:grid-cols-2 sm:grid-cols-1" style="height:80vh">
+    <div class="grid content-center justify-items-center">
+      <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Exterior of the restaurant">
+    </div>
+    <div class="flex flex-col items-start justify-center gap-6">
+      <h3 class="text-3xl font-semibold text-pink-pastel">Titre 3 restaurant</h3>
+      <p class="text-base">
+        Lorem <strong>ipsum dolor</strong> sit amet, consectetur adipisicing elit. Nihil ab impedit fuga molestias nostrum cum, aspernatur minus culpa esse rerum modi minima obcaecati nulla ea officiis nisi, id recusandae. Quidem, est hic ab voluptates quisquam minus!
+      </p>
+      <p class="text-base">
+        Commodi praesentium ea officiis odit odio neque quaerat enim officia tempore tenetur. Soluta repellat sint, repellendus nulla harum odit dolorem itaque eum, corrupti quos eaque praesentium dolore eveniet doloribus ullam asperiores cum illo vel provident labore!
+      </p>
+    </div>
+  </div>
+</div>

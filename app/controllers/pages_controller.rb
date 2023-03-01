@@ -7,5 +7,9 @@ class PagesController < ApplicationController
 
   def restaurant; end
 
+  def admin
+    @bookings = Booking.all
+  end
+
   def privatisation; end
 end

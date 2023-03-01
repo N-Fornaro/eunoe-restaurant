@@ -4,7 +4,7 @@
   >
     <div class="absolute top-4 right-4 sm:top-6 sm:right-6 lg:top-8 lg:right-8">
       <a
-        class="inline-block p-2 text-white transition bg-pink-pastel rounded-full shadow hover:bg-pink-pastel sm:p-3 lg:p-4"
+        class="inline-block p-2 text-white transition rounded-full shadow bg-pink-pastel hover:bg-pink-pastel sm:p-3 lg:p-4"
         href="#MainContent"
       >
         <span class="sr-only">Back to top</span>
@@ -59,6 +59,10 @@
 
           <li>
             <%= link_to "Réservation", new_booking_path, class: "text-gray-700 transition hover:text-gray-700/75" %>
+          </li>
+
+          <li>
+            <%= link_to "Admin", admin_path, class: "text-gray-700 transition hover:text-gray-700/75" %>
           </li>
 
         </ul>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   # Pages routes
   get '/home', to: 'pages#home', as: 'home'
+  get '/admin', to: 'pages#admin', as: 'admin'
   get '/restaurant', to: 'pages#restaurant', as: 'restaurant'
   get '/privatisation', to: 'pages#privatisation', as: 'privatisation'
 
@@ -23,6 +24,7 @@ Rails.application.routes.draw do
   # https://api.rubyonrails.org/v7.0.4/classes/ActionDispatch/Routing/Mapper/Scoping.html#method-i-namespace
   # namespace :admin do
   resources :newsletters, only: %i[index new show update create destroy]
-  resources :meals
-  # end
+  devise_scope :user do
+    resources :meals
+  end
 end

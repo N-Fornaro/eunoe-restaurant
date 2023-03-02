@@ -23,7 +23,10 @@
   </div>
 
   <div class="menu-lunch flex flex-col my-8">
-    <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pinred-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin%>
+    <% if current_user.nil? %>
+    <% else %>
+      <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pinred-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
+    <% end %>
 
     <div class="starter-meal flex flex-row justify-between my-8">
       <%# # maybe an img in futur %>
@@ -46,10 +49,13 @@
                 <p class="text-xl font-bold ml-1"><%= meal.price %></p>
               </div>
               <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+              <% if current_user.nil? %>
+              <% else %>
               <div class="flex flex-row">
                 <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
                 <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-10 pink-pastel py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
               </div>
+              <% end %>
             </div>
           <% end %>
         <% end %>
@@ -87,10 +93,13 @@
                 <p class="text-xl font-bold ml-1"><%= meal.price %></p>
               </div>
               <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+              <% if current_user.nil? %>
+              <% else %>
               <div class="flex flex-row">
                 <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
                 <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-10 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
               </div>
+              <% end %>
             </div>
           <% end %>
         <% end %>
@@ -125,10 +134,13 @@
                 <p class="text-xl font-bold ml-1"><%= meal.price %></p>
               </div>
               <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+              <% if current_user.nil? %>
+              <% else %>
               <div class="flex flex-row">
                 <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
                 <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
               </div>
+              <% end %>
             </div>
           <% end %>
         <% end %>

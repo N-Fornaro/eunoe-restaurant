@@ -1,0 +1,37 @@
+<table class="text-sm table-auto">
+    <thead>
+      <tr>
+        <% ['', 'Nom', 'Prénom', 'Email', 'Téléphone', 'Date', 'Heure', 'Couverts', 'Message', 'Statut', 'Actions'].each do |head| %>
+          <th class="px-4 py-2 text-white border bg-slate-600"><%= head %></th>
+        <% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.sort_by{|b| b.created_at}.each do |booking| %>
+        <tr>
+          <td class="px-4 py-2 border"><%= booking.gender %></td>
+          <td class="px-4 py-2 border"><%= booking.last_name %></td>
+          <td class="px-4 py-2 border"><%= booking.first_name %></td>
+          <td class="px-4 py-2 border"><%= booking.email %></td>
+          <td class="px-4 py-2 border"><%= booking.phone %></td>
+          <td class="px-4 py-2 border"><%= booking.date %></td>
+          <td class="px-4 py-2 border"><%= booking.starts_at.hour %>:<%= booking.starts_at.min == 0 ? "00" : booking.starts_at.min %></td>
+          <td class="px-4 py-2 border"><%= booking.people %></td>
+          <td class="px-4 py-2 border"><%= booking.comment %></td>
+          <td class="px-4 py-2 border"><%= booking.status %></td>
+          <td class="px-4 py-2 border">
+            <div class="flex flex-row justify-center gap-4">
+              <%= simple_form_for booking, method: 'patch' do |f| %>
+                <%= f.hidden_field :status, value: 'confirmed' %>
+                <%= f.button :submit, "Accepter", class: "px-4 py-1 text-sm font-medium text-white bg-gray-800 rounded-md shadow cursor-pointer" %>
+              <% end %>
+              <%= simple_form_for booking, method: 'patch' do |f| %>
+                <%= f.hidden_field :status, value: 'declined' %>
+                <%= f.button :submit, "Décliner", class: "px-4 py-1 text-sm font-medium text-white bg-gray-400 rounded-md shadow cursor-pointer" %>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>

@@ -22,12 +22,14 @@
     />
   </svg>
 </a>
+
   <div class="overflow-hidden bg-white shadow sm:rounded-lg">
-  <div class="px-4 py-5 sm:px-6">
-    <h3 class="text-lg font-medium leading-6 text-gray-900">Informations générales</h3>
-    <p class="max-w-2xl mt-1 text-sm text-gray-500">Vos informations utiles de cette réservation.</p>
-  </div>
+    <div class="px-4 py-5 sm:px-6">
+      <h3 class="text-lg font-medium leading-6 text-gray-900">Informations générales</h3>
+      <p class="max-w-2xl mt-1 text-sm text-gray-500">Vos informations utiles de cette réservation.</p>
+    </div>
   <div class="border-t border-gray-200">
+
     <dl>
       <div class="px-4 py-5 bg-white-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Nom</dt>
@@ -79,7 +81,9 @@
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
           <ul role="list">
             <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
+
               <div class="flex items-center flex-1 w-0 space-x-10">
+
                 <!-- Heroicon name: mini/paper-clip -->
                 <% unless @booking.status == ('confirmed') %>
                   <%= simple_form_for @booking do |f| %>

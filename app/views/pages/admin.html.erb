@@ -1,0 +1,46 @@
+<div class="px-32 py-64"> <%# Padding to adjust later %>
+
+  <div class="flex flex-row justify-end"><%= link_to "Déconnexion", destroy_user_session_path, class: "rounded-md bg-pink-pastel px-8 py-2.5 text-base font-medium text-white shadow", data: {turbo_method: :delete} %></div>
+  <h1>Admin page</h1>
+  <table class="text-sm table-auto">
+    <thead>
+      <tr>
+        <th class="px-4 py-2"></th>
+        <th class="px-4 py-2">Nom</th>
+        <th class="px-4 py-2">Prénom</th>
+        <th class="px-4 py-2">Email</th>
+        <th class="px-4 py-2">Téléphone</th>
+        <th class="px-4 py-2">Date</th>
+        <th class="px-4 py-2">Heure</th>
+        <th class="px-4 py-2">Couverts</th>
+        <th class="px-4 py-2">Message</th>
+        <th class="px-4 py-2">Statut</th>
+        <th class="px-4 py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @bookings.each do |booking| %>
+        <tr>
+          <td class="px-4 py-2 border"><%= booking.gender %></td>
+          <td class="px-4 py-2 border"><%= booking.last_name %></td>
+          <td class="px-4 py-2 border"><%= booking.first_name %></td>
+          <td class="px-4 py-2 border"><%= booking.email %></td>
+          <td class="px-4 py-2 border"><%= booking.phone %></td>
+          <td class="px-4 py-2 border"><%= booking.date %></td>
+          <td class="px-4 py-2 border"><%= booking.starts_at.hour %>:<%= booking.starts_at.min == 0 ? "00" : booking.starts_at.min %></td>
+          <td class="px-4 py-2 border"><%= booking.people %></td>
+          <td class="px-4 py-2 border"><%= booking.comment %></td>
+          <td class="px-4 py-2 border"><%= booking.status %></td>
+          <td class="flex flex-row gap-4 px-4 py-2 border">
+            <%= simple_form_for booking, method: 'patch' do |f| %>
+              <%= f.hidden_field :status, value: 'confirmed' %>
+              <button class="px-4 py-1 text-sm font-medium text-white bg-gray-800 rounded-md shadow" value="Accepter"><%= f.submit %></button>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+
+</div>

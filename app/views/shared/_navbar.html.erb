@@ -22,6 +22,10 @@
 
             <li><%= link_to "Réservation", new_booking_path, class: "text-white transition hover:text-white/75" %></li>
 
+            <% if current_user %>
+              <li><%= link_to "Admin", admin_path, class: "text-pink-pastel transition hover:text-white/75" %></li>
+            <% end %>
+
           </ul>
         </nav>
       </div>

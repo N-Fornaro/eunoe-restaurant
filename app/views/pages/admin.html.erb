@@ -1,0 +1,10 @@
+<div class="px-32 py-64"> <%# Padding to adjust later %>
+
+  <div class="flex flex-row items-center justify-between pb-16">
+    <h2 class="text-lg font-medium text-pink-pastel">Liste des réservations en cours</h2>
+    <%= link_to "Déconnexion", destroy_user_session_path, class: "rounded-md bg-pink-pastel px-8 py-2.5 text-base font-medium text-white shadow", data: {turbo_method: :delete} %>
+  </div>
+
+  <%= render "shared/bookings-table", bookings: @bookings %>
+
+</div>

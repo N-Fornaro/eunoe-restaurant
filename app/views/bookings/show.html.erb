@@ -1,6 +1,6 @@
 <div class="container">
 
-  <h1 class="text-3xl font-extrabold sm:text-5xl my-10">A propos de la réservation de <%= @booking.last_name %> <%= @booking.first_name %></h1>
+  <h1 class="my-10 text-3xl font-extrabold sm:text-5xl">A propos de la réservation de <%= @booking.last_name %> <%= @booking.first_name %></h1>
   <a
   class="mb-5 inline-block rounded-full border border-amber-700 p-3 text-amber-700 hover:bg-amber-800 hover:text-white focus:outline-none focus:ring active:bg-pink-pastel"
   href="<%= bookings_path %>"
@@ -8,7 +8,7 @@
   <span class="sr-only"> List </span>
 
   <svg
-    class="h-4 w-4 rotate-180"
+    class="w-4 h-4 rotate-180"
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
@@ -22,30 +22,32 @@
     />
   </svg>
 </a>
-  <div class="overflow-hidden bg-white shadow sm:rounded-lg mb-10">
+
+  <div class="overflow-hidden bg-white shadow sm:rounded-lg">
     <div class="px-4 py-5 sm:px-6">
       <h3 class="text-lg font-medium leading-6 text-gray-900">Informations générales</h3>
-      <p class="mt-1 max-w-2xl text-sm text-gray-500">Vos informations utiles de cette réservation.</p>
+      <p class="max-w-2xl mt-1 text-sm text-gray-500">Vos informations utiles de cette réservation.</p>
     </div>
-    <div class="border-t border-gray-200">
+  <div class="border-t border-gray-200">
+
     <dl>
-      <div class="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+      <div class="px-4 py-5 bg-white-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Nom</dt>
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= @booking.first_name %> <%= @booking.last_name %></dd>
       </div>
-      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+      <div class="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Email</dt>
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= @booking.email %></dd>
       </div>
-      <div class="bg-white-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+      <div class="px-4 py-5 bg-white-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Tel</dt>
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= @booking.phone  %></dd>
       </div>
-      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+      <div class="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Date et heure</dt>
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"> Le <%= @booking.date %> à <%= @booking.starts_at %></dd>
       </div>
-      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+      <div class="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Statut de la réservation</dt>
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
          <%if @booking.status == "pending"%>
@@ -70,16 +72,18 @@
       <% end %>
         </dd>
       </div>
-      <div class="bg-gray-50 px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+      <div class="px-4 py-5 bg-gray-50 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Commentaire</dt>
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0"><%= @booking.comment %></dd>
       </div>
-      <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
+      <div class="px-4 py-5 bg-white sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
         <dt class="text-sm font-medium text-gray-500">Actions</dt>
         <dd class="mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0">
           <ul role="list">
             <li class="flex items-center justify-between py-3 pl-3 pr-4 text-sm">
-              <div class="flex flex-col	 w-0 flex-1 items-start">
+
+              <div class="flex items-center flex-1 w-0 space-x-10">
+
                 <!-- Heroicon name: mini/paper-clip -->
                 <% unless @booking.status == ('confirmed') %>
                   <%= simple_form_for @booking do |f| %>

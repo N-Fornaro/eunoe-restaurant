@@ -8,6 +8,12 @@ ruby '3.1.2'
 # Users
 gem 'devise'
 
+# Faker for seeds
+gem 'faker'
+
+# Icons
+gem "font-awesome-sass", "~> 6.3.0"
+
 # Simple form
 gem 'simple_form', github: 'heartcombo/simple_form'
 

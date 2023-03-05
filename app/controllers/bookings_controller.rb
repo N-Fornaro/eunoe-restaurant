@@ -35,7 +35,8 @@ class BookingsController < ApplicationController
     status_changed = set_status_change
     if @booking.update!(booking_params)
       status_changed ? email_status_change : email_modified
-      redirect_to booking_path(@booking)
+      # redirect_to booking_path(@booking)
+      redirect_back(fallback_location: root_path)
     else
       render :edit
     end

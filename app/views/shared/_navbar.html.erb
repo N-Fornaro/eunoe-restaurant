@@ -3,9 +3,8 @@
   <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
       <div class="md:flex md:items-center md:gap-12">
-        <a class="block text-teal-600" href="/">
-          <span class="sr-only">Home</span>
-          <%= image_tag "logo-white.png", height: "48px", width: "48px" %>
+        <a class="block" href="/">
+          <%= image_tag "Eunoe_LogoB_crop.png", class: "", width: "120px" %>
         </a>
       </div>
 
@@ -21,6 +20,10 @@
             <li><%= link_to "Privatisation", privatisation_path, class: "text-white transition hover:text-white/75" %></li>
 
             <li><%= link_to "Réservation", new_booking_path, class: "text-white transition hover:text-white/75" %></li>
+
+            <% if current_user %>
+              <li><%= link_to "Admin", admin_path, class: "text-pink-pastel transition hover:text-white/75" %></li>
+            <% end %>
 
           </ul>
         </nav>

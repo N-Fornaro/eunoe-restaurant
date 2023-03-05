@@ -14,11 +14,11 @@
  *= require_self
  */
 
- @import "flatpickr/dist/flatpickr.css";
+@import "flatpickr/dist/flatpickr.css";
 
 // Graphical variables
 @import "config/fonts";
-@import "config/colors";
+@import "/config/colors";
 
 // Your CSS partials
 @import "components/index";

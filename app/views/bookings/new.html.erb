@@ -1,4 +1,17 @@
-<div class="container pt-24">
-  <h1 class="pb-8 text-3xl font-extrabold sm:text-5xl">Trouvez le moment idéal</h1>
-  <%= render "shared/form", booking: @booking  %>
-</div>
+<section id="main-banner" class="h-fit relative bg-[url(https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)] bg-cover bg-center bg-no-repeat">
+    <div
+    class="absolute inset-0 sm:z-0 bg-black/60 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/60 sm:to-black/60"
+  ></div>
+  <div class="relative max-w-screen-xl px-4 py-32 mx-auto sm:z-10 lg:h-fit lg:items-center">
+    <div class="max-w-xl mx-auto">
+      <h1 class="mb-10 text-3xl font-extrabold text-white sm:text-5xl">
+        Trouvez le moment
+        <strong class="font-extrabold text-pink-pastel sm:block">
+          idéal.
+        </strong>
+      </h1>
+        <%= render "shared/form", booking: @booking  %>
+      </div>
+    </div>
+  </div>
+</section>

@@ -2,7 +2,7 @@
 
   <h1 class="text-3xl font-extrabold sm:text-5xl my-10">A propos de la réservation de <%= @booking.last_name %> <%= @booking.first_name %></h1>
   <a
-  class="mb-5 inline-block rounded-full border border-teal-600 p-3 text-teal-600 hover:bg-teal-600 hover:text-white focus:outline-none focus:ring active:bg-teal-500"
+  class="mb-5 inline-block rounded-full border border-amber-700 p-3 text-amber-700 hover:bg-amber-800 hover:text-white focus:outline-none focus:ring active:bg-pink-pastel"
   href="<%= bookings_path %>"
 >
   <span class="sr-only"> List </span>
@@ -84,21 +84,21 @@
                 <% unless @booking.status == ('confirmed') %>
                   <%= simple_form_for @booking do |f| %>
                       <%= f.hidden_field :status, value: 'confirmed' %>
-                      <input type="submit" name="commit" value="Valider la réservation" class="inline-block mb-4 rounded border bg-teal-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-teal-600 focus:outline-none focus:ring active:text-teal-500 hover:cursor-pointer">
+                      <input type="submit" name="commit" value="Valider la réservation" class="inline-block mb-4 rounded border bg-green-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-green-600 focus:outline-none focus:ring active:text-green-500 hover:cursor-pointer">
                   <% end %>
                 <% end %>
 
-                <a href="<%= edit_booking_path(@booking) %>" class="inline-block mb-4 rounded border bg-blue-500 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-blue-500 focus:outline-none focus:ring active:text-blue-400 hover:cursor-pointer">Modifier</a>
+                <a href="<%= edit_booking_path(@booking) %>" class="inline-block mb-4 rounded border bg-amber-500 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-amber-500 focus:outline-none focus:ring active:text-amber-400 hover:cursor-pointer">Modifier</a>
                 <%= simple_form_for @booking do |f| %>
                   <%= f.hidden_field :status, value: "cancelled" %>
-                  <input type="submit" name="commit" value="Annuler (client)" class="inline-block mb-4 rounded border bg-rose-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-rose-600 focus:outline-none focus:ring active:text-rose-500 hover:cursor-pointer">
+                  <input type="submit" name="commit" value="Annuler (client)" class="inline-block mb-4 rounded border bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500 hover:cursor-pointer">
                 <% end %>
 
 
                 <% unless @booking.status == ('declined' || 'cancelled') %>
                   <%= simple_form_for @booking do |f| %>
                     <%= f.hidden_field :status, value: 'declined' %>
-                    <input type="submit" name="commit" value="Refuser (admin)" class="inline-block mb-4 rounded border bg-rose-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-rose-600 focus:outline-none focus:ring active:text-rose-500 hover:cursor-pointer">
+                    <input type="submit" name="commit" value="Refuser (admin)" class="inline-block mb-4 rounded border bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500 hover:cursor-pointer">
                   <% end %>
                 <% end %>
           </ul>

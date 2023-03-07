@@ -47,6 +47,11 @@ class BookingsController < ApplicationController
     redirect_to bookings_path, status: :see_other
   end
 
+  def list
+    bookings = Booking.all.order("#{params[:column]} #{params[:direction]}")
+    render(partial: 'bookings-table', locals: { bookings: })
+  end
+
   private
 
   def set_booking

@@ -10,8 +10,8 @@
       <tr>
         <% [{col: 'last_name', label: 'Nom'}, {col: 'phone', label: 'Téléphone'}, {col: 'date', label: 'Date'}, {col: 'starts_at', label: 'Heure'}, {col: 'people', label: 'Couverts'}, {col: 'comment', label: 'Message'}, {col: 'status', label: 'Statut'}].each do |head| %>
           <th class="relative px-6 py-2 text-white border bg-slate-600 hover:cursor-pointer">
-            <%= sort_indicator if params[:column] == head[:col] %>
-            <%= sort_link(column: head[:col], label: head[:label]) %>
+            <%= sort_indicator if session.dig('booking_filters', 'column') == head[:col] %>
+            <%= build_order_link(column: head[:col], label: head[:label]) %>
           </th>
         <% end %>
         <th class="relative px-4 py-2 text-white border bg-slate-600">

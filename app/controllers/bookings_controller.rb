@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 class BookingsController < ApplicationController
+  include Filterable
   before_action :set_booking, only: %i[confirmation show edit update destroy]
   skip_before_action :authenticate_user!, only: %i[new show create edit update destroy]
 
@@ -48,8 +49,7 @@ class BookingsController < ApplicationController
   end
 
   def list
-    bookings = Booking.where('last_name ilike ?', "%#{params[:last_name]}%")
-    bookings = bookings.order("#{params[:column]} #{params[:direction]}")
+    bookings = filter!(Booking)
     render(partial: 'bookings-table', locals: { bookings: })
   end
 

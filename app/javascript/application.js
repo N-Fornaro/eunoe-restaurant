@@ -1,7 +1,7 @@
 // Entry point for the build script in your package.json
-import "@hotwired/turbo-rails"
-import "./controllers"
-import { initFlatpickr } from "./plugins/flatpickr";
-window.addEventListener("turbo:load", function(){
-initFlatpickr();
+import '@hotwired/turbo-rails';
+import './controllers';
+import { initFlatpickr } from './plugins/flatpickr';
+window.addEventListener('turbo:load', function () {
+  initFlatpickr();
 });

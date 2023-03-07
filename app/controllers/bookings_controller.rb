@@ -48,7 +48,8 @@ class BookingsController < ApplicationController
   end
 
   def list
-    bookings = Booking.all.order("#{params[:column]} #{params[:direction]}")
+    bookings = Booking.where('last_name ilike ?', "%#{params[:last_name]}%")
+    bookings = bookings.order("#{params[:column]} #{params[:direction]}")
     render(partial: 'bookings-table', locals: { bookings: })
   end
 

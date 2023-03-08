@@ -3,6 +3,8 @@
     <%= f.text_field :last_name, placeholder: "Nom de réservation", value: params[:last_name], class: "border border-blue-500 rounded p-2", autocomplete: "off", data: {action: "input->bookings-search-form#search"} %>
     <%= f.select :status, options_for_select(Booking.distinct.pluck(:status), session.dig('booking_filters', 'status')), { include_blank: 'État' }, placeholder: "tout statut", value: params[:status], class: "border border-blue-500 rounded py-2 px-auto", autocomplete: "off", data: {action: "change->bookings-search-form#search"} %>
     <%= f.text_field :date, placeholder: "Date", value: params[:date], class: "dateTime border border-blue-500 rounded p-2", autocomplete: "off", data: {action: "input->bookings-search-form#search"} %>
+    <%= f.check_box :archive, checked: false, value: params[:archive], data: {action: "input->bookings-search-form#search"} %>
+    <%= f.label :archive, "Voir les réservations passées" %>
   <% end %>
 </div>
 

@@ -1,4 +1,4 @@
-<div class="flex justify-end mb-1">
+<div class="flex justify-end my-1">
   <%= form_with url: list_bookings_path, method: :get, data: {controller: "bookings-search-form", bookings_search_form_target: "form", turbo_frame: "bookings"} do |f| %>
     <%= f.text_field :last_name, placeholder: "Nom de réservation", value: params[:last_name], class: "border border-blue-500 rounded p-2", autocomplete: "off", data: {action: "input->bookings-search-form#search"} %>
     <%= f.select :status, options_for_select(Booking.distinct.pluck(:status), session.dig('booking_filters', 'status')), { include_blank: 'État' }, placeholder: "tout statut", value: params[:status], class: "border border-blue-500 rounded py-2 px-auto", autocomplete: "off", data: {action: "change->bookings-search-form#search"} %>
@@ -6,8 +6,8 @@
   <% end %>
 </div>
 
-<%= turbo_frame_tag "bookings" do %>
-  <table id="booking-list" class="text-sm table-auto">
+<%= turbo_frame_tag "bookings", class: "min-w-full" do %>
+  <table id="booking-list" class="w-full text-sm table-auto">
     <thead>
       <tr>
         <% [{col: 'last_name', label: 'Nom'}, {col: 'phone', label: 'Téléphone'}, {col: 'date', label: 'Date'}, {col: 'starts_at', label: 'Heure'}, {col: 'people', label: 'Couverts'}, {col: 'comment', label: 'Message'}, {col: 'status', label: 'Statut'}].each do |head| %>
@@ -16,32 +16,37 @@
             <%= build_order_link(column: head[:col], label: head[:label]) %>
           </th>
         <% end %>
-        <th class="relative px-4 py-2 text-white border bg-slate-600">
+        <th class="relative px-4 py-2 text-white border bg-slate-600 w-fit">
           Actions
         </th>
       </tr>
     </thead>
     <tbody>
       <% bookings.each do |booking| %>
-        <tr>
+        <tr class="<%= 'text-gray-300' if booking.date < Date.today %>">
           <td class="px-4 py-2 border"><%= booking.gender %> <%= booking.first_name %> <strong><%= booking.last_name %></strong></td>
           <td class="px-4 py-2 border"><%= booking.phone %></td>
           <td class="px-4 py-2 border"><%= booking.date.strftime('%a %d/%m') %></td>
           <td class="px-4 py-2 border"><%= booking.starts_at.hour %>:<%= booking.starts_at.min == 0 ? "00" : booking.starts_at.min %></td>
           <td class="px-4 py-2 border"><%= booking.people %></td>
           <td class="px-4 py-2 border"><%= booking.comment %></td>
-          <td class="px-4 py-2 border <%= booking.status == 'pending' ? 'text-orange-600' : (booking.status == 'confirmed' ? "text-green-600" : "text-red-600") %>"><%= case booking.status; when 'pending' then 'En attente'; when 'confirmed' then 'Accepté'; when 'declined' then 'Rejeté'; when 'cancelled' then 'Annulé (client)'; end %></td>
+          <td class="px-4 py-2 border <%= booking.date < Date.today ? 'text-gray-300' : (booking.status == 'pending' ? 'text-orange-600' : (booking.status == 'confirmed' ? "text-green-600" : "text-red-600")) %>"><%= case booking.status; when 'pending' then 'En attente'; when 'confirmed' then 'Accepté'; when 'declined' then 'Rejeté'; when 'cancelled' then 'Annulé (client)'; end %></td>
           <td class="px-4 py-2 border">
-            <div class="flex flex-row justify-center gap-4">
-              <%= simple_form_for booking, method: 'patch' do |f| %>
-                <%= f.hidden_field :status, value: 'confirmed' %>
-                <%= f.button :submit, "Accepter", class: "px-4 py-1 text-sm font-medium text-white bg-gray-800 rounded-md shadow cursor-pointer" %>
+            <div class="flex flex-wrap items-center justify-center gap-4">
+              <% unless ((booking.date < Date.today) || (booking.status == "confirmed")) %>
+                <%= simple_form_for booking, method: 'patch' do |f| %>
+                  <%= f.hidden_field :status, value: 'confirmed' %>
+                  <%= f.button :submit, "✅", class: "text-lg font-medium text-white bg-transparent rounded-md cursor-pointer", title: 'Accepter la demande' %>
+                <% end %>
               <% end %>
-              <%= simple_form_for booking, method: 'patch' do |f| %>
-                <%= f.hidden_field :status, value: 'declined' %>
-                <%= f.button :submit, "Décliner", class: "px-4 py-1 text-sm font-medium text-white bg-gray-400 rounded-md shadow cursor-pointer" %>
+              <% unless ((booking.date < Date.today) || (booking.status == "declined")) %>
+                <%= simple_form_for booking, method: 'patch' do |f| %>
+                  <%= f.hidden_field :status, value: 'declined' %>
+                  <%= f.button :submit, "❌", class: "text-lg font-medium text-white bg-transparent rounded-md cursor-pointer", title: 'Décliner la demande' %>
+                <% end %>
               <% end %>
-              <a href="mailto:<%= booking.email%>" class="px-4 py-1 text-sm font-medium text-white rounded-md shadow cursor-pointer bg-pink-pastel">Email</a>
+              <a href="mailto:<%= booking.email%>" class="text-lg font-medium text-white bg-transparent rounded-md cursor-pointer" title='Envoyer un email'>✉️</a>
+              <%= link_to "✏️", edit_booking_path(booking), class: "text-lg font-medium text-white bg-transparent rounded-md cursor-pointer", title: "Modifier la réservation" %>
             </div>
           </td>
         </tr>

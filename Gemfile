@@ -11,6 +11,9 @@ gem 'devise'
 # Faker for seeds
 gem 'faker'
 
+# I18n for locales
+gem 'rails-i18n'
+
 # Icons
 gem "font-awesome-sass", "~> 6.3.0"
 

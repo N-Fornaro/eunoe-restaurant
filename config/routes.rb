@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   # Bookings routes [TO PASS TO ADMIN MODULE WHEN READY FOR PRODUCTION]
   # https://api.rubyonrails.org/v7.0.4/classes/ActionDispatch/Routing/Mapper/Scoping.html#method-i-namespace
   # namespace :admin do
-  resources :bookings
+  resources :bookings do
+    collection do
+      get 'list'
+    end
+  end
   # end
   get '/bookings/:id/confirmation', to: 'bookings#confirmation', as: 'confirmation_booking'
 

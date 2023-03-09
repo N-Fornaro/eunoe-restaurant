@@ -1,27 +1,24 @@
 <div class="container">
 
   <h1 class="my-10 text-3xl font-extrabold sm:text-5xl">A propos de la réservation de <%= @booking.last_name %> <%= @booking.first_name %></h1>
-  <a
-  class="mb-5 inline-block rounded-full border border-amber-700 p-3 text-amber-700 hover:bg-amber-800 hover:text-white focus:outline-none focus:ring active:bg-pink-pastel"
-  href="<%= bookings_path %>"
->
-  <span class="sr-only"> List </span>
+  <%= link_to :back, class: "mb-5 inline-block rounded-full border border-amber-700 p-3 text-amber-700 hover:bg-amber-800 hover:text-white focus:outline-none focus:ring active:bg-pink-pastel" do %>
+    <span class="sr-only"> List </span>
 
-  <svg
-    class="w-4 h-4 rotate-180"
-    xmlns="http://www.w3.org/2000/svg"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-  >
-    <path
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M14 5l7 7m0 0l-7 7m7-7H3"
-    />
-  </svg>
-</a>
+    <svg
+      class="w-4 h-4 rotate-180"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M14 5l7 7m0 0l-7 7m7-7H3"
+      />
+    </svg>
+  <% end %>
 
   <div class="overflow-hidden bg-white shadow sm:rounded-lg">
     <div class="px-4 py-5 sm:px-6">
@@ -88,21 +85,21 @@
                 <% unless @booking.status == ('confirmed') %>
                   <%= simple_form_for @booking do |f| %>
                       <%= f.hidden_field :status, value: 'confirmed' %>
-                      <input type="submit" name="commit" value="Valider la réservation" class="inline-block mb-4 rounded border bg-green-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-green-600 focus:outline-none focus:ring active:text-green-500 hover:cursor-pointer">
+                      <input type="submit" name="commit" value="Valider la réservation" class="inline-block px-12 py-3 mb-4 text-sm font-medium text-white bg-green-600 border rounded hover:bg-transparent hover:text-green-600 focus:outline-none focus:ring active:text-green-500 hover:cursor-pointer">
                   <% end %>
                 <% end %>
 
-                <a href="<%= edit_booking_path(@booking) %>" class="inline-block mb-4 rounded border bg-amber-500 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-amber-500 focus:outline-none focus:ring active:text-amber-400 hover:cursor-pointer">Modifier</a>
+                <a href="<%= edit_booking_path(@booking) %>" class="inline-block px-12 py-3 mb-4 text-sm font-medium text-white border rounded bg-amber-500 hover:bg-transparent hover:text-amber-500 focus:outline-none focus:ring active:text-amber-400 hover:cursor-pointer">Modifier</a>
                 <%= simple_form_for @booking do |f| %>
                   <%= f.hidden_field :status, value: "cancelled" %>
-                  <input type="submit" name="commit" value="Annuler (client)" class="inline-block mb-4 rounded border bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500 hover:cursor-pointer">
+                  <input type="submit" name="commit" value="Annuler (client)" class="inline-block px-12 py-3 mb-4 text-sm font-medium text-white bg-red-600 border rounded hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500 hover:cursor-pointer">
                 <% end %>
 
 
                 <% unless @booking.status == ('declined' || 'cancelled') %>
                   <%= simple_form_for @booking do |f| %>
                     <%= f.hidden_field :status, value: 'declined' %>
-                    <input type="submit" name="commit" value="Refuser (admin)" class="inline-block mb-4 rounded border bg-red-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500 hover:cursor-pointer">
+                    <input type="submit" name="commit" value="Refuser (admin)" class="inline-block px-12 py-3 mb-4 text-sm font-medium text-white bg-red-600 border rounded hover:bg-transparent hover:text-red-600 focus:outline-none focus:ring active:text-red-500 hover:cursor-pointer">
                   <% end %>
                 <% end %>
           </ul>

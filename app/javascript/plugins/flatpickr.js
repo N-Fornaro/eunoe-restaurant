@@ -8,5 +8,12 @@ const initFlatpickr = () => {
     locale: French,
     // minDate: "today"
   });
+
+  flatpickr('.newDateTime', {
+    allowInput: true,
+    dateFormat: 'd-m-Y',
+    locale: French,
+    minDate: 'today',
+  });
 };
 export { initFlatpickr };

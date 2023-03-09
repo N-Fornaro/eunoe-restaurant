@@ -2,7 +2,10 @@
 
   <div class="flex flex-wrap items-center justify-between pb-16">
     <h2 class="text-lg font-medium text-pink-pastel">Liste des réservations en cours</h2>
-    <%= link_to "Déconnexion", destroy_user_session_path, class: "rounded-md bg-pink-pastel px-8 py-2.5 text-base font-medium text-white shadow", data: {turbo_method: :delete} %>
+    <div class="flex flex-wrap gap-6">
+      <%= link_to "Nouv. réservation", new_booking_path, class: "inline-block px-8 py-3 my-4 text-base font-medium text-white bg-green-600 border rounded-md hover:bg-green-700" %>
+      <%= link_to "Déconnexion", destroy_user_session_path, class: "inline-block px-8 py-3 my-4 rounded-md bg-pink-pastel text-base font-medium text-white shadow", data: {turbo_method: :delete} %>
+    </div>
   </div>
 
   <%# ADMIN TABS %>
@@ -40,7 +43,11 @@
   <div id="active-home-tab" class="block">CONTENT HOME</div>
 
   <%# BOOKING LIST %>
-  <div id="active-bookings-tab" class="hidden"><div class="flex flex-col items-start w-full"><%= render "bookings/bookings-table", bookings: Booking.where('bookings.date >= ?', Date.today) %></div></div>
+  <div id="active-bookings-tab" class="hidden">
+    <div class="flex flex-col items-start w-full">
+      <%= render "bookings/bookings-table", bookings: Booking.where('bookings.date >= ?', Date.today) %>
+    </div>
+  </div>
 
   <%# MENUS %>
   <div id="active-meals-tab" class="hidden">CONTENT MEALS</div>

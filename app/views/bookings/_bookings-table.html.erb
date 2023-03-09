@@ -28,11 +28,11 @@
         <tr class="<%= 'text-gray-300' if booking.date < Date.today %>">
           <td class="px-4 py-2 border"><%= booking.gender %> <%= booking.first_name %> <strong><%= booking.last_name %></strong></td>
           <td class="px-4 py-2 border"><%= booking.phone %></td>
-          <td class="px-4 py-2 border"><%= booking.date.strftime('%a %d/%m') %></td>
+          <td class="px-4 py-2 border"><%= l(booking.date, format: :day) %><%= booking.date.year if booking.date.year > Date.today.year %></td>
           <td class="px-4 py-2 border"><%= booking.starts_at.hour %>:<%= booking.starts_at.min == 0 ? "00" : booking.starts_at.min %></td>
           <td class="px-4 py-2 border"><%= booking.people %></td>
           <td class="px-4 py-2 border"><%= booking.comment %></td>
-          <td class="px-4 py-2 border <%= booking.date < Date.today ? 'text-gray-300' : (booking.status == 'pending' ? 'text-orange-600' : (booking.status == 'confirmed' ? "text-green-600" : "text-red-600")) %>"><%= case booking.status; when 'pending' then 'En attente'; when 'confirmed' then 'Accepté'; when 'declined' then 'Rejeté'; when 'cancelled' then 'Annulé (client)'; end %></td>
+          <td class="px-4 py-2 border"> <strong class="px-3 py-1.5 text-xs rounded-sm font-medium <%= booking.date < Date.today ? 'text-gray-300 bg-gray-100' : (booking.status == 'pending' ? 'bg-amber-100 text-amber-700' : (booking.status == 'confirmed' ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700")) %>"><%= case booking.status; when 'pending' then 'En attente'; when 'confirmed' then 'Accepté'; when 'declined' then 'Rejeté'; when 'cancelled' then 'Annulé (client)'; end %></strong></td>
           <td class="px-4 py-2 border">
             <div class="flex flex-wrap items-center justify-center gap-4">
               <% unless ((booking.date < Date.today) || (booking.status == "confirmed")) %>
@@ -48,7 +48,7 @@
                 <% end %>
               <% end %>
               <a href="mailto:<%= booking.email%>" class="text-lg font-medium text-white bg-transparent rounded-md cursor-pointer" title='Envoyer un email'>✉️</a>
-              <%= link_to "✏️", edit_booking_path(booking), class: "text-lg font-medium text-white bg-transparent rounded-md cursor-pointer", title: "Modifier la réservation" %>
+              <%= link_to "✏️", booking_path(booking), class: "text-lg font-medium text-white bg-transparent rounded-md cursor-pointer", title: "Modifier la réservation" %>
             </div>
           </td>
         </tr>

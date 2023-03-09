@@ -1,15 +1,11 @@
-  <%= simple_form_for @booking do |f| %>
-  <div class="text-white">
-    <%= f.input :last_name, label: "Nom", input_html: { class: "my-4 mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"}, placeholder: "Nom" %>
-    <%= f.input :first_name, label: "Prénom", input_html: { class: "my-4 mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"}, placeholder: "Prénom" %>
-    <%= f.input :email, label: "Email", input_html: { class: "my-4 mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"}, placeholder: "prenom.nom@gmail.com" %>
-    <%= f.input :phone, label: "Téléphone", input_html: { class: "my-4 mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"}, placeholder: "0606060606" %>
-    <%= f.input :people, label: "Nombre de couverts", input_html: { class: "my-4 mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"} %>
-    <%= f.input :date, label: "Date", as: :string, input_html: { class: "dateTime my-4 mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm" }%>
-    <%= f.input :starts_at, label: "Horaire", as: :time, input_html: { class: "time my-4 mt-1 w-auto rounded-md border-gray-200 shadow-sm sm:text-sm" }%>
-    <%= f.input :comment, :as => :text, label: "Commentaires (régimes alimentaires, allergies...)", input_html: { class: "my-4 mt-1 w-full rounded-md border-gray-200 shadow-sm sm:text-sm"} %>
-  </div>
-    <div class="flex justify-center">
-      <input type="submit" name="commit" value="Valider la réservation" class="inline-block border-none px-12 py-3 mb-4 text-sm font-medium text-white bg-pink-pastel border rounded hover:bg-transparent hover:text-pink-pastel focus:outline-none focus:ring active:text-pink-pastel hover:cursor-pointer" data-disable-with="Create Event">
-    </div>
+  <%= simple_form_for @booking, class: "#{'text-white' if current_page?(new_booking_path)}" do |f| %>
+    <%= f.input :last_name, label: "Nom", input_html: { class: "my-2 mt-1 w-full rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm"}, placeholder: "Nom" %>
+    <%= f.input :first_name, label: "Prénom", input_html: { class: "my-2 mt-1 w-full rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm"}, placeholder: "Prénom" %>
+    <%= f.input :email, label: "Email", input_html: { class: "my-2 mt-1 w-full rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm"}, placeholder: "prenom.nom@gmail.com" %>
+    <%= f.input :phone, label: "Téléphone", input_html: { class: "my-2 mt-1 w-full rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm"}, placeholder: "0606060606" %>
+    <%= f.input :people, label: "Nombre de couverts", collection: (1..20), input_html: { class: "my-2 mt-1 w-auto flex flex-col rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm"} %>
+    <%= f.input :date, label: "Date", as: :string, input_html: { class: "newDateTime my-2 mt-1 w-full rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm" }%>
+    <%= f.input :starts_at, label: "Horaire", collection: ["19:00", "19:15", "19:30", "19:45", "20:00", "20:15", "20:30", "20:45", "21:00", "21:15", "21:30"], input_html: { class: "time my-2 mt-1 w-auto flex flex-col rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm" }%>
+    <%= f.input :comment, :as => :text, label: "Commentaires (régimes alimentaires, allergies...)", input_html: { class: "my-2 mt-1 w-full rounded-md border-gray-200 shadow-sm text-gray-900 sm:text-sm"} %>
+    <%= f.button :submit, value: "Valider", class: "inline-block px-12 py-3 mb-2 text-sm font-medium text-white border border-none rounded bg-pink-pastel hover:bg-transparent hover:text-pink-pastel focus:outline-none focus:ring active:text-pink-pastel hover:cursor-pointer" %>
   <% end %>

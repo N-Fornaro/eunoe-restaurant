@@ -2,8 +2,12 @@
 
 class Booking < ApplicationRecord
   validates :email, presence: true
+  validates :last_name, presence: true
+  validates :date, presence: true
+  validates :starts_at, presence: true
+  validates :people, presence: true, numericality: { only_integer: true, greater_than: 0, less_than: 20 }
 
-  FILTER_PARAMS = %i[last_name status date archive column direction].freeze
+  FILTER_PARAMS = %i[last_name status date locale archive column direction].freeze
 
   scope :by_last_name, ->(last_name) { where('bookings.last_name ilike ?', "%#{last_name}%") if last_name.present? }
   scope :by_status, ->(status) { where(status:) if status.present? }

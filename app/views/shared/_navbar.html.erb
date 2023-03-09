@@ -1,4 +1,4 @@
-<header aria-label="Site Header" class="sticky top-0 left-0 right-0 z-20" style="<%= "background-color: rgba(0,0,0,0.6)" if current_page?(admin_path) || current_page?(privatisation_path) || current_page?(new_user_session_path) %>; margin-top: -64px;">
+<header data-controller="navbar" aria-label="Site Header" class="sticky top-0 left-0 right-0 z-20" style="<%= "background-color: rgba(0,0,0,0.6)" if current_page?(admin_path) || current_page?(privatisation_path) || current_page?(new_user_session_path) %>; margin-top: -64px;">
   <%# Prob current_page?(root_path) ? 'fixed bg-transparent' : 'sticky bg-black' -> no nav bar after the banner and no possibility with the opacity. AND, height with "mb-24" at the end of the tag header -> add an space btw Nav & banner to others pages(restaurant, cuisine) %>
   <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
@@ -42,7 +42,7 @@
           <%= link_to "Réserver", new_booking_path, class: "rounded-md bg-pink-pastel px-8 py-2.5 uppercase text-base font-medium text-white shadow" %>
         </div>
 
-        <div class="block md:hidden">
+        <div id="burger-open" class="block md:hidden" data-action="click->navbar#burgerMenu">
           <button
             class="p-2 text-gray-600 transition bg-gray-100 rounded dropdown-toggle hover:text-gray-600/75"
           >
@@ -63,6 +63,54 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+
+  <%# MOBILE BURGER MENU %>
+  <div id="mobile-burger" class="fixed top-0 left-0 z-50 items-center justify-between hidden w-full h-full p-4 mx-auto scale-95 bg-white opacity-0 pointer-events-none aria-expanded:duration-200 aria-expanded:ease-in-out sm:px-6 lg:px-8 aria-expanded:flex aria-expanded:transition aria-expanded:delay-300 aria-expanded:flex-col aria-expanded:scale-100 aria-expanded:opacity-100 aria-expanded:pointer-events-auto" data-navbar-target="burger" aria-expanded="false">
+    <div class="relative top-0 flex flex-row justify-end w-full">
+      <button
+        class="p-2 text-gray-600 transition bg-gray-100 rounded dropdown-toggle hover:text-gray-600/75"
+        data-action="click->navbar#burgerMenu" id="burger-close"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-5 h-5"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </button>
+    </div>
+    <nav aria-label="Site Nav" role="menu">
+      <ul class="flex flex-col items-center gap-10 text-base">
+        <li><%= link_to "Accueil", root_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+
+        <li><%= link_to "Restaurant", restaurant_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+
+        <li><%= link_to "Menu", meals_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+
+        <li><%= link_to "Privatisation", privatisation_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+
+        <li><%= link_to "Réservation", new_booking_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+
+        <% if current_user %>
+          <li><%= link_to "Admin", admin_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <div class="relative bottom-0 left-0 right-0 w-full sm:flex sm:items-center sm:justify-around md:gap-12 bg-pink-pastel">
+      <a class="flex justify-center" href="/">
+        <%= image_tag "Eunoe_LogoB_crop.png", class: "", width: "120px" %>
+      </a>
     </div>
   </div>
 

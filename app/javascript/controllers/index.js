@@ -9,3 +9,6 @@ application.register("admin", AdminController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import NavtabsController from "./navtabs_controller"
+application.register("navtabs", NavtabsController)

@@ -6,7 +6,14 @@ module.exports = {
     './app/views/**/*',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'green-pastel': '#5e6738',
+        'lightgreen-pastel': '#a8baa2',
+        'red-pastel': '#9c5741',
+        'pink-pastel': '#b97456',
+      },
+    },
   },
   plugins: [require('@tailwindcss/forms')]
 }

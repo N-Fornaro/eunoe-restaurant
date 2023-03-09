@@ -15,7 +15,9 @@ gem 'faker'
 gem 'rails-i18n'
 
 # Kaminari for pagination
-gem 'kaminari'
+# gem 'kaminari'
+# gem 'kaminari-mongoid'
+# gem 'kaminari-actionview'
 
 # Icons
 gem "font-awesome-sass", "~> 6.3.0"

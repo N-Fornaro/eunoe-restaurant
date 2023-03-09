@@ -71,17 +71,16 @@ require 'faker'
 ####################################################
 #### BOOKINGS
 n = 0
-20.times do
+200.times do
   b = Booking.new(
-    date: (Date.today + rand(1..30)),
+    date: (Date.today + rand(1..60)),
     people: rand(2..8),
     gender: Faker::Name.prefix,
-    first_name: Faker::Name.name,
+    first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
-    phone: '0611223344',
+    phone: Faker::PhoneNumber.phone_number_with_country_code,
     email: Faker::Internet.email,
-    comment: Faker::Lorem.sentence,
-    status: 'pending'
+    comment: Faker::Lorem.sentence
   )
   b.starts_at = Time.new(b.date.year, b.date.month, b.date.day,
                          [11, 12, 13, 19, 20, 21].sample, [0, 15, 30, 45].sample, 0, '+00:00')

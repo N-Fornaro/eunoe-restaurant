@@ -2,7 +2,7 @@
   <%= form_with url: list_bookings_path, method: :get, data: {controller: "bookings-search-form", bookings_search_form_target: "form", turbo_frame: "bookings"} do |f| %>
     <%= f.text_field :last_name, placeholder: "Nom de réservation", value: params[:last_name], class: "border border-blue-500 rounded p-2", autocomplete: "off", data: {action: "input->bookings-search-form#search"} %>
     <%= f.select :status, options_for_select(Booking.distinct.pluck(:status), session.dig('booking_filters', 'status')), { include_blank: 'État' }, placeholder: "tout statut", value: params[:status], class: "border border-blue-500 rounded py-2 px-auto", autocomplete: "off", data: {action: "change->bookings-search-form#search"} %>
-    <%= f.text_field :date, placeholder: "Date", value: params[:date], class: "dateTime border border-blue-500 rounded p-2", autocomplete: "off", data: {action: "input->bookings-search-form#search"} %>
+    <%= f.text_field :date, placeholder: "Date", value: params[:date], class: "adminDateTime border border-blue-500 rounded p-2", autocomplete: "off", data: {action: "input->bookings-search-form#search"} %>
     <%= f.check_box :archive, checked: false, value: params[:archive], data: {action: "input->bookings-search-form#search"} %>
     <%= f.label :archive, "Voir les réservations passées" %>
   <% end %>
@@ -28,11 +28,11 @@
         <tr class="<%= 'text-gray-300' if booking.date < Date.today %>">
           <td class="px-4 py-2 border"><%= booking.gender %> <%= booking.first_name %> <strong><%= booking.last_name %></strong></td>
           <td class="px-4 py-2 border"><%= booking.phone %></td>
-          <td class="px-4 py-2 border"><%= booking.date.strftime('%a %d/%m') %></td>
+          <td class="px-4 py-2 border"><%= l(booking.date, format: :day) %><%= booking.date.year if booking.date.year > Date.today.year %></td>
           <td class="px-4 py-2 border"><%= booking.starts_at.hour %>:<%= booking.starts_at.min == 0 ? "00" : booking.starts_at.min %></td>
           <td class="px-4 py-2 border"><%= booking.people %></td>
           <td class="px-4 py-2 border"><%= booking.comment %></td>
-          <td class="px-4 py-2 border <%= booking.date < Date.today ? 'text-gray-300' : (booking.status == 'pending' ? 'text-orange-600' : (booking.status == 'confirmed' ? "text-green-600" : "text-red-600")) %>"><%= case booking.status; when 'pending' then 'En attente'; when 'confirmed' then 'Accepté'; when 'declined' then 'Rejeté'; when 'cancelled' then 'Annulé (client)'; end %></td>
+          <td class="px-4 py-2 border"> <strong class="px-3 py-1.5 text-xs rounded-sm font-medium <%= booking.date < Date.today ? 'text-gray-300 bg-gray-100' : (booking.status == 'pending' ? 'bg-amber-100 text-amber-700' : (booking.status == 'confirmed' ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700")) %>"><%= case booking.status; when 'pending' then 'En attente'; when 'confirmed' then 'Accepté'; when 'declined' then 'Rejeté'; when 'cancelled' then 'Annulé (client)'; end %></strong></td>
           <td class="px-4 py-2 border">
             <div class="flex flex-wrap items-center justify-center gap-4">
               <% unless ((booking.date < Date.today) || (booking.status == "confirmed")) %>
@@ -48,7 +48,7 @@
                 <% end %>
               <% end %>
               <a href="mailto:<%= booking.email%>" class="text-lg font-medium text-white bg-transparent rounded-md cursor-pointer" title='Envoyer un email'>✉️</a>
-              <%= link_to "✏️", edit_booking_path(booking), class: "text-lg font-medium text-white bg-transparent rounded-md cursor-pointer", title: "Modifier la réservation" %>
+              <%= link_to "✏️", booking_path(booking), class: "text-lg font-medium text-white bg-transparent rounded-md cursor-pointer", title: "Modifier la réservation" %>
             </div>
           </td>
         </tr>

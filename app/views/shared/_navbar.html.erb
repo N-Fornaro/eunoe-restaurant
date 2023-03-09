@@ -30,6 +30,14 @@
       </div>
 
       <div class="flex items-center gap-4">
+
+        <div class="sm:flex sm:gap-4">
+          <ul>
+            <li><%= link_to '🇬🇧', root_path(locale: :en) %></li>
+            <li><%= link_to '🇫🇷', root_path(locale: :fr) %></li>
+          </ul>
+        </div>
+
         <div class="sm:flex sm:gap-4">
           <%= link_to "Réserver", new_booking_path, class: "rounded-md bg-pink-pastel px-8 py-2.5 uppercase text-base font-medium text-white shadow" %>
         </div>

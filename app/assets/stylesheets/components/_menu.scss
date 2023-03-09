@@ -1,0 +1,35 @@
+.menu-infos-tablet{
+
+}
+/* On tablet screen and bigger */
+@media screen and (min-width: 768px) {
+  .menu-tablet{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+.menu-img-starter{
+
+}
+@media screen and (min-width: 768px) {
+  .menu-img-starter{
+    width: 40vw;
+    height: 78vh;
+    object-fit: cover;
+  }
+}
+
+.menu-img-main{
+
+}
+@media screen and (min-width: 768px) {
+  .menu-img-main{
+    width: 36vw;
+    height: 90vh;
+    object-fit: cover;
+  }
+}

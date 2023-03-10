@@ -42,9 +42,9 @@
           <%= link_to "Réserver", new_booking_path, class: "rounded-md bg-pink-pastel px-8 py-2.5 uppercase text-base font-medium text-white shadow" %>
         </div>
 
-        <div id="burger-open" class="block md:hidden" data-action="click->navbar#burgerMenu">
+        <div id="burger-open" class="z-50 block md:hidden" data-action="click->navbar#burgerMenu">
           <button
-            class="p-2 text-gray-600 transition bg-gray-100 rounded dropdown-toggle hover:text-gray-600/75"
+            class="p-2 text-gray-600 transition bg-gray-100 rounded dropdown-toggle hover:text-gray-600/75" data-navbar-target="button"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -67,45 +67,29 @@
   </div>
 
   <%# MOBILE BURGER MENU %>
-  <div id="mobile-burger" class="fixed top-0 left-0 z-50 items-center justify-between hidden w-full h-full p-4 mx-auto scale-95 bg-white opacity-0 pointer-events-none aria-expanded:duration-200 aria-expanded:ease-in-out sm:px-6 lg:px-8 aria-expanded:flex aria-expanded:transition aria-expanded:delay-300 aria-expanded:flex-col aria-expanded:scale-100 aria-expanded:opacity-100 aria-expanded:pointer-events-auto" data-navbar-target="burger" aria-expanded="false">
-    <div class="relative top-0 flex flex-row justify-end w-full">
-      <button
-        class="p-2 text-gray-600 transition bg-gray-100 rounded dropdown-toggle hover:text-gray-600/75"
-        data-action="click->navbar#burgerMenu" id="burger-close"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="w-5 h-5"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          />
-        </svg>
-      </button>
+  <div id="mobile-burger" class="fixed top-0 left-0 z-40 flex flex-col items-center justify-between w-full h-full p-4 mx-auto transition-all duration-300 ease-in-out scale-95 translate-x-32 opacity-0 pointer-events-none bg-[#B97456] hover:b sm:px-6 bg- lg:px-8 aria-expanded:translate-x-0 aria-expanded:scale-100 aria-expanded:opacity-100 aria-expanded:pointer-events-auto" data-navbar-target="burger" aria-expanded="false">
+    <div class="relative top-0 flex flex-row justify-end w-full h-5 p-2">
+
     </div>
     <nav aria-label="Site Nav" role="menu">
       <ul class="flex flex-col items-center gap-10 text-base">
-        <li><%= link_to "Accueil", root_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+        <li><%= link_to "Accueil", root_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 
-        <li><%= link_to "Restaurant", restaurant_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+        <li><%= link_to "Restaurant", restaurant_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 
-        <li><%= link_to "Menu", meals_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+        <li><%= link_to "Menu", meals_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 
-        <li><%= link_to "Privatisation", privatisation_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
-
-        <li><%= link_to "Réservation", new_booking_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+        <li><%= link_to "Privatisation", privatisation_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 
         <% if current_user %>
-          <li><%= link_to "Admin", admin_path, class: "text-pink-pastel transition hover:text-pink-pastel/75" %></li>
+          <li><%= link_to "Admin", admin_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
         <% end %>
       </ul>
     </nav>
+
+    <div class="sm:flex sm:gap-4">
+          <%= link_to "Réserver", new_booking_path, class: "rounded-md bg-white px-8 py-2.5 uppercase text-base font-medium text-pink-pastel shadow" %>
+    </div>
 
     <div class="relative bottom-0 left-0 right-0 w-full sm:flex sm:items-center sm:justify-around md:gap-12 bg-pink-pastel">
       <a class="flex justify-center" href="/">

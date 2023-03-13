@@ -16,15 +16,21 @@ class MealsController < ApplicationController
 
   def create
     @meal = Meal.new(meal_params)
-    @meal.save!
-    redirect_to meal_path(@meal)
+    if @meal.save!
+      redirect_to meals_path, status: :see_other
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def edit; end
 
   def update
-    @meal.update!(meal_params)
-    redirect_to meal_path(@meal)
+    if @meal.update!(meal_params)
+      redirect_to meals_path, status: :see_other
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy

@@ -24,8 +24,10 @@
       </tr>
     </thead>
     <tbody>
+      <% n = 0 %>
       <% bookings.each do |booking| %>
-        <tr class="<%= 'text-gray-300' if booking.date < Date.today %>">
+        <tr class="<%= 'text-gray-300' if booking.date < Date.today %><%= 'bg-gray-100' if (n % 2 != 0) %>">
+          <% n += 1 %>
           <td class="px-4 py-2 border"><%= booking.gender %> <%= booking.first_name %> <strong><%= booking.last_name %></strong></td>
           <td class="px-4 py-2 border"><%= booking.phone %></td>
           <td class="px-4 py-2 border"><%= l(booking.date, format: :day) %><%= booking.date.year if booking.date.year > Date.today.year %></td>

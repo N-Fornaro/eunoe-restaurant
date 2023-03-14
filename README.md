@@ -1,6 +1,7 @@
 # Eunoé Restaurant App
 
-Eunoé is a restaurant app that presents the restaurant menu, style, and other information on one side, and has a custom booking system with an admin dashboard on the other side. The app is entirely developed using Ruby, Ruby on Rails, PostgreSQL, Webpack, Yarn, Node.js, JavaScript, Stimulus.js, TailwindCSS, Flatpickr, Action Mailer, Active Record, Turbo, Jbuilder, Sass, and Faker.
+Eunoé is a custom restaurant app built to present a nice, clean showcase website presenting the restaurant offer, menu and style on one side, and 
+to offer a flexible booking app with an admin dashboard for the restaurant's manager on the other side. The app is entirely developed using Ruby, Ruby on Rails, PostgreSQL, Webpack, Yarn, Node.js, JavaScript, Stimulus.js, TailwindCSS, Flatpickr, Action Mailer, Active Record, Turbo, Jbuilder, Sass, and Faker.
 
 ## Technologies Used
 

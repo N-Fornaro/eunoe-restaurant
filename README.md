@@ -58,4 +58,4 @@ to offer a flexible booking app with an admin dashboard for the restaurant's man
 
 ## License
 
-The project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+The project is licensed under the Creative Commons Zero v1.0 Universal

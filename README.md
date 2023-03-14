@@ -1,24 +1,60 @@
-# README
+# Eunoé Restaurant App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Eunoé is a restaurant app that presents the restaurant menu, style, and other information on one side, and has a custom booking system with an admin dashboard on the other side. The app is entirely developed using Ruby, Ruby on Rails, PostgreSQL, Webpack, Yarn, Node.js, JavaScript, Stimulus.js, TailwindCSS, Flatpickr, Action Mailer, Active Record, Turbo, Jbuilder, Sass, and Faker.
 
-Things you may want to cover:
+## Technologies Used
 
-* Ruby version
+- Ruby
+- Ruby on Rails
+- PostgreSQL
+- Webpack
+- Yarn
+- Node.js
+- JavaScript
+- Stimulus.js
+- TailwindCSS
+- Flatpickr
+- Action Mailer
+- Active Record
+- Turbo
+- Jbuilder
+- Sass
+- Faker
 
-* System dependencies
+## Features
 
-* Configuration
+- Responsive design that works on various devices
+- Present the restaurant menu, style, and other information
+- Custom booking system with an admin dashboard
+- Ability to create, read, update, and delete reservations
+- Email notifications for reservation confirmations and cancellations
 
-* Database creation
+## Installation
 
-* Database initialization
+1. Clone the repository
+2. Install the required gems using `bundle install`
+3. Install the required JavaScript packages using `yarn install`
+4. Create and setup the database using `rails db:create db:migrate`
+5. Start the local server using `rails server`
 
-* How to run the test suite
+## Usage
 
-* Services (job queues, cache servers, search engines, etc.)
+- Visit the website to view the restaurant menu, style, and other information
+- Use the custom booking system to make a reservation
+- Admins can login to the admin dashboard to manage reservations
 
-* Deployment instructions
+## Contributing
 
-* ...
+1. Fork the repository
+2. Create a new branch (`git checkout -b new-feature`)
+3. Make your changes and commit them (`git commit -am 'Add new feature'`)
+4. Push your changes to the new branch (`git push origin new-feature`)
+5. Create a new pull request
+
+## Credits
+
+- Developed by [Nicolas Fornaro](https://github.com/n-fornaro), [Adrien Mery-Costa](https://github.com/Ameco-dev), [Antoine Mariani](https://github.com/antoinemariani)
+
+## License
+
+The project is licensed under the [MIT License](https://opensource.org/licenses/MIT).

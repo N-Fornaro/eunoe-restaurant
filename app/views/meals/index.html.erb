@@ -32,13 +32,9 @@
         <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
       <% end %>
 
-      <div class="starter-meal flex flex-row justify-between my-8">
+      <div class="starter-meal flex flex-col sm:flex-row sm:justify-between">
         <%# # maybe an img in futur %>
-        <div class="meal-infos mb-4" style="width: 55%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: stretch;">
+        <div class="meal-infos flex flex-col sm:w-6/12 sm:justify-center">
           <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Entrées (Lunch)</h2>
           <p class="text-base italic">(Uniquement les déjeuners, du lundi au samedi)</p>
           <br>
@@ -47,13 +43,13 @@
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Lunch' %>
               <% if meal.dish == 'Starter' %>
-                <div class="mb-6">
-                  <div class="flex flex-row mb-3">
+                <div class="mb-3 sm:mb-6">
+                  <div class="flex flex-row mb-1 sm:mb-3">
                     <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
                     <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
                     <p class="text-xl font-bold ml-1"><%= meal.price %></p>
                   </div>
-                  <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+                  <p class="text-sm sm:text-base font-light mb-1 sm:mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
                   <% if current_user %>
                     <div class="flex flex-row">
                       <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
@@ -66,7 +62,7 @@
           <% end %>
         </div>
 
-        <img style="width: 36vw; height: 78vh; object-fit: cover;" src="https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
+        <img class="object-cover w-full sm:w-6/12 sm:h-screen sm:py-20 sm:pl-10" src="https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="entrée eunoé restaurant">
 
       </div>
 
@@ -75,15 +71,11 @@
       <br>
 
 
-      <div class="main-meal flex flex-row justify-between my-8">
+      <div class="main-meal flex sm:flex-row sm:justify-between">
         <%# # maybe an img in futur %>
-        <img style="width: 36vw; height: 90vh; object-fit: cover;" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+        <img class="object-cover w-6/12 h-screen py-20 pr-10" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
 
-        <div class="meal-infos mb-4" style="width: 55%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: stretch;">
+        <div class="meal-infos flex flex-col w-6/12 justify-center">
           <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Plat principal</h2>
           <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
           <br>
@@ -119,13 +111,9 @@
       <br>
 
 
-      <div class="dessert-meal flex flex-row justify-between my-8">
+      <div class="dessert-meal flex sm:flex-row sm:justify-between">
         <%# # maybe an img in futur %>
-        <div class="meal-infos mb-4" style="width: 55%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: stretch;">
+        <div class="meal-infos flex flex-col w-6/12 justify-center">
           <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Dessert</h2>
           <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
           <br>
@@ -153,7 +141,7 @@
           <% end %>
         </div>
 
-        <img style="width: 36vw; height: 78vh; object-fit: cover;" class="overflow-hidden" src="https://images.unsplash.com/photo-1593424718424-cf4d83f3def1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+        <img class="object-cover w-6/12 h-screen py-20 pl-10" src="https://images.unsplash.com/photo-1593424718424-cf4d83f3def1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
 
       </div>
 

@@ -4,32 +4,28 @@
         <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
       <% end %>
 
-      <div class="starter-meal flex flex-row justify-between my-8">
+      <div class="starter-meal flex flex-col sm:flex-row sm:justify-between">
         <%# # maybe an img in futur %>
-        <div class="meal-infos mb-4" style="width: 55%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: stretch;">
-          <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Entrées Dinner</h2>
+        <div class="meal-infos flex flex-col sm:w-7/12 sm:justify-center">
+          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Entrées Dinner</h2>
           <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
           <br>
-          <p class="text-base font-normal	">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+          <p class="text-sm sm:text-base font-normal">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>
               <% if meal.dish == 'Starter' %>
-                <div class="mb-6">
-                  <div class="flex flex-row mb-3">
-                    <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
+                <div class="mb-3 sm:mb-6">
+                  <div class="flex flex-row mb-1 sm:mb-3">
+                    <h3 class="text-lg sm:text-xl font-bold mr-1"><%= meal.title %></h3>
                     <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
-                    <p class="text-xl font-bold ml-1"><%= meal.price %></p>
+                    <p class="text-lg sm:text-xl font-bold ml-1"><%= meal.price %></p>
                   </div>
-                  <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+                  <p class="text-sm sm:text-base font-light mb-1 sm:mb-3"><%= meal.description %></p>
                   <% if current_user %>
                     <div class="flex flex-row">
-                      <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
-                      <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-10 pink-pastel py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %> <%# Wait admin part : if current_user.admin %>
+                      <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %>
+                      <%= link_to 'Delete', meal_path(meal), class: "block w-12 px-10 pink-pastel py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto", data: {turbo_method: :delete, turbo_confirm: 'Are you sure?'} %>
                     </div>
                   <% end %>
                 </div>
@@ -38,7 +34,7 @@
           <% end %>
         </div>
 
-        <img style="width: 36vw; height: 78vh; object-fit: cover;" src="https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
+        <img class="object-cover w-full max-sm:h-56 sm:w-5/12 sm:h-screen sm:py-20 sm:pl-10" src="https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="">
 
       </div>
 
@@ -47,30 +43,26 @@
       <br>
 
 
-      <div class="main-meal flex flex-row justify-between my-8">
-        <%# # maybe an img in futur %>
-        <img style="width: 36vw; height: 90vh; object-fit: cover;" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+      <div class="main-meal flex flex-col sm:flex-row sm:justify-between">
 
-        <div class="meal-infos mb-4" style="width: 55%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: stretch;">
-          <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Plat principal</h2>
+        <img class="max-sm:hidden sm:object-cover sm:w-5/12 sm:h-screen sm:py-20 sm:pr-10" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+
+        <div class="meal-infos flex flex-col sm:w-7/12 sm:justify-center">
+          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plat principal</h2>
           <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
           <br>
-          <p class="text-base font-normal	">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+          <p class="text-sm sm:text-base font-normal">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>
               <% if meal.dish == 'Main meal' %>
-                <div class="mb-6">
-                  <div class="flex flex-row mb-3">
-                    <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
+                <div class="mb-3 sm:mb-6">
+                  <div class="flex flex-row mb-1 sm:mb-3">
+                    <h3 class="text-lg sm:text-xl font-bold mr-1"><%= meal.title %></h3>
                     <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
-                    <p class="text-xl font-bold ml-1"><%= meal.price %></p>
+                    <p class="text-lg sm:text-xl font-bold ml-1"><%= meal.price %></p>
                   </div>
-                  <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+                  <p class="text-sm sm:text-base font-light mb-1 sm:mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
                   <% if current_user %>
                     <div class="flex flex-row">
                       <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
@@ -83,6 +75,7 @@
           <% end %>
         </div>
 
+         <img class="sm:hidden max-sm:object-cover max-sm:w-full max-sm:h-56" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
 
       </div>
 
@@ -91,28 +84,24 @@
       <br>
 
 
-      <div class="dessert-meal flex flex-row justify-between my-8">
+      <div class="dessert-meal flex flex-col sm:flex-row sm:justify-between">
         <%# # maybe an img in futur %>
-        <div class="meal-infos mb-4" style="width: 55%;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: stretch;">
-          <h2 class="text-3xl font-extrabold text-black sm:text-3xl">Dessert</h2>
+        <div class="meal-infosflex flex-col sm:w-7/12 sm:justify-center">
+          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Dessert</h2>
           <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
           <br>
-          <p class="text-base font-normal	">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+          <p class="text-sm sm:text-base font-normal">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>
               <% if meal.dish == 'Dessert' %>
-                <div class="mb-6">
-                  <div class="flex flex-row mb-3">
-                    <h3 class="text-xl font-bold mr-1"><%= meal.title %></h3>
+                <div class="mb-3 sm:mb-6">
+                  <div class="flex flex-row mb-1 sm:mb-3">
+                    <h3 class="text-lg sm:text-xl font-bold mr-1"><%= meal.title %></h3>
                     <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
-                    <p class="text-xl font-bold ml-1"><%= meal.price %></p>
+                    <p class="text-lg sm:text-xl font-bold ml-1"><%= meal.price %></p>
                   </div>
-                  <p class="text-base font-light mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
+                  <p class="text-sm sm:text-base font-light mb-1 sm:mb-3"><%= meal.description %> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, dicta!lorem5, gourmant.</p>
                   <% if current_user %>
                     <div class="flex flex-row">
                       <%= link_to 'Edit', edit_meal_path(meal), class: "block w-12 px-12 py-2 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %> <%# Wait admin part : if current_user.admin %>
@@ -125,7 +114,7 @@
           <% end %>
         </div>
 
-        <img style="width: 36vw; height: 78vh; object-fit: cover;" class="overflow-hidden" src="https://images.unsplash.com/photo-1593424718424-cf4d83f3def1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
+        <img class="object-cover w-full max-sm:h-56 sm:w-5/12 sm:h-screen sm:py-20 sm:pl-10" src="https://images.unsplash.com/photo-1593424718424-cf4d83f3def1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="">
 
       </div>
 

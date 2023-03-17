@@ -1,4 +1,4 @@
-<header data-controller="navbar" aria-label="Site Header" class="sticky top-0 left-0 right-0 z-20" style="<%= "background-color: rgba(0,0,0,0.6)" if current_page?(admin_path) || current_page?(privatisation_path) || current_page?(new_user_session_path) %>; margin-top: -64px;">
+<header data-controller="navbar" data-navbar-target='navbar' data-navbar-booking-button-background-class='bg-white text-pink-pastel' data-navbar-background-class="bg-pink-pastel" data-action="scroll@document->navbar#backgroundHandler" aria-label="Site Header" class="sticky top-0 left-0 right-0 z-20 -mt-16 transition duration-500 ease-in-out">
   <%# Prob current_page?(root_path) ? 'fixed bg-transparent' : 'sticky bg-black' -> no nav bar after the banner and no possibility with the opacity. AND, height with "mb-24" at the end of the tag header -> add an space btw Nav & banner to others pages(restaurant, cuisine) %>
   <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
@@ -21,17 +21,13 @@
 
             <li><%= link_to "Réservation", new_booking_path, class: "text-white transition hover:text-white/75" %></li>
 
-            <% if current_user %>
-              <li><%= link_to "Admin", admin_path, class: "text-pink-pastel transition hover:text-white/75" %></li>
-            <% end %>
-
           </ul>
         </nav>
       </div>
 
       <div class="flex items-center gap-4">
 
-        <div class="sm:flex sm:gap-4">
+        <div class="hidden md:flex md:gap-4 ">
           <ul>
             <li><%= link_to '🇬🇧', root_path(locale: :en) %></li>
             <li><%= link_to '🇫🇷', root_path(locale: :fr) %></li>
@@ -39,7 +35,7 @@
         </div>
 
         <div class="sm:flex sm:gap-4">
-          <%= link_to "Réserver", new_booking_path, class: "rounded-md bg-pink-pastel px-8 py-2.5 uppercase text-base font-medium text-white shadow" %>
+          <%= link_to "Réserver", new_booking_path, data: {navbar_target: 'booking'}, class: "transition duration-300 ease-in-out rounded-md bg-pink-pastel px-8 py-2.5 uppercase text-base font-medium text-white shadow" %>
         </div>
 
         <div id="burger-open" class="z-50 block md:hidden" data-action="click->navbar#burgerMenu">
@@ -70,6 +66,12 @@
   <div id="mobile-burger" class="fixed top-0 left-0 z-40 flex flex-col items-center justify-between w-full h-full p-4 mx-auto transition-all duration-300 ease-in-out scale-95 translate-x-32 opacity-0 pointer-events-none bg-[#B97456] hover:b sm:px-6 bg- lg:px-8 aria-expanded:translate-x-0 aria-expanded:scale-100 aria-expanded:opacity-100 aria-expanded:pointer-events-auto" data-navbar-target="burger" aria-expanded="false">
     <div class="relative top-0 flex flex-row justify-end w-full h-5 p-2">
 
+    </div>
+    <div class="flex flex-row gap-4">
+          <ul class="flex flex-row gap-4">
+            <li><%= link_to '🇬🇧', root_path(locale: :en) %></li>
+            <li><%= link_to '🇫🇷', root_path(locale: :fr) %></li>
+          </ul>
     </div>
     <nav aria-label="Site Nav" role="menu">
       <ul class="flex flex-col items-center gap-10 text-base">

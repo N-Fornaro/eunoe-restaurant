@@ -1,0 +1,2 @@
+class Privatisation < ApplicationRecord
+end

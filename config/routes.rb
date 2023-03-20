@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     get '/home', to: 'pages#home', as: 'home'
     get '/admin', to: 'pages#admin', as: 'admin'
     get '/restaurant', to: 'pages#restaurant', as: 'restaurant'
-    get '/privatisation', to: 'privatisation#new', as: 'privatisation'
+    get '/privatisation', to: 'privatisations#new', as: 'privatisation'
 
     # Privatisation routes
     resources :privatisations do

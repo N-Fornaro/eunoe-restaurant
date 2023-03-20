@@ -11,7 +11,14 @@ Rails.application.routes.draw do
     get '/home', to: 'pages#home', as: 'home'
     get '/admin', to: 'pages#admin', as: 'admin'
     get '/restaurant', to: 'pages#restaurant', as: 'restaurant'
-    get '/privatisation', to: 'pages#privatisation', as: 'privatisation'
+    get '/privatisation', to: 'privatisation#new', as: 'privatisation'
+
+    # Privatisation routes
+    resources :privatisations do
+      collection do
+        get 'list'
+      end
+    end
 
     # Bookings routes [TO PASS TO ADMIN MODULE WHEN READY FOR PRODUCTION]
     # https://api.rubyonrails.org/v7.0.4/classes/ActionDispatch/Routing/Mapper/Scoping.html#method-i-namespace

@@ -1,8 +1,7 @@
 # frozen_string_literal: true
 
 class Booking < ApplicationRecord
-
-  validates :email, presence: true
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Email incorrect' }
   validates :last_name, presence: true
   validates :date, presence: true
   validates :starts_at, presence: true

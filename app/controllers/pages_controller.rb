@@ -10,6 +10,4 @@ class PagesController < ApplicationController
   def admin
     @bookings = Booking.all
   end
-
-  def privatisation; end
 end

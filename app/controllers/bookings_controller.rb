@@ -3,7 +3,7 @@
 class BookingsController < ApplicationController
   include Filterable
   before_action :set_booking, only: %i[confirmation show edit update destroy]
-  skip_before_action :authenticate_user!, only: %i[new show create edit update destroy]
+  skip_before_action :authenticate_user!, only: %i[new show create edit update]
 
   def index
     @booking = Booking.all

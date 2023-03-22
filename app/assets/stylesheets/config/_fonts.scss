@@ -9,9 +9,11 @@
 // $headers-font: "Nunito", "Helvetica", "sans-serif";
 
 // re:Cycle GGFonts
-$body-font: 'Lexend Deca', "sans-serif";
-$headers-font: 'Alexandria', "sans-serif";
+// $body-font: 'Lexend Deca', "sans-serif";
+// $headers-font: 'Alexandria', "sans-serif";
 
+// $body-font: 'Darker Grotesque', "sans-serif";
+// $headers-font: 'Darker Grotesque', "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -29,4 +31,9 @@ $headers-font: 'Alexandria', "sans-serif";
 @font-face {
   font-family: 'Mirra';
   src: url('mirra.otf');
+}
+
+@font-face {
+  font-family: 'Migra Extrabold';
+  src: url('Migra-Extrabold.ttf');
 }

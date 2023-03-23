@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[home restaurant privatisation]
+  # Line below to uncomment when ready for opening (to remove the temporary homepage / opening soon page)
+  # skip_before_action :authenticate_user!, only: %i[home restaurant privatisation]
+  skip_before_action :authenticate_user!, only: %i[soon]
+  layout "private", only: %i[soon]
 
   def home; end
 
@@ -9,5 +12,8 @@ class PagesController < ApplicationController
 
   def admin
     @bookings = Booking.all
+  end
+
+  def soon
   end
 end

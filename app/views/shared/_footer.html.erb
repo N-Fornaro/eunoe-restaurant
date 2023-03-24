@@ -24,12 +24,12 @@
 
     <div class="lg:flex lg:items-end lg:justify-around mt-4">
       <div>
-        <p class="max-w-md mx-auto leading-relaxed text-center text-gray-500">
+        <p class="text-base sm:text-lg max-w-md mx-auto leading-relaxed text-center text-gray-500 pt-10">
           <strong>Eunoé</strong><br>
           150, rue de la Roquette <br>
           75011 Paris <br>
           +33 1 75 75 75 75 <br>
-          restaurant@eunoe.paris
+          Felix@eunoe-restaurant.com
         </p>
         <div class="flex flex-row justify-center">
           <a href="" class="text-5xl text-blue-900 m-1"><i class="fa-brands fa-square-facebook"></i></a>
@@ -38,7 +38,7 @@
         </div>
       </div>
 
-      <div>
+      <div class="text-base sm:text-lg">
         <div class="flex justify-center">
           <%= image_tag "Eunoe_Logo_crop.png", class:"flex justify-center my-4", width:"180px" %>
         </div>
@@ -66,26 +66,26 @@
 
       <nav aria-label="Footer Nav" class="mt-8 lg:mt-0">
         <ul
-          class="flex flex-col justify-center gap-1 sm:text-center sm:mt-4 md:gap-2 lg:justify-end lg:gap-3"
+          class="flex flex-col items-center justify-center gap-1 sm:text-center sm:mt-4 md:gap-2 lg:justify-end lg:gap-3"
         >
           <li>
-            <%= link_to "Accueil", "#main-banner", class: "text-gray-700 transition hover:text-gray-700/75" %>
+            <%= link_to "Accueil", "#main-banner", class: "text-gray-500 transition hover:text-gray-700" %>
           </li>
 
           <li>
-            <%= link_to "Restaurant", restaurant_path, class: "text-gray-700 transition hover:text-gray-700/75" %>
+            <%= link_to "Restaurant", restaurant_path, class: "text-gray-500 transition hover:text-gray-700" %>
           </li>
 
           <li>
-            <%= link_to "Privatisation", privatisation_path, class: "text-gray-700 transition hover:text-gray-700/75" %>
+            <%= link_to "Privatisation", privatisation_path, class: "text-gray-500 transition hover:text-gray-700" %>
           </li>
 
           <li>
-            <%= link_to "Réservation", new_booking_path, class: "text-gray-700 transition hover:text-gray-700/75" %>
+            <%= link_to "Réservation", new_booking_path, class: "text-gray-500 transition hover:text-gray-700" %>
           </li>
 
           <li>
-            <%= link_to "Admin", admin_path, class: "text-gray-700 transition hover:text-gray-700/75" %>
+            <%= link_to "Admin", admin_path, class: "text-gray-500 transition hover:text-gray-700" %>
           </li>
 
         </ul>

@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class MealsController < ApplicationController
-  skip_before_action :authenticate_user!, only: %i[index]
+  # Line below to uncomment when ready for opening (to remove the temporary homepage / opening soon page)
+  # skip_before_action :authenticate_user!, only: %i[index]
   before_action :set_meal, only: %i[show edit update destroy]
 
   def index

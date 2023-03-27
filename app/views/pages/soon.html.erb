@@ -1,16 +1,20 @@
 
     <div class="flex flex-col items-center justify-center min-w-full min-h-screen text-white bg-pink-pastel">
       <div class="flex flex-col items-center justify-center text-xl font-medium">
-        <%= image_tag "Eunoe_LogoB_crop.png", class: "", width: "120px", alt: "Eunoé Restaurant" %>
-        <h1 class="hidden sr-only">Eunoé Restaurant</h1>
+        <%= link_to root_path do %>
+          <%= image_tag "Eunoe_LogoB_crop.png", class: "", width: "120px", alt: "Eunoé Restaurant" %>
+          <h1 class="hidden sr-only">Eunoé Restaurant</h1>
+        <% end %>
         <h2>Ouverture prochaine !</h2>
-        <h3 class="italic">Coming soon !</h3>
-        <a class="p-8" href="https://www.instagram.com/eunoe_restaurant/"><i class="fa-brands fa-instagram fa-2xl" alt="Instagram"></i></a>
+        <h3 class="italic">Opening soon !</h3>
+        <a class="p-8" href="https://www.instagram.com/eunoe_restaurant/">
+          <i class="fa-brands fa-instagram fa-2xl" alt="Instagram"></i>
+        </a>
       </div>
 
-      <div class="flex flex-col items-center justify-center font-base text-md">
-        <p>
-          150, rue de la Roquette
-          75011 Paris
-        </p>
+    <div class="flex flex-col items-center justify-center text-center font-base text-md">
+      <p>
+        6 rue Rochebrune,<br>
+        75011 Paris
+      </p>
     </div>

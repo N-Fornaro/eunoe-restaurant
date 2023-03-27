@@ -1,0 +1,23 @@
+<div
+  class="flex flex-col items-center justify-center min-w-full min-h-screen p-16 text-white bg-pink-pastel"
+>
+  <div class="flex flex-col items-center justify-center text-xl font-medium text-center">
+    <%= link_to root_path do %>
+      <%= image_tag "Eunoe_LogoB_crop.png", class: "", width: "120px", alt: "Eunoé Restaurant" %>
+      <h1 class="hidden sr-only">Eunoé Restaurant</h1>
+    <% end %>
+    <h2>La page que vous cherchez n'existe pas!</h2>
+    <br>
+    <h3 class="italic">The page you are looking for does not exist !</h3>
+    <a class="p-8" href="https://www.instagram.com/eunoe_restaurant/"
+      ><i class="fa-brands fa-instagram fa-2xl" alt="Instagram"></i
+    ></a>
+  </div>
+
+  <div class="flex flex-col items-start justify-center font-base text-md">
+    <%= link_to root_path, class: 'flex flex-row items-center justify-center gap-4' do %>
+      <i class='fa-solid fa-arrow-left'></i>
+      <p>Accueil / Home</p>
+    <% end %>
+  </div>
+</div>

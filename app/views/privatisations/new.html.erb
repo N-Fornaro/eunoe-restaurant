@@ -7,13 +7,13 @@
 
   <div class="relative max-w-screen-xl px-4 py-32 mx-auto sm:z-10 lg:flex lg:h-screen lg:items-center">
     <div class="max-w-xl mx-auto text-center">
-      <h1 class="text-5xl font-extrabold text-white ">
-        <strong class="font-extrabold text-pink-pastel ">Privatiser EUNOE</strong> <br>pour vos évènements
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-white drop-shadow">
+        <strong class="font-extrabold text-pink-pastel drop-shadow">Privatiser EUNOE</strong> <br>pour vos évènements
       </h1>
 
       <div class="flex flex-wrap justify-center gap-4 mt-8">
-        <a href="brochure-privatisation-Eunoe.pdf" class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-pink-pastel bg-red-pastel:hover focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" target="_blank">Téléchargez notre brochure privatisation</a>
-        <a href="#contact-privat" class="block w-full px-12 py-3 text-sm font-medium text-white rounded shadow bg-pink-pastel bg-red-pastel:hover focus:outline-none focus:ring active:bg-red-pastel sm:w-auto">Nous Contacter</a>
+        <a href="brochure-privatisation-Eunoe.pdf" class="block w-full px-12 py-3 text-base sm:text-lg font-medium text-white rounded shadow bg-pink-pastel hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" target="_blank">Téléchargez notre brochure privatisation</a>
+        <a href="#contact-privat" class="block w-full px-12 py-3 text-base sm:text-lg font-medium text-white rounded shadow bg-pink-pastel hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto">Nous Contacter</a>
       </div>
     </div>
   </div>
@@ -22,19 +22,20 @@
 
 <div class="container">
   <div class="flex flex-col items-center justify-center mt-6">
-    <div class="flex flex-col justify-center w-1/2">
-      <h3 class="my-4 text-3xl font-semibold leading-relaxed text-center text-pink-pastel">Privatisation en semaine comme le weekend</h3>
-      <p class="my-2 text-base leading-relaxed text-center">
+    <div class="flex flex-col justify-center sm:w-1/2">
+      <h3 class="my-4 text-3xl md:text-4xl font-semibold leading-relaxed text-center text-pink-pastel">Privatisation en semaine comme le weekend</h3>
+      <p class="my-2 text-base md:text-lg leading-relaxed text-center">
         Un lieu convivial privatisable entièrement ou en partie, en semaine comme le week-end. Des peintures artistiques d’Agnes, la vaisselle en céramique de Lola, des tables centenaires restaurées par Quentin, le tout mise en scène par Annabelle Fesquet.
       </p>
-      <p class="my-4 text-lg font-semibold leading-relaxed text-center">Privatisation : De 25 à 60 personnes</p>
-      <p class="my-2 text-base leading-relaxed text-center">
+      <p class="my-4 text-lg md:text-xl font-semibold leading-relaxed text-center">Privatisation : De 25 à 60 personnes</p>
+      <p class="my-2 text-base md:text-lg leading-relaxed text-center">
         Eunoé peut accueillir jusqu’à 60 personnes en cocktail et 40 personnes en diner assis avec une cuisine ouverte donnant sur le square Gardette.
       </p>
-      <a href="brochure-privatisation-Eunoe.pdf" target="_blank" class="my-4 text-base font-light leading-relaxed text-center underline">Téléchargez notre brochure privatisation</a>
+      <a href="brochure-privatisation-Eunoe.pdf" target="_blank" class="my-4 text-base md:text-lg font-light leading-relaxed text-center underline hover:font-normal">Téléchargez notre brochure privatisation</a>
     </div>
 
-    <img class="object-cover w-1/2 h-96" src="https://images.unsplash.com/photo-1519822472072-ec86d5ab6f5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Exterior of the restaurant">
+    <%= render "privatisations/carousel-privatisation" %>
+
   </div>
 
 </div>

@@ -22,6 +22,8 @@ class BookingsController < ApplicationController
     if @booking.save
       email_saved && notify_admin
       redirect_to booking_path(@booking), status: :see_other
+      redirect_to home_path, status: :see_other
+      flash[:notice] = 'Réservation enregistrée avec succès / Booking successfully saved'
     else
       render :new, status: :unprocessable_entity
     end
@@ -40,6 +42,8 @@ class BookingsController < ApplicationController
       status_changed ? email_status_change : email_modified
       # redirect_to booking_path(@booking)
       redirect_back(fallback_location: root_path)
+      redirect_back(fallback_location: home_path)
+      flash[:notice] = 'Réservation modifiée avec succès / Booking successfully modified'
     else
       render :edit
     end

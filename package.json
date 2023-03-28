@@ -13,8 +13,5 @@
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.2.4"
   }
 }

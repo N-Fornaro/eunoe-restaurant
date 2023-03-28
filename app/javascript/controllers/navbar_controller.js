@@ -7,7 +7,14 @@ export default class extends Controller {
 
   connect() {
     if (
-      ['', 'restaurant', 'privatisation', 'meals', 'bookings/new'].includes(
+      [
+        '',
+        'home',
+        'restaurant',
+        'privatisation',
+        'meals',
+        'bookings/new',
+      ].includes(
         window.location.pathname.substring(
           window.location.pathname.length - 1
         ) === '/'
@@ -41,7 +48,7 @@ export default class extends Controller {
 
   backgroundHandler(event) {
     if (
-      ['', 'restaurant', 'privatisation', 'bookings/new'].includes(
+      ['', 'home', 'restaurant', 'privatisation', 'bookings/new'].includes(
         window.location.pathname.substring(
           window.location.pathname.length - 1
         ) === '/'

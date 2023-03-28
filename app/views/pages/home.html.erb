@@ -1,48 +1,4 @@
-<%# ------- FOR DEVELOPMENT PURPOSES ONLY ------- %>
-<div class="container hidden"> <%# <--- Remove the 'hidden' class to see app routes %>
-  <h1 class="text-xl">Homepage</h1>
-
-  <div class="grid grid-cols-3 gap-4">
-
-    <div class="p-3 border rounded-xl">
-      <p class="text-lg">Pages controller <br>
-        <%= link_to "pages#home", root_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%= link_to "pages#privatisation", privatisation_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%= link_to "pages#restaurant", restaurant_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-      </p>
-    </div>
-
-    <div class="p-3 border rounded-xl">
-      <p class="text-lg">Bookings controller <br>
-        <%= link_to "bookings#index", bookings_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%= link_to "bookings#new", new_booking_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%= link_to "bookings#show", booking_path(Booking.last), class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%= link_to "bookings#confirmation", confirmation_booking_path(Booking.last), class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %>
-      </p>
-    </div>
-
-    <div class="p-3 border rounded-xl">
-      <p class="text-lg">Menus & Newsletters controllers <br>
-        <%# link_to "menus#index", menus_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%# link_to "menus#show", menu_path(Menu.last), class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%# link_to "newsletters#index", newsletters_path, class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%# link_to "newsletters#show", newsletter_path(Newsletter.last), class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-      </p>
-    </div>
-
-    <div class="p-3 border rounded-xl">
-      <p class="text-lg">Mailers templates previews</p>
-        <%= link_to "booking_saved", "http://localhost:3000/rails/mailers/booking_mailer/booking_saved", class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %> <br>
-        <%= link_to "booking_confirmed", "http://localhost:3000/rails/mailers/booking_mailer/booking_confirmed", class: "font-light text-amber-600 hover:text-blue-700 hover:font-medium" %>
-      </p>
-    </div>
-
-  </div>
-
-</div>
-
-<%# ------- DEV HOMEPAGE BELOW THIS ------- %>
-
+<h1 class="sr-only">Eunoé Restaurant</h1>
 <%= render "pages/home/banner" %>
 
 <%= render "pages/home/video_section" %>

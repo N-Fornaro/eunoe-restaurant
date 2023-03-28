@@ -5,6 +5,7 @@ module.exports = {
     './app/javascript/**/*.js',
     './app/views/**/*',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
@@ -13,7 +14,15 @@ module.exports = {
         'red-pastel': '#9c5741',
         'pink-pastel': '#b97456',
       },
+      fontFamily: {
+        sans: ['Roboto', 'sans-serif'],
+        body: ['Roboto', 'sans-serif'],
+        mono: ['ui-monospace', 'monospace'],
+      },
     },
   },
-  plugins: [require('@tailwindcss/forms')]
-}
+  corePlugins: {
+    preflight: false,
+  },
+  plugins: [require('@tailwindcss/forms')],
+};

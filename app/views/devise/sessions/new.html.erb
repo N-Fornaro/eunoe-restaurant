@@ -9,11 +9,11 @@
                   required: false,
                   autofocus: true,
                   wrapper_html: { class: "m-2 flex flex-row min-w-full gap-2 justify-center items-center "},
-                  input_html: { autocomplete: "email", class: "rounded-md flex-grow" } %>
+                  input_html: { autocomplete: "email", class: "rounded-md text-black flex-grow" } %>
       <%= f.input :password,
                   required: false,
                   wrapper_html: { class: "m-2 flex flex-row min-w-full gap-2 justify-center items-center "},
-                  input_html: { autocomplete: "current-password", class: "rounded-md flex-grow" } %>
+                  input_html: { autocomplete: "current-password", class: "rounded-md text-black flex-grow" } %>
       <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
     </div>
 

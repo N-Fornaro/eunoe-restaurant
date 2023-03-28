@@ -1,17 +1,16 @@
 <header data-controller="navbar" data-navbar-target='navbar' data-navbar-booking-button-background-class='bg-white text-pink-pastel' data-navbar-background-class="bg-pink-pastel" data-action="scroll@document->navbar#backgroundHandler" aria-label="Site Header" class="sticky top-0 left-0 right-0 z-20 -mt-20 transition duration-500 ease-in-out">
-  <%# Prob current_page?(root_path) ? 'fixed bg-transparent' : 'sticky bg-black' -> no nav bar after the banner and no possibility with the opacity. AND, height with "mb-24" at the end of the tag header -> add an space btw Nav & banner to others pages(restaurant, cuisine) %>
   <div class="max-w-screen-xl px-4 mx-auto sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-20">
       <div class="md:flex md:items-center md:gap-12">
-        <a class="block" href="/">
+        <%= link_to home_path, class: "block" do %>
           <%= image_tag "Eunoe_LogoB_crop.png", class: "", width: "140px" %>
-        </a>
+        <% end %>
       </div>
 
       <div class="hidden md:block">
         <nav aria-label="Site Nav" role="menu">
           <ul class="flex items-center gap-12 text-xl">
-            <li><%= link_to "Accueil", root_path, class: "text-white transition hover:text-white/75" %></li>
+            <li><%= link_to "Accueil", home_path, class: "text-white transition hover:text-white/75" %></li>
 
             <li><%= link_to "Restaurant", restaurant_path, class: "text-white transition hover:text-white/75" %></li>
 
@@ -33,8 +32,8 @@
 
         <div class="hidden md:flex md:gap-4 md:text-3xl md:ml-8 ">
           <ul>
-            <li><%= link_to '🇬🇧', root_path(locale: :en) %></li>
-            <li><%= link_to '🇫🇷', root_path(locale: :fr) %></li>
+            <li><%= link_to '🇬🇧', home_path(locale: :en) %></li>
+            <li><%= link_to '🇫🇷', home_path(locale: :fr) %></li>
           </ul>
         </div>
 
@@ -68,14 +67,14 @@
 
     </div>
     <div class="flex flex-row gap-4">
-          <ul class="flex flex-row text-4xl gap-10">
-            <li><%= link_to '🇬🇧', root_path(locale: :en) %></li>
-            <li><%= link_to '🇫🇷', root_path(locale: :fr) %></li>
+          <ul class="flex flex-row gap-10 text-4xl">
+            <li><%= link_to '🇬🇧', home_path(locale: :en) %></li>
+            <li><%= link_to '🇫🇷', home_path(locale: :fr) %></li>
           </ul>
     </div>
     <nav aria-label="Site Nav" role="menu">
       <ul class="flex flex-col items-center gap-10 text-lg">
-        <li><%= link_to "Accueil", root_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
+        <li><%= link_to "Accueil", home_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 
         <li><%= link_to "Restaurant", restaurant_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 

@@ -4,7 +4,10 @@ class BookingsTest < ApplicationSystemTestCase
   test 'creating a booking successfully, with all fields filled properly' do
     login_as users(:george)
     visit home_path
-    click_link_or_button 'Réserver'
+    click_link_or_button 'reserver'
+    puts '>> Booking form opened successfully'
+
+    # Filling booking form
     fill_in 'booking_first_name', with: 'Test User 1st Name'
     fill_in 'booking_last_name', with: 'Test User Last Name'
     fill_in 'booking_email', with: 'test.user@eunoe-restaurant.com'

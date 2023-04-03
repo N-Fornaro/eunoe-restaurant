@@ -4,7 +4,9 @@ class BookingsTest < ApplicationSystemTestCase
   test 'creating a booking successfully, with all fields filled properly' do
     login_as users(:george)
     visit home_path
-    click_link_or_button 'reserver'
+    puts ">> Current URL => #{current_path}"
+    puts ">> Booking button present? #{page.has_link?('new-booking')}"
+    click_link_or_button 'new-booking'
     puts '>> Booking form opened successfully'
 
     # Filling booking form

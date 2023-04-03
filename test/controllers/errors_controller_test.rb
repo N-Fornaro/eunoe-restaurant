@@ -10,4 +10,5 @@ class ErrorsControllerTest < ActionDispatch::IntegrationTest
     get errors_internal_server_error_url
     assert_response :success
   end
+
 end

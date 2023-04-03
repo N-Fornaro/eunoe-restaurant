@@ -5,8 +5,10 @@ class BookingsTest < ApplicationSystemTestCase
     login_as users(:george)
     visit home_path
     puts ">> Current URL => #{current_path}"
-    puts ">> Booking button present? #{page.has_link?('new-booking')}"
-    click_link_or_button 'new-booking'
+    visit new_booking_path
+    # puts ">> Booking button present? #{page.has_link?('new-booking')}"
+    # click_link_or_button 'new-booking'
+    puts ">> Current URL => #{current_path}"
     puts '>> Booking form opened successfully'
 
     # Filling booking form

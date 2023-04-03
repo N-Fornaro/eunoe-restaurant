@@ -4,7 +4,7 @@ class BookingsTest < ApplicationSystemTestCase
   test 'creating a booking successfully, with all fields filled properly' do
     login_as users(:george)
     visit home_path
-    click_on 'Réserver'
+    click_link_or_button 'Réserver'
     fill_in 'booking_first_name', with: 'Test User 1st Name'
     fill_in 'booking_last_name', with: 'Test User Last Name'
     fill_in 'booking_email', with: 'test.user@eunoe-restaurant.com'
@@ -17,7 +17,7 @@ class BookingsTest < ApplicationSystemTestCase
     if click_on('Valider')
       puts '>> Submit button found'
       sleep 5 and puts '>> Waiting for 5 seconds'
-      assert_equal (home_path(locale: 'en') || home_path(locale: 'fr') || home_path), page.current_path
+      assert_equal (home_path(locale: 'en') || home_path(locale: 'fr') || home_path), page.current_path
       assert_equal 'Test User 1st Name', Booking.last.first_name
       assert_equal 'Test User Last Name', Booking.last.last_name
       assert_equal '0623456789', Booking.last.phone

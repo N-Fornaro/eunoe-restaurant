@@ -48,7 +48,14 @@ export default class extends Controller {
 
   backgroundHandler(event) {
     if (
-      ['', 'home', 'restaurant', 'privatisation', 'bookings/new'].includes(
+      [
+        '',
+        'home',
+        'meals',
+        'restaurant',
+        'privatisation',
+        'bookings/new',
+      ].includes(
         window.location.pathname.substring(
           window.location.pathname.length - 1
         ) === '/'
@@ -59,7 +66,7 @@ export default class extends Controller {
           : window.location.pathname.substring(4)
       )
     ) {
-      if (window.scrollY > 100) {
+      if (window.scrollY > 47) {
         this.navbarTarget.classList.add(...this.backgroundClasses);
         this.bookingTarget.classList.remove('bg-pink-pastel', 'text-white');
         this.bookingTarget.classList.add(

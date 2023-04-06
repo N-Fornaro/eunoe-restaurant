@@ -1,8 +1,8 @@
-<div class="bg-mailer">
+<div class="container bg-mailer">
   <div style="font-family: 'Darker Grotesque', sans-serif; font-size: large; color: black; margin: 2vh 2vw 2vh 2vw;">
-    <p> Bonjour <%= @booking.first_name %> <%= @booking.last_name %>,
-    <br> <br>
-        Nous ne pouvons pas donner suite à votre demande de réservation du :</p>
+    <p> Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+    <br>
+    <p> Nous ne pouvons pas donner suite à votre demande de réservation du :</p>
 
         <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🗓️   du <%= @booking.date.strftime("%d / %m / %Y")%>, </li>
         <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> ⏰   à <%= @booking.starts_at.time.strftime('%H:%M heure')%></li>
@@ -10,7 +10,9 @@
 
     <p> Nous sommes complets en réservation mais nous gardons toujours quelques tables pour les promeneurs 🍷.</p>
     <br>
-    <p style="margin-bottom: 5vh;"> Cordialement,</p>
+    <p style="margin-bottom: 5vh;">
+        A bientôt,<br>
+        l'équipe Eunoé.</p>
 
     <%= image_tag "Eunoe_Logo_crop.png", width:"260px" %>
 

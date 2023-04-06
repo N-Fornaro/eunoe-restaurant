@@ -1,24 +1,36 @@
-<div class="container">
-  <p>Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+<div class="container bg-mailer">
+  <div style="font-family: 'Darker Grotesque', sans-serif; font-size: large; color: black; margin: 2vh 2vw 2vh 2vw;">
+    <p> Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+    <br>
+    <p> Votre réservation pour le <strong><%= @booking.date.strftime("%d / %m / %Y") %></strong> a bien été confirmée par notre équipe. Pour rappel :</p>
 
-  Votre réservation pour le <%= @booking.date %> a bien été confirmée par notre équipe. Pour rappel :
-  <ul>
-    <li>Places : <%= @booking.people %></li>
-    <li>Date : <%= @booking.date %></li>
-    <li>Heure : <%= @booking.starts_at %></li>
-    <li>Remarques : <%= @booking.comment %></li>
-  </ul>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🧑‍🤝‍🧑   pour <%= @booking.people %> personnes</li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🗓️   du <%= @booking.date.strftime("%d / %m / %Y")%>, </li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> ⏰   à <%= @booking.starts_at.time.strftime('%H:%M heure')%></li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🧐   Commentaire : <%= @booking.comment %></li>
+    <br>
+    <p> Pour vous rendre au restaurant :</p>
+    <em>
+      <li style="list-style-type: none; padding-left: 2vw;">6 rue Rochebrune,</li>
+      <li style="list-style-type: none; padding-left: 2vw;">75011 Paris</li>
+      <li style="list-style-type: none; padding-left: 2vw;">Métros ligne 3 : Rue Saint-Maur</li>
+      <li style="list-style-type: none; padding-left: 2vw;">Métro ligne 9 : Saint-Ambroise ou Voltaire</li>
+    </em>
+    <br>
 
-  Pour vous rendre au restaurant :
-  <em>
-    <p>Eunoé Restaurant <br>
-    15 boulevard Lorem Ipsum <br>
-    75011 Paris <br>
-    Métros : Lorem Ipsum, Sit Amet</p>
-  </em>
+    <p> Nous contacter si vous avez un imprévu : </p>
+    <em>
+      Felix Perrotte : <br>
+      <li style="list-style-type: none; padding-left: 2vw;">📱 +33 1 75 75 75 75 </li>
+      <li style="list-style-type: none; padding-left: 2vw;">👨‍💻 Felix@eunoe-restaurant.com </li>
+    </em>
+    <br>
 
-  <p>A bientôt dans notre restaurant,<br>
-  l'équipe Eunoé.
-  </p>
+    <p style="margin-bottom: 5vh;">
+        A bientôt,<br>
+        l'équipe Eunoé.</p>
 
+    <%= image_tag "Eunoe_Logo_crop.png", width:"260px" %>
+
+  </div>
 </div>

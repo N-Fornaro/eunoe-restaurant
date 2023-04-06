@@ -1,18 +1,22 @@
 <div class="container">
-  <p>Bonjour Admin,</p>
+  <div style="font-family: 'Darker Grotesque', sans-serif; font-size: large; color: black; margin: 2vh 2vw 2vh 2vw;">
+    <p> Bonjour Admin,</p>
+    <br>
+    <p> Une nouvelle demande de réservation pour le <%= @booking.date.strftime("%d / %m / %Y") %> a été enregistrée. Détail de la réservation :</p>
 
-  Une nouvelle demande de réservation pour le <%= @booking.date %> a été enregistrée. Détail de la réservation :
-  <ul>
-    <li>Nom : <%= @booking.first_name %> <%= @booking.last_name.upcase %></li>
-    <li>Places : <%= @booking.people %></li>
-    <li>Date : <%= @booking.date %></li>
-    <li>Heure : <%= @booking.starts_at %></li>
-    <li>Remarques : <%= @booking.comment %></li>
-    <li>Contact : <%= @booking.phone %> / <%= @booking.email %></li>
-  </ul>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> Nom : <%= @booking.first_name %> <%= @booking.last_name.upcase %></li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> Contact : <%= @booking.phone %> / <%= @booking.email %></li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> Places : <%= @booking.people %> personnes</li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;">
+        Date : <%= @booking.date.strftime("%d / %m / %Y")%>, </li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> Horaire : <%= @booking.starts_at.time.strftime('%H:%M heure')%></li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> Commentaire : <%= @booking.comment %></li>
+    <br>
+    <p>Pour la confirmer ou l'annuler :</p>
+    <%# LINK BELOW TO EDIT & FIX WHEN DOMAIN IS SET. STILL BUGGY IF LINK_TO IS USED. %>
+    <p style="margin-bottom: 3vh;"><%= link_to "Valider la réservation", "http://localhost:3000/bookings" %></p>
 
-  Pour la confirmer ou l'annuler :
-  <%# LINK BELOW TO EDIT & FIX WHEN DOMAIN IS SET. STILL BUGGY IF LINK_TO IS USED. %>
-  <p><%= link_to "Valider la réservation", "http://localhost:3000/bookings" %></p>
+    <%= image_tag "Eunoe_Logo_crop.png", width:"260px" %>
 
+    </div>
 </div>

@@ -1,18 +1,21 @@
-<div class="container">
-  <p>Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+<div class="container bg-mailer">
+  <div style="font-family: 'Darker Grotesque', sans-serif; font-size: large; color: black; margin: 2vh 2vw 2vh 2vw;">
+    <p> Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+    <br>
+    <p> Votre réservation a bien été prise en compte et en attente de validation :</p>
 
-  Votre réservation a bien été prise en compte :
-  <ul>
-    <li>Places : <%= @booking.people %></li>
-    <li>Date : <%= @booking.date %></li>
-    <li>Heure : <%= @booking.starts_at %></li>
-    <li>Remarques : <%= @booking.comment %></li>
-  </ul>
+        <li style="list-style-type: none; font-weight: bold; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🗓️   du <%= @booking.date.strftime("%d / %m / %Y")%>, </li>
+        <li style="list-style-type: none; font-weight: bold; margin: 2vh 0 2vh 0; padding-left: 4vw;"> ⏰   à <%= @booking.starts_at.time.strftime('%H:%M heure')%></li>
+        <li style="list-style-type: none; font-weight: bold; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🧑‍🤝‍🧑   pour <%= @booking.people %> personnes</li>
+        <li style="list-style-type: none; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🧐   Commentaire : <%= @booking.comment %></li>
 
-  <p>Notre équipe va prendre connaissance de votre demande dans les plus brefs délais pour y apporter une réponse.</p>
+    <p> Notre équipe va prendre connaissance de votre demande dans les plus brefs délais <strong>pour y apporter une réponse</strong>.</p>
+    <br>
+    <p style="margin-bottom: 5vh;">
+        A bientôt,<br>
+        l'équipe Eunoé.</p>
 
-  <p>A bientôt,<br>
-  l'équipe Eunoé.
-  </p>
+    <%= image_tag "Eunoe_Logo_crop.png", width:"260px" %>
 
+  </div>
 </div>

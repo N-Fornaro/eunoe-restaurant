@@ -4,8 +4,11 @@ class Booking < ApplicationRecord
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: 'Email incorrect' }
   validates :last_name, presence: true
   validates :date, presence: true
+  validates :phone, presence: true, format: { with: /\A\+?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}\z/, message: 'Numéro de téléphone incorrect' }
   validates :starts_at, presence: true
   validates :people, presence: true, numericality: { only_integer: true, greater_than: 0, less_than: 20 }
+
+  HOURS = %w[12:00 12:15 12:30 13:00 13:30 13:45 14:00 14:15 19:00 19:15 19:30 19:45 20:00 20:15 20:30 20:45 21:00 21:15 21:30 21:45 22:00].freeze
 
   FILTER_PARAMS = %i[last_name status date locale archive column direction].freeze
 

@@ -7,9 +7,7 @@
       <div class="starter-meal flex flex-col sm:flex-row sm:justify-between">
 
         <div class="meal-infos flex flex-col sm:w-7/12 sm:justify-center"
-          data-te-animation-init
-          data-te-animation-start="onScroll"
-          data-te-animation="[fade-in-left_2s_ease-in-out]">
+          <%= @animation_left %> >
 
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Entrées (Lunch)</h2>
           <p class="text-base italic">(Uniquement les déjeuners, du lundi au samedi)</p>
@@ -39,9 +37,7 @@
         </div>
 
         <img class="object-cover w-full max-sm:h-56 sm:w-5/12 sm:h-screen sm:py-20 sm:pl-10" src="https://images.unsplash.com/photo-1470338950318-40320a722782?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="entrée eunoé restaurant"
-          data-te-animation-init
-          data-te-animation-start="onScroll"
-          data-te-animation="[fade-in-right_2s_ease-in-out]">
+         <%= @animation_right %> >
 
       </div>
 
@@ -53,15 +49,10 @@
       <div class="main-meal flex flex-col sm:flex-row sm:justify-between">
 
         <img class="max-sm:hidden sm:object-cover sm:w-5/12 sm:h-screen sm:py-20 sm:pr-10" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""
-          data-te-animation-init
-          data-te-animation-start="onScroll"
-          data-te-animation="[fade-in-left_2s_ease-in-out]"
-        >
+          <%= @animation_left %> >
 
         <div class="meal-infos flex flex-col sm:w-7/12 sm:justify-center"
-          data-te-animation-init
-          data-te-animation-start="onScroll"
-          data-te-animation="[fade-in-right_2s_ease-in-out]">
+          <%= @animation_right %> >
 
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plat principal</h2>
           <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
@@ -91,9 +82,7 @@
         </div>
 
         <img class="sm:hidden max-sm:object-cover max-sm:w-full max-sm:h-56" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""
-          data-te-animation-init
-          data-te-animation-start="onScroll"
-          data-te-animation="[fade-in-left_2s_ease-in-out]">
+          <%= @animation_left %> >
 
       </div>
 
@@ -105,9 +94,7 @@
       <div class="dessert-meal flex flex-col sm:flex-row sm:justify-between">
         <%# # maybe an img in futur %>
         <div class="meal-infos flex flex-col sm:w-7/12 sm:justify-center"
-          data-te-animation-init
-          data-te-animation-start="onScroll"
-          data-te-animation="[fade-in-left_2s_ease-in-out]">
+          <%= @animation_left %> >
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Dessert</h2>
           <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
           <br>
@@ -136,9 +123,7 @@
         </div>
 
         <img class="object-cover w-full max-sm:h-56 sm:w-5/12 sm:h-screen sm:py-20 sm:pl-10" src="https://images.unsplash.com/photo-1593424718424-cf4d83f3def1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""
-          data-te-animation-init
-          data-te-animation-start="onScroll"
-          data-te-animation="[fade-in-right_2s_ease-in-out]">
+          <%= @animation_right %> >
 
       </div>
 

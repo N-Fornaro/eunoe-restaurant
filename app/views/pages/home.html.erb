@@ -1,6 +1,23 @@
 <h1 class="sr-only">Eunoé Restaurant</h1>
 <%= render "pages/home/banner" %>
 
+<% @animation_left =  'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-left_2s_ease-in-out] ' %>
+
+<% @animation_right = 'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-right_2s_ease-in-out] ' %>
+
+<% @animation_top = 'data-te-animation-init ' +
+                    'data-te-animation-start= onScroll ' +
+                    'data-te-animation= [fade-in-down_3s_ease-in-out] ' %>
+
+<% @animation_bot = 'data-te-animation-init ' +
+                    'data-te-animation-start= onScroll ' +
+                    'data-te-animation= [fade-in-up_3s_ease-in-out] ' %>
+
+
 <%= render "pages/home/video_section" %>
 
 <%= render "pages/home/list-img" %>

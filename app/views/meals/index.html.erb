@@ -26,8 +26,16 @@
     <h2 class="flex justify-center text-center text-sm font-light italic mt-1">Notre carte Eunoé change en fonction de la restauration <br class="max-sm:hidden">du midi et du soir. </h2>
   </div>
 
+  <% @animation_left =  'data-te-animation-init ' +
+                        'data-te-animation-start= onScroll ' +
+                        'data-te-animation= [fade-in-left_2s_ease-in-out] ' %>
+  <% @animation_right = 'data-te-animation-init ' +
+                        'data-te-animation-start= onScroll ' +
+                        'data-te-animation= [fade-in-right_2s_ease-in-out] ' %>
+
   <%= render "lunch" %>
 
   <%= render "dinner" %>
+  <%# Dinner - Change animation to a Var if no-repeat fixed %>
 
 </div>

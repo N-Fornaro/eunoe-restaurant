@@ -19,10 +19,18 @@
   </div>
 </section>
 
+<% @animation_left =  'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-left_2s_ease-in-out] ' %>
+
+<% @animation_right = 'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-right_2s_ease-in-out] ' %>
 
 <div class="container">
   <div class="flex flex-col items-center justify-center mt-6">
-    <div class="flex flex-col justify-center sm:w-1/2">
+    <div class="flex flex-col justify-center sm:w-1/2"
+      <%= @animation_left %> >
       <h3 class="my-4 text-3xl md:text-4xl font-semibold leading-relaxed text-center text-pink-pastel">Privatisation en semaine comme le weekend</h3>
       <p class="my-2 text-base md:text-lg leading-relaxed text-center">
         Un lieu convivial privatisable entièrement ou en partie, en semaine comme le week-end. Des peintures artistiques d’Agnes, la vaisselle en céramique de Lola, des tables centenaires restaurées par Quentin, le tout mise en scène par Annabelle Fesquet.

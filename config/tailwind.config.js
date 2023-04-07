@@ -7,7 +7,10 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    safelist: ['animate-[fade-in-left_2s_ease-in-out]', 'animate-[fade-in-right_1s_ease-in-out]'],
+    safelist: [ 'animate-[fade-in-left_2s_ease-in-out]',
+                'animate-[fade-in-right_2s_ease-in-out]',
+                'animate-[fade-in-down_3s_ease-in-out]',
+                'animate-[fade-in-up_3s_ease-in-out]'],
     extend: {
       colors: {
         'green-pastel': '#5e6738',

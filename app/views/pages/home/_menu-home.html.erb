@@ -1,18 +1,20 @@
 <div class="container bg-white my-8 sm:my-16">
-  <div class="flex flex-col text-center">
+  <div class="flex flex-col text-center items-center">
     <h2 class="text-3xl font-extrabold text-pink-pastel sm:text-5xl">Menu Eunoé</h2>
     <p class="text-base italic">(Différent le soir, samedi et dimanche midi)</p>
     <br>
-    <p class="text-base sm:text-lg leading-relaxed font-normal">Les gourmands apprécieront <strong>le mélange subtil des saveurs et des épices dans nos plats</strong>. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+    <p class="text-base sm:text-lg leading-relaxed font-normal w-4/5">Les gourmands apprécieront <strong>le mélange subtil des saveurs et des épices dans nos plats</strong>. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
   </div>
 
-  <img class="sm:hidden max-sm:object-cover max-sm:w-full max-sm:h-52 max-sm:my-6" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+  <img class="sm:hidden max-sm:object-cover max-sm:w-full max-sm:h-52 max-sm:my-6" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""
+    <%= @animation_left %> >
 
   <div class="flex flex-col sm:flex-row sm:justify-between">
-    <%# # maybe an img in futur %>
-    <img class="max-sm:hidden sm:object-cover sm:w-6/12 sm:h-screen sm:py-12 sm:pr-10" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt="">
+    <img class="max-sm:hidden sm:object-cover sm:w-6/12 sm:h-[80vh] sm:py-12 sm:pr-10" src="https://images.unsplash.com/photo-1579631542761-d7c4e913f8d4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""
+      <%= @animation_left %> >
 
-    <div class="meal-infos flex flex-col sm:w-6/12 sm:justify-center">
+    <div class="meal-infos flex flex-col sm:w-6/12 sm:justify-center"
+      <%= @animation_right %> >
       <div class="mb-3 sm:mb-6">
         <div class="flex flex-row mb-1 sm:mb-3">
           <h3 class="text-lg sm:text-xl font-bold mr-1">Pour le Déjeuner</h3>

@@ -24,6 +24,13 @@
   </div>
 </section>
 
+<% @animation_left =  'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-left_2s_ease-in-out] ' %>
+
+<% @animation_right = 'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-right_2s_ease-in-out] ' %>
 
 <%= render "pages/restaurant/description-1" %>
 

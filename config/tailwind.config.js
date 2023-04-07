@@ -13,10 +13,10 @@ module.exports = {
                 'animate-[fade-in-up_3s_ease-in-out]'],
     extend: {
       colors: {
-        'green-pastel': '#5e6738',
-        'lightgreen-pastel': '#a8baa2',
-        'red-pastel': '#9c5741',
-        'pink-pastel': '#b97456',
+        'green-pastel': '#5e6737',
+        'lightgreen-pastel': '#a5bea4',
+        'red-pastel': '#904530',
+        'pink-pastel': '#b9714f',
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],

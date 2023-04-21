@@ -44,6 +44,6 @@ class BookingMailer < ApplicationMailer
   private
 
   def attachments_logo
-    attachments['Eunoe_Logo_crop.png'] = File.read('app/assets/images/Eunoe_Logo_crop.png')
+    attachments['Eunoe.png'] = File.read('app/assets/images/Eunoe.png')
   end
 end

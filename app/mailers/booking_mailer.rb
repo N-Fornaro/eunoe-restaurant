@@ -2,7 +2,8 @@
 
 # Mailer controlling the messages sent following the creation or update of a booking
 class BookingMailer < ApplicationMailer
-  default from: 'no-reply@eunoe.resto'
+  default from: 'no-reply@eunoe-restaurant.com'
+  before_action :attachments_logo
 
   def booking_saved
     @booking = params[:booking]
@@ -13,7 +14,7 @@ class BookingMailer < ApplicationMailer
     @booking = params[:booking]
 
     ### !!! Email address below to update when domain name is bought and ready for production !!! ###
-    mail(to: 'resa@eunoe.resto',
+    mail(to: 'booking@eunoe-restaurant.com',
          from: "Nouvelle demande - #{@booking.last_name.upcase} - #{@booking.people} p. - #{@booking.starts_at}")
   end
 
@@ -38,5 +39,11 @@ class BookingMailer < ApplicationMailer
     @booking = params[:booking]
     mail(to: @booking.email, subject: 'Eunoé - Modification de votre réservation')
     # OPTIONAL
+  end
+
+  private
+
+  def attachments_logo
+    attachments['Eunoe.png'] = File.read('app/assets/images/Eunoe.png')
   end
 end

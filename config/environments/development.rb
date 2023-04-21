@@ -43,8 +43,35 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
-  config.action_mailer.delivery_method = :letter_opener
   config.action_mailer.perform_deliveries = true
+
+  # config.action_mailer.delivery_method = :smtp
+  # host = ‘localhost:3000’ # replace  with your  own url
+  # config.action_mailer.default_url_options = { :host => 'localhost:3000', protocol: 'http' }
+  # config.action_mailer.smtp_settings = {
+  #   :address              => "mail.gandi.net",
+  #   :port                 => 587,
+  #   :user_name             => ENV["MAIL_PASSWORD"],
+  #   :password             => ENV["MAIL_PASSWORD"],
+  #   :authentification     => "plain",
+  #   :enable_starttls_auto => true
+  # }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'mail.gandi.net',
+    port:                 587,
+    domain:               'localhost:3000',
+    user_name:            ENV["MAIL_FELIX"],
+    password:             ENV["MAIL_PASSWORD"],
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5
+  }
+
+  # For images in mailer with the attachments method
+  config.action_controller.asset_host = 'http://localhost:3000'
+  config.action_mailer.asset_host = config.action_controller.asset_host
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

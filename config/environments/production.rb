@@ -63,8 +63,28 @@ Rails.application.configure do
   # Use a real queuing backend for Active Job (and separate queues per environment).
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "eunoe_restaurant_production"
+  config.action_mailer.raise_delivery_errors = false
 
   config.action_mailer.perform_caching = false
+
+  config.action_mailer.perform_deliveries = true
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address:              'mail.gandi.net',
+    port:                 587,
+    domain:               'https://www.eunoe-restaurant.com',
+    user_name:            ENV['MAIL_FELIX'],
+    password:             ENV['MAIL_PASSWORD'],
+    authentication:       'plain',
+    enable_starttls_auto: true,
+    open_timeout:         5,
+    read_timeout:         5
+  }
+
+  # For images in mailer with the attachments method
+  config.action_controller.asset_host = 'https://www.eunoe-restaurant.com'
+  config.action_mailer.asset_host = config.action_controller.asset_host
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

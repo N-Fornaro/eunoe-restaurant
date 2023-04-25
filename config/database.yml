@@ -83,4 +83,5 @@ production:
   <<: *default
   database: eunoe_restaurant_production
   username: eunoe_restaurant
+  url: <%= ENV["DATABASE_URL"] %>
   password: <%= ENV["EUNOE_RESTAURANT_DATABASE_PASSWORD"] %>

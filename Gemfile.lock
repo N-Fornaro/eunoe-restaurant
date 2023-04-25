@@ -271,7 +271,7 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   letter_opener
-  pg (~> 1.1)
+  pg
   puma (~> 5.0)
   rails (~> 7.0.4)
   rails-i18n

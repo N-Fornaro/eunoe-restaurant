@@ -88,10 +88,11 @@
             <%= link_to "Réservation", new_booking_path, class: "text-gray-500 transition hover:text-gray-700" %>
           </li>
 
-          <li>
-            <%= link_to "Admin", admin_path, class: "text-gray-500 transition hover:text-gray-700" %>
-          </li>
-
+          <% if current_user %>
+            <li>
+              <%= link_to "Admin", admin_path, class: "text-gray-500 transition hover:text-gray-700" %>
+            </li>
+          <% end %>
         </ul>
       </nav>
 

@@ -39,7 +39,7 @@
       <p class="my-2 text-base md:text-lg leading-relaxed text-center">
         Eunoé peut accueillir jusqu’à 60 personnes en cocktail et 40 personnes en diner assis avec une cuisine ouverte donnant sur le square Gardette.
       </p>
-      <a href="brochure-privatisation-Eunoe.pdf" target="_blank" class="my-4 text-base md:text-lg font-light leading-relaxed text-center underline hover:font-normal">Téléchargez notre brochure privatisation</a>
+      <a href="https://6qvxwpjda8.execute-api.eu-west-1.amazonaws.com/docs/Uzz5ndMXlMbAIU8XMhUYelWDoqfsfF?sig=ccaf26c11cd58b23f232009548824fbcab00bf65c952344620b1871e236b5859" target="_blank" class="my-4 text-base md:text-lg font-light leading-relaxed text-center underline hover:font-normal">Téléchargez le communiqué de presse</a>
     </div>
 
     <%= render "privatisations/carousel-privatisation" %>
@@ -50,8 +50,20 @@
 
 
 
-<div class="container">
-  <div id="contact-privat">
-    <%= render "privatisations/contact-privatisation" %>
+<div class="container mb-20">
+  <div id="contact-privat" <%= @animation_left %> >
+    <div class="mt-4 lg:flex lg:items-end lg:justify-around">
+      <div>
+        <p class="max-w-md pt-10 mx-auto text-lg leading-relaxed text-center text-gray-500 sm:text-xl">
+          <strong class="text-xl sm:text-2xl font-extrabold pb-2"> Veuillez contacter Félix Perrotte pour plus d'information :  </strong>
+        <p class="max-w-md pt-2 mx-auto font-bold text-lg leading-relaxed text-center text-gray-500 sm:text-xl">
+          <a href="tel:+33 7 67 96 86 36"> +33 7 67 96 86 36 </a> <br>
+          <a href="mailto:Felix@eunoe-restaurant.com"> Felix@eunoe-restaurant.com </a>
+        </p>
+        <div class="flex flex-row justify-center">
+          <a href="https://www.instagram.com/eunoe_restaurant/" class="m-1 text-5xl text-rose-700"><i class="fa-brands fa-square-instagram"></i></a>
+        </div>
+      </div>
+    <%# <%= render "privatisations/contact-privatisation" %>
   </div>
 </div>

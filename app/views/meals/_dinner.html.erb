@@ -1,5 +1,6 @@
  <div data-navtabs-target="dinner" class="hidden">
     <div class="menu-dinner flex flex-col my-8">
+      <h2 class="text-4xl font-extrabold text-pink-pastel text-center sm:text-6xl">Menu du diner</h2>
       <% if current_user %>
         <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
       <% end %>
@@ -13,10 +14,10 @@
           data-te-animation-reset="true"
           data-te-animation="[fade-in-left_2s_ease-in-out]">
 
-          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Entrées Dinner</h2>
-          <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
+          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Entrées</h2>
+          <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
           <br>
-          <p class="text-base sm:text-lg font-normal">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+          <p class="text-base sm:text-lg font-normal">Entrées ou assiettes de convivialités, chez eunoe on est libre de ses envies !</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>
@@ -71,10 +72,10 @@
           data-te-animation-reset="true"
           data-te-animation="[fade-in-right_2s_ease-in-out]">
 
-          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plat principal</h2>
-          <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
+          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plats principaux</h2>
+          <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
           <br>
-          <p class="text-base sm:text-lg font-normal">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+          <p class="text-base sm:text-lg font-normal">L'exigence du produit se traduit dans le respect qu’il apporte aux bêtes qu’il travaille. Ryuji reçoit des bêtes entières, afin de les valoriser et de pouvoir offrir des assiettes généreuses sans être trop onéreuses. Chez EUNOE, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>
@@ -121,10 +122,10 @@
           data-te-animation-reset="true"
           data-te-animation="[fade-in-left_2s_ease-in-out]">
 
-          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Dessert</h2>
-          <p class="text-base italic">(Uniquement le soir, samedi et dimanche midi)</p>
+          <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Desserts</h2>
+          <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
           <br>
-          <p class="text-base sm:text-lg font-normal">Les gourmands apprécieront le mélange subtil des saveurs et des épices dans nos plats. Fermez les yeux et expérimentez une explosion de saveur en bouche mais aussi un voyage instantané vers Bangkok. Parmi les plats les plus populaires en restaurant, retrouvez le Pad Thai, sauté dans le fameux ‘wok’!</p>
+          <p class="text-base sm:text-lg font-normal">Une explosion de saveurs en bouche, expérimentez le régressif qui se réinvente !</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>
@@ -148,7 +149,7 @@
           <% end %>
         </div>
 
-        <img class="object-cover w-full max-sm:h-56 sm:w-5/12 sm:h-screen sm:my-20 sm:pl-10" src="https://images.wakelet.com/resize?id=u9Bh0wQ8z2X_J5n7ahsBB&h=2303&w=1536&q=85#" alt=""
+        <img class="object-cover w-full max-sm:h-56 sm:w-5/12 sm:h-screen sm:my-20 sm:pl-10" src="https://images.wakelet.com/resize?id=QpENvB3MNw_i2P_xz3D_X&h=1920&w=1536&q=85#" alt=""
           data-te-animation-init
           data-te-animation-start="onScroll"
           data-te-animation-on-scroll="repeat"

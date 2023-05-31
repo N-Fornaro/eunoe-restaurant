@@ -17,8 +17,8 @@ module EunoeRestaurant
     config.exceptions_app = self.routes
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
-    config.i18n.available_locales = %i[en fr]
-    config.i18n.default_locale = :en
+    config.i18n.available_locales = %i[fr en]
+    config.i18n.default_locale = :fr
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end

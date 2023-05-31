@@ -1,5 +1,23 @@
-<div class="container bg-white">
-  <p>To Do</p>
-  Eunoé - Annulation de votre réservation
-  <%= image_tag attachments['Eunoe.png'].url, width:"200px" %>
+<div class="container bg-mailer">
+  <div style="font-family: 'Darker Grotesque', sans-serif; font-size: large; color: black; margin: 2vh 2vw 2vh 2vw;">
+    <p> Bonjour <%= @booking.gender %> <%= @booking.first_name %> <%= @booking.last_name %>,</p>
+    <br>
+    <p> Votre réservation pour le <strong><%= @booking.date.strftime("%d / %m / %Y") %></strong> a bien été <strong>annulé</strong> par notre équipe. Pour rappel :</p>
+
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🧑‍🤝‍🧑   pour <%= @booking.people %> personnes</li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🗓️   du <%= @booking.date.strftime("%d / %m / %Y")%>, </li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> ⏰   à <%= @booking.starts_at.time.strftime('%H:%M heure')%></li>
+        <li style="list-style-type: none; font-weight: bold; color: #904530; margin: 2vh 0 2vh 0; padding-left: 4vw;"> 🧐   Commentaire : <%= @booking.comment %></li>
+    <br>
+    <br>
+
+
+    <p style="margin-bottom: 5vh;">
+        A bientôt,<br>
+        l'équipe Eunoé.
+    </p>
+
+    <%= image_tag attachments['Eunoe.png'].url, width:"200px" %>
+
+  </div>
 </div>

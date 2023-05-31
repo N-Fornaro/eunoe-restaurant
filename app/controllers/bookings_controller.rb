@@ -52,8 +52,8 @@ class BookingsController < ApplicationController
     status_changed = set_status_change
     if @booking.update!(booking_params)
       status_changed ? email_status_change : email_modified
-      # redirect_to booking_path(@booking)
-      redirect_back(fallback_location: home_path)
+      redirect_to booking_path(@booking)
+      # redirect_back(fallback_location: home_path)
       flash[:notice] = 'Réservation modifiée avec succès / Booking successfully modified'
     else
       render :edit
@@ -94,7 +94,7 @@ class BookingsController < ApplicationController
   end
 
   def notify_admin
-    BookingMailer.with(booking: @booking).notify_admin.deliver
+    BookingMailer.with(booking: @booking).notify_admin.deliver!
   end
 
   def set_status_change

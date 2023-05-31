@@ -30,12 +30,12 @@
           <%= link_to "Réserver", new_booking_path, id: "new-booking", data: {navbar_target: 'booking'}, class: "transition duration-300 ease-in-out rounded-md bg-pink-pastel hover:bg-red-pastel px-8 py-2.5 uppercase text-base sm:text-lg font-medium text-white hover:text-white shadow" %>
         </div>
 
-        <div class="hidden md:flex md:gap-4 md:text-3xl md:ml-8 ">
-          <ul>
-            <li><%= link_to '🇬🇧', home_path(locale: :en) %></li>
-            <li><%= link_to '🇫🇷', home_path(locale: :fr) %></li>
-          </ul>
-        </div>
+        <%# <div class="hidden md:flex md:gap-4 md:text-3xl md:ml-8 "> %>
+          <%# <ul> %>
+            <%# <li><%= link_to '🇬🇧', home_path(locale: :en)</li> %>
+            <%# <li><%= link_to '🇫🇷', home_path(locale: :fr)</li>  %>
+          <%# </ul> %>
+        <%# </div> %>
 
         <div id="burger-open" class="z-50 block md:hidden" data-action="click->navbar#burgerMenu">
           <button
@@ -66,12 +66,12 @@
     <div class="relative top-0 flex flex-row justify-end w-full h-5 p-2">
 
     </div>
-    <div class="flex flex-row gap-4">
-          <ul class="flex flex-row gap-10 text-4xl">
-            <li><%= link_to '🇬🇧', home_path(locale: :en) %></li>
-            <li><%= link_to '🇫🇷', home_path(locale: :fr) %></li>
-          </ul>
-    </div>
+    <%# <div class="flex flex-row gap-4"> %>
+          <%# <ul class="flex flex-row gap-10 text-4xl"> %>
+            <%# <li><%= link_to '🇬🇧', home_path(locale: :en)</li> %>
+            <%# <li><%= link_to '🇫🇷', home_path(locale: :fr) </li> %>
+          <%# </ul> %>
+    <%# </div> %>
     <nav aria-label="Site Nav" role="menu">
       <ul class="flex flex-col items-center gap-10 text-lg">
         <li><%= link_to "Accueil", home_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>

@@ -12,9 +12,8 @@ class BookingMailer < ApplicationMailer
 
   def notify_admin
     @booking = params[:booking]
-
     ### !!! Email address below to update when domain name is bought and ready for production !!! ###
-    mail(to: 'booking@eunoe-restaurant.com',
+    mail(to: 'felix@eunoe-restaurant.com',
          from: "Nouvelle demande - #{@booking.last_name.upcase} - #{@booking.people} p. - #{@booking.starts_at}")
   end
 

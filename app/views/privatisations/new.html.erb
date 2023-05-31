@@ -13,7 +13,8 @@
 
       <div class="flex flex-wrap justify-center gap-4 mt-8">
         <%# <a href="https://6qvxwpjda8.execute-api.eu-west-1.amazonaws.com/docs/xRISzhoJuLw9BhhPuzKgjP2e-Fl7BK?sig=8834825d513519af241d2050d53d5a692ecc5d9015bc555aa91c3ef7eddb744b" class="block w-full px-12 py-3 text-base sm:text-lg font-medium text-white rounded shadow bg-pink-pastel hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" target="_blank">Téléchargez notre brochure privatisation</a> %>
-        <a href="#contact-privat" class="block w-full px-12 py-3 text-base sm:text-lg font-medium text-white rounded shadow bg-pink-pastel hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto">Nous Contacter</a>
+        <%# <a href="mailto:Felix@eunoe-restaurant.com" class="block w-full px-12 py-3 text-base sm:text-lg font-medium text-white rounded shadow bg-pink-pastel hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto">Nous Contacter</a>
+        <a href="#contact-privat" class="block w-full px-12 py-3 text-base sm:text-lg font-medium text-white rounded shadow bg-pink-pastel hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto">Nous Contacter</a> %>
       </div>
     </div>
   </div>
@@ -28,9 +29,9 @@
                       'data-te-animation= [fade-in-right_2s_ease-in-out] ' %>
 
 <div class="container">
-  <div class="flex flex-col items-center justify-center mt-6">
+  <div class="flex flex-col items-center justify-center my-6">
     <div class="flex flex-col justify-center sm:w-1/2 mb-2 sm:mb-6"
-      <%= @animation_left %> >
+       >
       <h3 class="my-4 text-3xl md:text-4xl font-semibold leading-relaxed text-center text-pink-pastel">Privatisation en semaine comme le weekend</h3>
       <p class="my-2 text-base md:text-lg leading-relaxed text-center">
         Un lieu convivial privatisable entièrement ou en partie, en semaine comme le week-end. Des peintures artistiques d’Agnes, la vaisselle en céramique de Lola, des tables centenaires restaurées par Quentin, le tout mise en scène par Annabelle Fesquet.
@@ -40,6 +41,18 @@
         Eunoé peut accueillir jusqu’à 60 personnes en cocktail et 40 personnes en diner assis avec une cuisine ouverte donnant sur le square Gardette.
       </p>
       <%# <a href="https://6qvxwpjda8.execute-api.eu-west-1.amazonaws.com/docs/xRISzhoJuLw9BhhPuzKgjP2e-Fl7BK?sig=8834825d513519af241d2050d53d5a692ecc5d9015bc555aa91c3ef7eddb744b" target="_blank" class="my-4 text-base md:text-lg font-light leading-relaxed text-center underline hover:font-normal">Téléchargez notre brochure privatisation</a> %>
+
+      <div >
+          <p class="max-w-md pt-10 mx-auto text-lg leading-relaxed text-center text-gray-500 sm:text-xl">
+            <strong class="text-xl sm:text-2xl font-extrabold pb-2"> Veuillez contacter Félix Perrotte pour plus d'informations :  </strong>
+          <p class="max-w-md pt-2 mx-auto font-bold text-lg leading-relaxed text-center text-gray-500 sm:text-xl">
+            <a href="tel:+33 7 67 96 86 36"> <i class="fa-solid fa-phone"></i>  +33 7 67 96 86 36</a> <br>
+            <a href="mailto:Felix@eunoe-restaurant.com"><i class="fa-solid fa-envelope"></i>  Felix@eunoe-restaurant.com </a>
+          </p>
+          <%# <div class="flex flex-row justify-center">
+            <a href="https://www.instagram.com/eunoe_restaurant/" class="m-1 text-5xl text-rose-700"><i class="fa-brands fa-square-instagram"></i></a>
+          </div> %>
+        </div>
     </div>
 
     <%= render "privatisations/carousel-privatisation" %>
@@ -50,8 +63,8 @@
 
 
 
-<div class="container my-20">
-  <div id="contact-privat" <%= @animation_left %> >
+<%# <div class="container my-20">
+  <div id="contact-privat" >
     <div class="flex flex-col items-center justify-center sm:flex-row mt-6">
       <div class="flex flex-col sm:flex-row justify-center sm:w-1/2">
         <div>
@@ -69,6 +82,5 @@
           </div>
         </div>
       </div>
-    <%# <%= render "privatisations/contact-privatisation" %>
   </div>
-</div>
+</div> %>

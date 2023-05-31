@@ -1,6 +1,9 @@
   <div data-navtabs-target="lunch">
     <div class="menu-lunch flex flex-col my-8">
       <h2 class="text-4xl font-extrabold text-pink-pastel text-center sm:text-6xl">Menu du déjeuner</h2>
+      <div class="flex justify-center">
+        <p class="text-base sm:text-lg leading-relaxed font-normal w-4/5 text-center my-2 sm:my-4">Nous vous proposons une bonne cuisine certes, mais surtout une expérience et une bonne ambiance. Sans oublier d’être accessible à tous, notamment avec un menu déjeuner très attractif, dans lequel le plat du jour est à 14€ et la formule complète à 26€.</p>
+      </div>
       <% if current_user %>
         <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
       <% end %>
@@ -58,7 +61,7 @@
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plats principaux</h2>
           <p class="text-base italic">(Uniquement les déjeuners, du mardi au dimanche)</p>
           <br>
-          <p class="text-base sm:text-lg font-normal">L'exigence du produit se traduit dans le respect qu’il apporte aux bêtes qu’il travaille. Ryuji reçoit des bêtes entières, afin de les valoriser et de pouvoir offrir des assiettes généreuses sans être trop onéreuses. Chez EUNOE, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.</p>
+          <p class="text-base sm:text-lg font-normal">Chez EUNOE, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Lunch' %>

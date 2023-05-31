@@ -1,12 +1,15 @@
 <div class="container bg-white my-8 sm:my-16">
   <div class="flex flex-col text-center items-center">
-    <h2 class="text-3xl font-extrabold text-pink-pastel sm:text-5xl">Menu Eunoé</h2>
+    <h2 class="text-3xl font-extrabold text-pink-pastel sm:text-5xl">Menu</h2>
     <p class="text-base italic">(Différent le midi et le soir)</p>
     <br>
     <p class="text-base sm:text-lg leading-relaxed font-normal w-4/5">
-    L'exigence du produit se traduit dans le respect qu’il apporte aux bêtes qu’il travaille. Ryuji reçoit des bêtes entières, afin de les valoriser et de pouvoir offrir des assiettes généreuses sans être trop onéreuses.
+    Eunoé, c’est une cuisine créative, généreuse et conviviale qui fait la part belle aux produits de saison et de la région. Nous avons sélectionné pour vous les plus beaux ingrédients issus des meilleurs fournisseurs locaux.
     Chez EUNOE, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.
     </p>
+    <div class="flex justify-center sm:gap-4 sm:mt-4">
+        <%= link_to "Découvez notre carte", meals_path, class: "block w-full px-12 py-3 text-base sm:text-lg text-center font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto my-2" %>
+    </div>
   </div>
 
   <img class="sm:hidden max-sm:object-cover max-sm:w-full max-sm:h-52 max-sm:my-6" src="https://images.wakelet.com/resize?id=6Nvch3ibpsqfm6FGV6QHw&h=2304&w=1536&q=85#" alt=""
@@ -24,8 +27,9 @@
           <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
           <p class="text-lg sm:text-xl font-bold ml-1">14/26 €</p>
         </div>
-        <p class="text-base sm:text-lg leading-relaxed font-light mb-1 sm:mb-3">Il est composé de 2 choix d'entrées, 3 choix de plats et 2 desserts selon les saisons. <br>
+        <p class="text-base sm:text-lg leading-relaxed font-light mb-2 sm:mb-3">Il est composé de 2 choix d'entrées, 3 choix de plats et 2 desserts selon les saisons. <br>
         Nous vous proposons une bonne cuisine certes, mais surtout une expérience et une bonne ambiance. Sans oublier d’être accessible à tous, notamment avec un menu déjeuner très attractif, dans lequel le plat du jour est à 14€ et la formule complète à 26€.</p>
+        <a href="https://6qvxwpjda8.execute-api.eu-west-1.amazonaws.com/docs/KFnXOG9Rc0v-COp2Ti5LiQHx3O58OE?sig=57382f61981ea7e0b364699f440bd39b59efc9426c96659e66797077ca08e51c" target="_blank" rel="noopener noreferrer" class="px-6 py-2 sm:px-7 text-sm sm:text-base  text-center font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"><i class="fa-regular fa-circle-down pr-2 sm:pr-4"></i> Menu midi</a>
       </div>
 
       <div class="mb-3 sm:mb-6">
@@ -34,10 +38,8 @@
           <span class="grow border-black border-b border-dotted mb-3 mr-2 ml-2"></span>
           <p class="text-lg sm:text-xl font-bold ml-1">35/50 €</p>
         </div>
-        <p class="text-base sm:text-lg leading-relaxed font-light mb-1 sm:mb-3">Il est composé de 5 choix d'entrées, 3 choix de plats et 2 desserts selon les saisons. Nos produits sont frais et trier sur le volet pour le bonheur de vos papilles. Pour le diner nous vous proposons des produits plus rafinés pour une expérience plus subtile et complète.  Nous vous invitons à les découvrir.</p>
-      </div>
-      <div class="flex justify-center sm:gap-4 sm:mt-4">
-        <%= link_to "Découvez notre carte", meals_path, class: "block w-full px-12 py-3 text-base sm:text-lg text-center font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %>
+        <p class="text-base sm:text-lg leading-relaxed font-light mb-2 sm:mb-3">Il est composé de 5 choix d'entrées, 3 choix de plats et 2 desserts selon les saisons. Pour le diner nous vous proposons des produits plus rafinés pour une expérience plus subtile et complète.  Nous vous invitons à les découvrir.</p>
+        <a href="https://6qvxwpjda8.execute-api.eu-west-1.amazonaws.com/docs/lMZGJJ8pefOVBRAihp8TyiBJU051xc?sig=cb2a08ad1f4b33dffdc746a05712b2e65fff486267bb2d298d183e60baa0696e" target="_blank" rel="noopener noreferrer" class="px-6 py-2 sm:px-8 text-sm sm:text-base  text-center font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"><i class="fa-regular fa-circle-down pr-2 sm:pr-4"></i> Menu soir</a>
       </div>
     </div>
 

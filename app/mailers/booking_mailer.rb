@@ -14,7 +14,7 @@ class BookingMailer < ApplicationMailer
     @booking = params[:booking]
     ### !!! Email address below to update when domain name is bought and ready for production !!! ###
     mail(to: 'felix@eunoe-restaurant.com',
-         from: "Nouvelle demande - #{@booking.last_name.upcase} - #{@booking.people} p. - #{@booking.starts_at}")
+         subject: "Nouvelle demande - #{@booking.last_name.upcase} - #{@booking.people} p. - #{@booking.starts_at}")
   end
 
   def booking_confirmed

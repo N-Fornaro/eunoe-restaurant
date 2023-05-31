@@ -32,7 +32,8 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
-      email_saved && notify_admin
+      # email_saved && notify_admin
+      email_saved
       # redirect_to booking_path(@booking), status: :see_other
       redirect_to home_path, status: :see_other
       flash[:notice] = 'Réservation enregistrée avec succès / Booking successfully saved'

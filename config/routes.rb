@@ -9,10 +9,11 @@ Rails.application.routes.draw do
     }
     # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
     # Defines the root path route ("/")
-    root 'pages#soon'
+    # root 'pages#soon'
+    root 'pages#home'
 
     # Temporary homepage / Opening soon (or future maintenance page)
-    get '/soon', to: 'pages#soon', as: 'soon'
+    # get '/soon', to: 'pages#soon', as: 'soon'
 
     # Pages routes
     get '/home', to: 'pages#home', as: 'home'

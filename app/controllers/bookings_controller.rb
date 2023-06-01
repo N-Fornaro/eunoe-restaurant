@@ -5,7 +5,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: %i[confirmation show edit update destroy]
 
   # Line below to uncomment when ready for opening (to remove the temporary homepage / opening soon page)
-  # skip_before_action :authenticate_user!, only: %i[new show create edit update]
+  skip_before_action :authenticate_user!, only: %i[new create]
 
   def index
     @booking = Booking.all

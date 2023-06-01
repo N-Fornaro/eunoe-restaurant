@@ -1,6 +1,8 @@
 class PrivatisationsController < ApplicationController
   include Filterable
   before_action :set_privatisation, only: %i[show edit update destroy]
+  skip_before_action :authenticate_user!, only: %i[new]
+
 
   # Line below to uncomment when ready for opening (to remove the temporary homepage / opening soon page)
   # skip_before_action :authenticate_user!, only: %i[new create]

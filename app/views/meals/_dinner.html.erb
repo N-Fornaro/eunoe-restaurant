@@ -1,8 +1,9 @@
  <div data-navtabs-target="dinner" class="hidden">
     <div class="menu-dinner flex flex-col my-8">
-      <h2 class="text-4xl font-extrabold text-pink-pastel text-center sm:text-6xl">Menu du diner</h2>
+      <h2 class="text-4xl font-extrabold text-pink-pastel text-center sm:text-6xl">Menu du dîner</h2>
       <div class="flex justify-center">
-        <p class="text-base sm:text-lg leading-relaxed font-normal w-4/5 text-center my-2 sm:my-4">L'exigence du produit se traduit dans le respect qu’il apporte aux bêtes qu’il travaille. Ryuji reçoit des bêtes entières, afin de les valoriser et de pouvoir offrir des assiettes généreuses sans être trop onéreuses. Des saveurs qui raisonneront avec de jolis vins proposés par Félix, qui nous embarquera dans une expérience conviviale.</p>
+        <p class="text-base sm:text-lg leading-relaxed font-normal w-4/5 text-center my-2 sm:my-4">
+        Pour le dîner, nous vous proposons des produits plus travaillés et raffinés pour une expérience plus subtile et complète. L'exigence du produit se traduit dans le respect qu’il apporte aux bêtes qu’il travaille. Ryuji reçoit des bêtes entières, afin de les valoriser et de pouvoir offrir des assiettes généreuses sans être trop onéreuses. Des saveurs qui raisonneront avec de jolis vins proposés par Félix, qui nous embarquera dans une expérience conviviale.</p>
       </div>
       <% if current_user %>
         <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
@@ -20,7 +21,7 @@
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Entrées</h2>
           <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
           <br>
-          <p class="text-base sm:text-lg font-normal">Entrées ou assiettes de convivialités, chez eunoe on est libre de ses envies !</p>
+          <p class="text-base sm:text-lg font-normal">Entrées ou assiettes de convivialités, chez Eunoé on est libre de ses envies !</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>
@@ -78,7 +79,7 @@
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plats principaux</h2>
           <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
           <br>
-          <p class="text-base sm:text-lg font-normal">Chez EUNOE, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.</p>
+          <p class="text-base sm:text-lg font-normal">Chez Eunoé, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.</p>
           <br>
           <% @meals.each do |meal| %>
             <% if meal.timing == 'Dinner' %>

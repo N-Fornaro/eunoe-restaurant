@@ -4,6 +4,7 @@
       <div class="flex justify-center">
         <p class="text-base sm:text-lg leading-relaxed font-normal w-4/5 text-center my-2 sm:my-4">Nous vous proposons une bonne cuisine certes, mais surtout une expérience et une bonne ambiance. Sans oublier d’être accessible à tous, notamment avec un menu déjeuner très attractif, dans lequel le plat du jour est à 14€ et la formule complète à 26€.</p>
       </div>
+      <%# <p class="text-base sm:text-lg leading-relaxed font-semibold text-center">Du mardi au vendredi midi</p> %>
       <% if current_user %>
         <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
       <% end %>
@@ -14,7 +15,7 @@
           <%= @animation_left %> >
 
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Entrées</h2>
-          <p class="text-base italic">(Uniquement les déjeuners, du mardi au dimanche)</p>
+          <p class="text-base italic">(Uniquement les déjeuners, du mardi au vendredi)</p>
           <br>
           <p class="text-base sm:text-lg font-normal">Entrées ou assiettes de convivialités, chez Eunoé on est libre de ses envies !</p>
           <br>
@@ -59,7 +60,7 @@
           <%= @animation_right %> >
 
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plats principaux</h2>
-          <p class="text-base italic">(Uniquement les déjeuners, du mardi au dimanche)</p>
+          <p class="text-base italic">(Uniquement les déjeuners, du mardi au vendredi)</p>
           <br>
           <p class="text-base sm:text-lg font-normal">Chez Eunoé, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.</p>
           <br>
@@ -100,7 +101,7 @@
         <div class="meal-infos flex flex-col sm:w-7/12 sm:justify-center"
           <%= @animation_left %> >
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Desserts</h2>
-          <p class="text-base italic">(Uniquement les déjeuners, du mardi au dimanche)</p>
+          <p class="text-base italic">(Uniquement les déjeuners, du mardi au vendredi)</p>
           <br>
           <p class="text-base sm:text-lg font-normal">Une explosion de saveurs en bouche, expérimentez le régressif qui se réinvente !</p>
           <br>

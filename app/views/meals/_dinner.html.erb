@@ -5,6 +5,8 @@
         <p class="text-base sm:text-lg leading-relaxed font-normal w-4/5 text-center my-2 sm:my-4">
         Pour le dîner, nous vous proposons des produits plus travaillés et raffinés pour une expérience plus subtile et complète. L'exigence du produit se traduit dans le respect qu’il apporte aux bêtes qu’il travaille. Ryuji reçoit des bêtes entières, afin de les valoriser et de pouvoir offrir des assiettes généreuses sans être trop onéreuses. Des saveurs qui raisonneront avec de jolis vins proposés par Félix, qui nous embarquera dans une expérience conviviale.</p>
       </div>
+      <%# <p class="text-base sm:text-lg leading-relaxed font-semibold text-center">Dont le samedi midi et les jours fériés</p> %>
+
       <% if current_user %>
         <%= link_to 'Add a meal', new_meal_path, class: "block w-full px-12 py-3 text-sm font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto"%> <%# Wait admin part : if current_user.admin%>
       <% end %>
@@ -20,6 +22,7 @@
 
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Entrées</h2>
           <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
+          <p class="text-base italic">(samedi midi et jours fériés inclus)</p>
           <br>
           <p class="text-base sm:text-lg font-normal">Entrées ou assiettes de convivialités, chez Eunoé on est libre de ses envies !</p>
           <br>
@@ -78,6 +81,7 @@
 
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Plats principaux</h2>
           <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
+          <p class="text-base italic">(samedi midi et jours fériés inclus)</p>
           <br>
           <p class="text-base sm:text-lg font-normal">Chez Eunoé, les produits sont magnifiés par le barbecue japonais dont le charbon spécial appelé « binchotan » permet des cuissons lentes et donne un goût très particulier aux aliments.</p>
           <br>
@@ -128,6 +132,7 @@
 
           <h2 class="text-3xl font-extrabold text-black sm:text-5xl">Desserts</h2>
           <p class="text-base italic">(Uniquement le soir, du mardi au samedi)</p>
+          <p class="text-base italic">(samedi midi et jours fériés inclus)</p>
           <br>
           <p class="text-base sm:text-lg font-normal">Une explosion de saveurs en bouche, expérimentez le régressif qui se réinvente !</p>
           <br>

@@ -1,21 +1,27 @@
-<section id="main-banner" class="h-fit relative bg-[url(https://images.wakelet.com/resize?id=e-P8vb_A5ciDQL8ImHeLW&h=2304&w=1536&q=85#)] bg-cover bg-center bg-no-repeat">
+<section id="main-banner" class=" min-h-screen relative bg-[url(https://images.wakelet.com/resize?id=e-P8vb_A5ciDQL8ImHeLW&h=2304&w=1536&q=85#)] bg-cover bg-center bg-no-repeat">
     <div
     class="absolute inset-0 sm:z-0 bg-black/60 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/60 sm:to-black/60"
   ></div>
   <div class="relative max-w-screen-xl px-4 py-32 mx-auto sm:z-10 lg:h-fit lg:items-center">
     <div class="max-w-xl mx-auto">
-      <h1 class="mb-10 text-3xl font-extrabold text-white sm:text-6xl drop-shadow">
+      <h1 class="mb-36 text-3xl font-extrabold text-white sm:text-6xl drop-shadow">
         Trouvez le moment
         <strong class="font-extrabold text-pink-pastel sm:block">
           idéal.
         </strong>
       </h1>
-        <div class="p-8 bg-white rounded-md"><%= render "shared/form", booking: @booking  %></div>
+        <div class="p-8 bg-white rounded-md text-center">
+          <%# <%= render "shared/form", booking: @booking  %>
+          <p class=" md:text-2xl text-xl">Nous prenons les réservations par téléphone <br>
+          au 07 67 96 86 36 <br>
+          en raison d'une maintenance du site internet.
+          </p>
+        </div>
       </div>
-      <p class="mt-4 text-base italic text-center text-white sm:text-lg">
+      <%# <p class="mt-4 text-base italic text-center text-white sm:text-lg">
       *Un email confirmant votre demande de réservation vous sera envoyé. <br>
       *Un autre suivra pour confirmer ou non votre réservation.
-      </p>
+      </p> %>
     </div>
   </div>
 </section>

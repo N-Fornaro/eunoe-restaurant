@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get '/admin', to: 'pages#admin', as: 'admin'
     get '/restaurant', to: 'pages#restaurant', as: 'restaurant'
     get '/privatisation', to: 'privatisations#new', as: 'privatisation'
+    get '/presse', to: 'pages#presse', as: 'presse'
 
     # Privatisation routes
     resources :privatisations do

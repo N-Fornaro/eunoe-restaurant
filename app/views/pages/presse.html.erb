@@ -1,0 +1,290 @@
+<section class="h-screen relative bg-[url(https://images.wakelet.com/resize?id=DjPB4rSjbliETBD0kqQf-&h=2304&w=1536&q=85#)] bg-cover bg-center bg-no-repeat flex flex-col justify-center">
+
+  <div class="absolute inset-0 sm:z-0 bg-black/60 sm:bg-transparent sm:bg-gradient-to-r sm:from-black/60 sm:to-black/60">
+  </div>
+
+  <div class="relative max-w-screen-xl px-4 py-32 mx-auto sm:z-10 lg:flex lg:h-screen lg:items-center">
+    <div class="max-w-xl mx-auto text-center">
+      <h1 class="text-5xl sm:text-6xl font-extrabold text-white drop-shadow">
+        La presse
+        <strong class="font-extrabold text-pink-pastel sm:block drop-shadow">
+          Eunoé Restaurant
+        </strong>
+      </h1>
+
+      <p class="mt-4 text-white text-lg sm:text-2xl leading-relaxed shadow">
+        Une expérience bistronomique haute en couleurs, à la croisée des classiques du bistrot et de la fusion food japonaise.
+      </p>
+
+      <div class="flex flex-wrap justify-center gap-4 mt-8">
+
+        <%= link_to "Réservez votre table", new_booking_path, class: "block w-56 sm:w-full px-12 py-3 text-base sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<% @animation_left =  'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-left_2s_ease-in-out] ' %>
+
+<% @animation_right = 'data-te-animation-init ' +
+                      'data-te-animation-start= onScroll ' +
+                      'data-te-animation= [fade-in-right_2s_ease-in-out] ' %>
+
+<div class="sm:container sm:mx-auto sm:my-12 my-6 flex flex-col items-center justify-center content-center mx-2">
+  <h2 class="text-center sm:text-4xl text-xl font-bold text-pink-pastel leading-tight sm:my-6 my-4 sm:mx-10">- Toutes les publications presse d'Eunoé - <br>restaurant parisien du 11ème arrondissment de Paris : </h2>
+  <!-- Container all articles -->
+  <div class="grid sm:grid-cols-3 grid-cols-2 content-around items-stretch sm:items-center sm:gap-6 gap-2 sm:mx-10 sm:mt-6 mt-3">
+      <!-- Card 1 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+      <!-- Card 2 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+      <!-- Card 3 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+      <!-- Card 4 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+      <!-- Card 5 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+      <!-- Card 6 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+      <!-- Card 7 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+      <!-- Card 8 article -->
+      <div class="flex flex-col items-center rounded-lg bg-white shadow-lg dark:bg-neutral-700 hover:scale-105 sm:mb-6 ">
+        <div class=" w-full bg-gray-600 text-center text-white leading-tight text-xs sm:text-base">
+          <p>Publication Mai 2023</p>
+        </div>
+        <img
+          class="object-fit sm:h-32 h-14 sm:w-96 w-32 rounded-t-lg sm:p-2 p-1"
+          src="https://fr.newtable.com/images/logo-newtable.svg"
+          alt="" />
+        <div class="flex flex-col items-center justify-center content-center sm:p-6 p-1">
+          <h3
+            class="sm:mb-2 mb-1 sm:text-xl text-sm sm:font-medium font-normal max-sm:text-center leading-tight text-neutral-800 dark:text-neutral-50">
+            Cuisine qualitative aux inspirations japonaises
+          </h5>
+          <div class=" sm:h-56 h-28 overflow-scroll sm:my-4 max-sm:mt-1 max-sm:mb-3 px-1">
+            <p class="sm:mb-4 mb-2 sm:text-base text-xs text-neutral-600 dark:text-neutral-200 sm:py-2 py-1 px-2">
+              Le restaurant Eunoé est le fruit d'une amitié née il y a sept ans lors d'une rencontre à Tokyo.
+              <br>
+              Ryuji et Félix, tous deux passionnés par la cuisine, les échanges culturels, gastronomiques et amoureux des bons produits se lancent alors dans l'ouverture d'un restaurant à mi-chemin entre un bistrot et un restaurant gastronomique.
+              <br>
+              Aux fourneaux, Ryuji Sato propose une cuisine authentique et travaillée aux inspirations nippones et aux cultures du monde.
+            </p>
+          </div>
+          <a
+            class="block w-auto sm:w-2/3 px-3 sm:py-3 py-2 mb-2 text-center text-sm sm:text-lg font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel"
+            href="https://fr.newtable.com/restaurant-eunoe-7063.php"
+            target="_blank" rel="noopener noreferrer">
+            Accéder à l'article complet
+          </a>
+        </div>
+      </div>
+
+  </div>
+
+</div>

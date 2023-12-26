@@ -119,8 +119,9 @@
   </div>
 </div> %>
 
-<div class="container flex flex-col justify-center w-4/5 mx-auto my-16">
-  <h2 class="text-center text-3xl font-extrabold text-pink-pastel sm:text-4xl m-2 sm:m-12">La presse parle de notre restaurant du 11 ème arrondissement de Paris</h2>
+<div class="container flex flex-col items-center justify-center sm:w-4/5 mx-auto my-16 ">
+  <h2 class="text-center text-3xl font-extrabold text-pink-pastel sm:text-4xl m-2 sm:w-4/5 sm:m-10">
+    On parle de notre restaurant Eunoé du 11 ème arrondissement de Paris</h2>
   <div
     id="carouselExampleControls"
     class="relative"
@@ -135,19 +136,27 @@
         data-te-carousel-item
         data-te-carousel-active>
         <div class="flex flex-col sm:flex-row justify-center my-2 sm:my-12">
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 32-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4" src="https://guide.michelin.com/assets/images/michelin-guide-logo-dark.svg" alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://guide.michelin.com/fr/fr/ile-de-france/paris/restaurant/eunoe"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
           <span class="sm:hidden grow border-black border-b border-dotted my-6 mx-12"></span>
-
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 31-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4"
+              src="data:image/png;base64,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" alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Braise, Ardent, Eunoé, Otto... Ces restos parisiens de BBQ qui ont la flamme en automne</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://www.20minutes.fr/tempo/food/4056210-20231012-braise-ardent-eunoe-restos-parisiens-font-bbq-automne-comme"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
         </div>
       </div>
@@ -156,19 +165,29 @@
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item>
         <div class="flex flex-col sm:flex-row justify-center my-2 sm:my-12">
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 29-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4"
+              src="data:image/png;base64,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"
+              alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Bistronomie (Paris 11e) - Un joli resto à la cuisine pleine de vivacité et d’originalité</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://www.telerama.fr/restos-loisirs/eunoe_cri-7028160.php"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
           <span class="sm:hidden grow border-black border-b border-dotted my-6 mx-12"></span>
-
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 30-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4"
+              src="data:image/png;base64,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" alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Gault & Millau Ile-de-France : les distingués de la rentrée 2023</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://www.yonder.fr/news/restaurants/gault-millau-ile-de-france-distingues-rentree-2023"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
         </div>
       </div>
@@ -177,19 +196,30 @@
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item>
         <div class="flex flex-col sm:flex-row justify-center my-2 sm:my-12">
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 27-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4"
+              src="https://www.pemagazine.fr/img/logo.png"
+              alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Chroniques rédigées par Emmanuel Rubin 2023</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://6qvxwpjda8.execute-api.eu-west-1.amazonaws.com/docs/2S33Qkyk6Q8ur5Ojq8_iWkb4ydQgso?sig=176333e7ed8e0e75e62136d32d829e9f733e4f854d2ef16437c38be722e0472a"
+              target="_blank" rel="noopener noreferrer">PDF de l'Article
+            </a>
           </div>
           <span class="sm:hidden grow border-black border-b border-dotted my-6 mx-12"></span>
-
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 26-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4"
+              src="https://pariscapitale.com/wp-content/themes/pariscapitale/assets/images/logo.png"
+              alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Eunoé, gastronomie française décomplexée - Paris 11</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://pariscapitale.com/restaurants-paris/guide-gastronomique/eunoe/"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
         </div>
       </div>
@@ -198,19 +228,31 @@
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item>
         <div class="flex flex-col sm:flex-row justify-center my-2 sm:my-12">
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés 4444.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 25-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4 "
+              src="https://kissmychef.com/wp-content/uploads/2020/10/cropped-logo-1-300x72-v2.png"
+              alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Actualités Gastronomiques - Gault&Millau Tour Paris 2023</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://kissmychef.com/articles/actus/actualites-gastronomiques/gaultmillau-tour-paris-2023/"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
           <span class="sm:hidden grow border-black border-b border-dotted my-6 mx-12"></span>
-
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 21-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4 bg-black"
+              src="https://www.finedininglovers.fr/themes/custom/fdl/logo.webp"
+              alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Les bonnes adresses<br>
+            Eunoé : convivialité et belles assiettes</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://www.finedininglovers.fr/article/eunoe-restaurant-paris-11"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
         </div>
       </div>
@@ -219,19 +261,30 @@
         class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
         data-te-carousel-item>
         <div class="flex flex-col sm:flex-row justify-center my-2 sm:my-12">
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés 5555.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 4-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4"
+              src="https://upload.wikimedia.org/wikipedia/fr/thumb/f/f8/Le_Figaro_logo.svg/2560px-Le_Figaro_logo.svg.png"
+              alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Eunoé, belle auberge urbaine à l’orée du square Gardette</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://www.lefigaro.fr/gastronomie/eunoe-belle-auberge-urbaine-a-l-oree-du-square-gardette-20230601"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
           <span class="sm:hidden grow border-black border-b border-dotted my-6 mx-12"></span>
-
-          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-2">
-            <img class="h-16 sm:h-32 m-1 sm:m-4" src="https://to-restaurant.com/wp-content/uploads/elementor/thumbs/selction_guide_michelin-psx45qqy5q2bzorjbapsbpb2hetv3ax0p2kzicvm8m.webp" alt="">
-            <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">Assiettes inspirées aux dressages soignés.</p>
-            <p class="text-sm sm:text-md font-normal text-center m-1 sm:m-2">À deux pas du canal Saint-Martin, franchissez cette TO – porte en japonais – pour découvrir leur cuisine fusion franco-japonaise.</p>
-            <button class="bg-black text-white text-sm sm:text-base px-6 sm:px-10 py-2 sm:py-4 rounded">Lire l'Article</button>
+          <!--Article 3-->
+          <div class="flex flex-col justify-center items-center sm:mb-0 sm:mx-10 sm:w-1/3">
+            <img class="h-16 sm:h-30 m-1 sm:m-4 "
+              src="https://wsafety-news.com/storage/2012/07/forbes-logo.png"
+              alt="Presse article Eunoé restaurant Paris 11 - parisien">
+            <%# <p class="text-sm sm:text-md font-bold text-center m-1 sm:m-2">L'avis du Guide MICHELIN sur le restaurant de Paris Eunoé</p> %>
+            <p class="text-sm sm:text-lg font-normal text-center m-1 sm:m-2 sm:p-4">Eunoé, Where The Laid-Back Chefs Make You Feel At Home</p>
+            <a class="bg-gray-600 text-white text-sm sm:text-base sm:font-semibold px-6 sm:px-10 py-2 sm:py-4 rounded hover:bg-gray-500"
+              href="https://www.forbes.com/sites/rooksanahossenally/2023/06/16/where-to-eat-12-best-new-restaurants-in-paris/?sh=3a2bc00b23c1#:~:text=Euno%C3%A9%2C%20Where%20The%20Laid%2DBack%20Chefs%20Make%20You%20Feel%20At%20Home"
+              target="_blank" rel="noopener noreferrer">Lire l'Article
+            </a>
           </div>
         </div>
       </div>
@@ -287,5 +340,8 @@
         >Next</span
       >
     </button>
+  </div>
+  <div class="flex justify-center mt-2 sm:mt-4">
+    <%= link_to "Tous les articles sur Eunoé", presse_path, class: "block w-full px-12 py-3 text-base sm:text-xl text-center font-medium text-white bg-pink-pastel rounded shadow hover:bg-red-pastel focus:outline-none focus:ring active:bg-red-pastel sm:w-auto" %>
   </div>
 </div>

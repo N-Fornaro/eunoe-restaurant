@@ -18,6 +18,8 @@
 
             <li><%= link_to "Privatisation", privatisation_path, class: "text-white transition hover:text-white/75" %></li>
 
+            <li><%= link_to "Presse", presse_path, class: "text-white transition hover:text-white/75" %></li>
+
             <li><%= link_to "Réservation", new_booking_path, class: "text-white transition hover:text-white/75" %></li>
 
           </ul>
@@ -81,6 +83,8 @@
         <li><%= link_to "Menu", meals_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 
         <li><%= link_to "Privatisation", privatisation_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
+
+        <li><%= link_to "Presse", presse_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
 
         <% if current_user %>
           <li><%= link_to "Admin", admin_path, class: "text-white font-medium uppercase transition hover:text-white/75" %></li>
